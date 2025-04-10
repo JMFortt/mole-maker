@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="CMS.590 Assignment 3"
+run/main_scene="uid://sfbo0v7vkcy5"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [rendering]
 
