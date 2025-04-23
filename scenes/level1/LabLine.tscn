@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://6vc6xqon6plj"]
+
+[ext_resource type="Texture2D" uid="uid://8wpoh7wd7ocl" path="res://assets/lablinebackground.png" id="1_c5706"]
+
+[node name="LabLine" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(647, 361)
+scale = Vector2(0.847861, 0.722992)
+texture = ExtResource("1_c5706")
+
+[node name="DialogueUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueLabel" type="Label" parent="DialogueUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="SkipButton" type="Button" parent="DialogueUI"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TicketSpawn" type="Node2D" parent="."]

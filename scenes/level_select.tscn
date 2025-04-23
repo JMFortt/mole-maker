@@ -1,13 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1i2ucce87pfy"]
+[gd_scene load_steps=5 format=3 uid="uid://b1i2ucce87pfy"]
 
-[ext_resource type="Texture2D" uid="uid://6ltboip8yqbm" path="res://assets/mainmenubackground.png" id="1_p0wlc"]
-[ext_resource type="FontFile" uid="uid://bmyn1kbi20r4s" path="res://fonts/LuckiestGuy-Regular.ttf" id="2_2epne"]
+[ext_resource type="Texture2D" uid="uid://t5txvxvchhc3" path="res://assets/lablevelbackground.png" id="1_p0wlc"]
+[ext_resource type="Script" uid="uid://cpaigou1bkyxi" path="res://scenes/LevelSelector.gd" id="1_rif6e"]
+[ext_resource type="Texture2D" uid="uid://cf5pas4ncoeg2" path="res://assets/selectalevel.png" id="2_2epne"]
+[ext_resource type="Texture2D" uid="uid://k1eixrpyyhea" path="res://assets/level1.png" id="4_chg43"]
 
 [node name="LevelSelect" type="Node2D"]
+script = ExtResource("1_rif6e")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1924.0
 offset_bottom = 1082.0
+scale = Vector2(0.668689, 0.668689)
 texture = ExtResource("1_p0wlc")
 
 [node name="UI" type="Control" parent="."]
@@ -16,15 +20,20 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="UI"]
+[node name="Label" type="TextureRect" parent="UI"]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 35.0
-offset_right = 1924.0
-offset_bottom = 240.0
-theme_override_fonts/font = ExtResource("2_2epne")
-theme_override_font_sizes/font_size = 100
-text = "Select a Level
-"
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = 243.0
+offset_top = 24.0
+offset_right = 3114.0
+offset_bottom = 425.0
+scale = Vector2(0.270848, 0.270397)
+texture = ExtResource("2_2epne")
+
+[node name="Level1Button" type="TextureButton" parent="UI"]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 171.0
+offset_right = 1658.0
+offset_bottom = 410.0
+scale = Vector2(0.679814, 0.679814)
+texture_normal = ExtResource("4_chg43")
