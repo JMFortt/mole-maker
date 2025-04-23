@@ -15,6 +15,11 @@ radius = 230.11
 
 [node name="AtomAssembler" type="Node2D"]
 script = ExtResource("1_70k88")
+nucleus_radius = null
+inner_radius = null
+outer_radius = null
+inner_e_max = null
+outer_e_max = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(641, 360)
