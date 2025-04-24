@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://pgsnpo7tekxp"]
+
+[ext_resource type="Script" uid="uid://clsksg8t2awuw" path="res://scenes/main_menu.gd" id="1_sugp2"]
+[ext_resource type="Texture2D" uid="uid://6ltboip8yqbm" path="res://assets/mainmenubackground.png" id="2_jyhfs"]
+[ext_resource type="FontFile" uid="uid://bmyn1kbi20r4s" path="res://fonts/LuckiestGuy-Regular.ttf" id="3_tbgi4"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_sugp2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -155.0
+offset_top = 73.0
+offset_right = 1769.0
+offset_bottom = 1155.0
+texture = ExtResource("2_jyhfs")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 73.0
+offset_right = 1921.0
+offset_bottom = 278.0
+theme_override_fonts/font = ExtResource("3_tbgi4")
+theme_override_font_sizes/font_size = 100
+text = "Cooking for Compounds"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="UI"]
+layout_mode = 0
+offset_left = 798.0
+offset_top = 527.0
+offset_right = 1092.0
+offset_bottom = 672.0
+theme_override_fonts/font = ExtResource("3_tbgi4")
+theme_override_font_sizes/font_size = 75
+text = "Play"
+
+[connection signal="pressed" from="UI/Button" to="." method="_on_button_pressed"]
