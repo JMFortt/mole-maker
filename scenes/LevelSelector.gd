@@ -7,3 +7,7 @@ func _ready():
 
 func _on_Level1Button_pressed():
 	get_tree().change_scene_to_file("res://scenes/level1/Level1.tscn")
+
+
+func _on_menu_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

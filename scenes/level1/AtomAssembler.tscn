@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cy8kfvob6180f"]
 
-[ext_resource type="Script" uid="uid://du3gc74e7p6hp" path="res://scenes/level1/AtomAssembler.gd" id="1_70k88"]
+[ext_resource type="Script" uid="uid://dnejgg7lniuh4" path="res://scenes/level1/atom_assembler.gd" id="1_70k88"]
 [ext_resource type="Texture2D" uid="uid://bk7scx6n1xs2h" path="res://assets/atomassemblerbackground.png" id="1_ggkhf"]
 [ext_resource type="Script" uid="uid://dmuh6wgdmc7yq" path="res://scenes/level1/draggable.gd" id="1_ybdqk"]
 [ext_resource type="Texture2D" uid="uid://fbgrj4y2yokf" path="res://assets/proton.png" id="4_0wguy"]
@@ -16,100 +16,144 @@ radius = 230.11
 [node name="AtomAssembler" type="Node2D"]
 script = ExtResource("1_70k88")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1293.0
+offset_bottom = 730.0
+color = Color(0, 0.368627, 0.658824, 1)
+metadata/_edit_use_anchors_ = true
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(641, 360)
-scale = Vector2(0.847426, 0.726905)
+position = Vector2(634.439, 291.479)
+scale = Vector2(0.53543, 0.528701)
 texture = ExtResource("1_ggkhf")
+region_enabled = true
+region_rect = Rect2(301.051, 0, 928.661, 887.41)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(103.716, 338.618)
+scale = Vector2(0.53543, 0.528701)
+texture = ExtResource("1_ggkhf")
+region_enabled = true
+region_rect = Rect2(22.31, 0, 238.207, 827.883)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 10.0
+offset_top = 78.0
+offset_right = 50.0
+offset_bottom = 118.0
+scale = Vector2(0.817455, 0.783436)
+metadata/_edit_use_anchors_ = true
 
 [node name="Proton" type="TextureButton" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 86.0001
+offset_top = 183.0
+offset_right = 126.0
+offset_bottom = 223.0
+scale = Vector2(0.817455, 0.783436)
 script = ExtResource("1_ybdqk")
+metadata/_edit_use_anchors_ = true
 
 [node name="Neutron" type="TextureButton" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 89.0001
+offset_top = 318.0
+offset_right = 129.0
+offset_bottom = 358.0
+scale = Vector2(0.817455, 0.783436)
 script = ExtResource("1_ybdqk")
+metadata/_edit_use_anchors_ = true
 
 [node name="Electron" type="TextureButton" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 92.0001
+offset_top = 459.0
+offset_right = 132.0
+offset_bottom = 499.0
+scale = Vector2(0.817455, 0.783436)
 script = ExtResource("1_ybdqk")
+metadata/_edit_use_anchors_ = true
 
 [node name="ProtonSource" type="TextureButton" parent="."]
-offset_left = 65.0
-offset_top = 51.0
-offset_right = 246.0
-offset_bottom = 236.0
-scale = Vector2(0.444851, 0.444851)
+offset_left = 72.7162
+offset_top = 166.618
+offset_right = 253.716
+offset_bottom = 351.618
+scale = Vector2(0.363646, 0.348512)
 texture_normal = ExtResource("4_0wguy")
+metadata/_edit_use_anchors_ = true
 
 [node name="NeutronSource" type="TextureButton" parent="."]
-offset_left = 65.0
-offset_top = 246.0
-offset_right = 246.0
-offset_bottom = 446.0
-scale = Vector2(0.399133, 0.399133)
+offset_left = 75.7162
+offset_top = 303.618
+offset_right = 256.716
+offset_bottom = 503.618
+scale = Vector2(0.326273, 0.312695)
 texture_normal = ExtResource("5_cbrif")
+metadata/_edit_use_anchors_ = true
 
 [node name="ElectronSource" type="TextureButton" parent="."]
-offset_left = 66.0
-offset_top = 441.0
-offset_right = 247.0
-offset_bottom = 626.0
-scale = Vector2(0.450554, 0.450554)
+offset_left = 72.7162
+offset_top = 442.618
+offset_right = 253.716
+offset_bottom = 627.618
+scale = Vector2(0.368308, 0.35298)
 texture_normal = ExtResource("6_l7887")
+metadata/_edit_use_anchors_ = true
 
 [node name="ProtonCountLabel" type="Label" parent="."]
-offset_left = 1102.0
-offset_top = 35.0
-offset_right = 1142.0
-offset_bottom = 58.0
+offset_left = 244.0
+offset_top = 241.0
+offset_right = 352.0
+offset_bottom = 264.0
+scale = Vector2(0.817455, 0.783436)
 text = "Proton Count:"
+metadata/_edit_use_anchors_ = true
 
 [node name="NeutronCountLabel" type="Label" parent="."]
-offset_left = 1108.0
-offset_top = 78.0
-offset_right = 1148.0
-offset_bottom = 101.0
+offset_left = 242.0
+offset_top = 270.0
+offset_right = 363.0
+offset_bottom = 293.0
+scale = Vector2(0.817455, 0.783436)
 text = "Neutron Count:"
+metadata/_edit_use_anchors_ = true
 
 [node name="InnerECountLabel" type="Label" parent="."]
-offset_left = 1108.0
-offset_top = 100.0
-offset_right = 1148.0
-offset_bottom = 123.0
+offset_left = 242.0
+offset_top = 292.0
+offset_right = 352.0
+offset_bottom = 315.0
+scale = Vector2(0.817455, 0.783436)
 text = "Inner E Count:"
+metadata/_edit_use_anchors_ = true
 
 [node name="OuterECountLabel" type="Label" parent="."]
-offset_left = 1108.0
-offset_top = 135.0
-offset_right = 1148.0
-offset_bottom = 158.0
+offset_left = 242.0
+offset_top = 327.0
+offset_right = 356.0
+offset_bottom = 350.0
+scale = Vector2(0.817455, 0.783436)
 text = "Outer E Count:"
+metadata/_edit_use_anchors_ = true
 
 [node name="DropZones" type="Node2D" parent="."]
+position = Vector2(345, 128)
+scale = Vector2(0.686403, 0.649792)
 
 [node name="NucleusZone" type="Area2D" parent="DropZones"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropZones/NucleusZone"]
-position = Vector2(650, 292)
+position = Vector2(433.566, 243.491)
 scale = Vector2(-0.474874, -0.474874)
 shape = SubResource("CircleShape2D_70k88")
 
 [node name="InnerShellZone" type="Area2D" parent="DropZones"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropZones/InnerShellZone"]
-position = Vector2(651, 309)
+position = Vector2(434.566, 260.491)
 scale = Vector2(0.984941, 0.984941)
 shape = SubResource("CircleShape2D_0wguy")
 
 [node name="OuterShellZone" type="Area2D" parent="DropZones"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropZones/OuterShellZone"]
-position = Vector2(650, 308)
+position = Vector2(433.566, 259.491)
 shape = SubResource("CircleShape2D_70k88")

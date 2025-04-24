@@ -37,3 +37,13 @@ offset_right = 1658.0
 offset_bottom = 410.0
 scale = Vector2(0.679814, 0.679814)
 texture_normal = ExtResource("4_chg43")
+
+[node name="MenuButton" type="Button" parent="UI"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 150.0
+offset_bottom = 100.0
+text = "Menu"
+
+[connection signal="pressed" from="UI/MenuButton" to="." method="_on_menu_button_pressed"]

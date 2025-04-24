@@ -136,3 +136,6 @@ func _update_counters() -> void:
 	$NeutronCountLabel.text  = str(neutron_count)
 	$InnerECountLabel.text   = str(inner_e_count)
 	$OuterECountLabel.text   = str(outer_e_count)
+	
+func _on_back_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/level_select.tscn")

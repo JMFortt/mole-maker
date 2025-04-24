@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://6vc6xqon6plj"]
+[gd_scene load_steps=3 format=3 uid="uid://6vc6xqon6plj"]
 
+[ext_resource type="Script" uid="uid://dcbh1bwjv7cwf" path="res://scenes/level1/lab_line.gd" id="1_8rmab"]
 [ext_resource type="Texture2D" uid="uid://8wpoh7wd7ocl" path="res://assets/lablinebackground.png" id="1_c5706"]
 
 [node name="LabLine" type="Node2D"]
+script = ExtResource("1_8rmab")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(647, 361)

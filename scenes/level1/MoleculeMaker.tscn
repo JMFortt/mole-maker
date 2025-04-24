@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgnq4u46sfole"]
+
+[ext_resource type="Texture2D" uid="uid://8wpoh7wd7ocl" path="res://assets/lablinebackground.png" id="2_2wf33"]
+[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="2_ur06j"]
+
+[node name="MoleculeMaker" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(647, 361)
+scale = Vector2(0.847861, 0.722992)
+texture = ExtResource("2_2wf33")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 93.0
+offset_top = 153.0
+offset_right = 1116.0
+offset_bottom = 524.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_ur06j")
+theme_override_font_sizes/normal_font_size = 70
+text = "PLACEHOLDER
+(Molec Maker)"
