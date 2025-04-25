@@ -112,6 +112,50 @@ theme = SubResource("Theme_ckc44")
 text = "Level 1"
 alignment = 0
 
+[node name="Star1" type="Node2D" parent="UI/Level1Button"]
+
+[node name="StarOutline" type="Polygon2D" parent="UI/Level1Button/Star1"]
+position = Vector2(318, 47)
+scale = Vector2(0.65, 0.65)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="StarMain" type="Polygon2D" parent="UI/Level1Button/Star1"]
+position = Vector2(318, 47)
+scale = Vector2(0.5, 0.5)
+color = Color(0.721569, 0.721569, 0.721569, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="Star2" type="Node2D" parent="UI/Level1Button"]
+position = Vector2(100, 0)
+
+[node name="StarOutline" type="Polygon2D" parent="UI/Level1Button/Star2"]
+position = Vector2(318, 47)
+scale = Vector2(0.65, 0.65)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="StarMain" type="Polygon2D" parent="UI/Level1Button/Star2"]
+position = Vector2(318, 47)
+scale = Vector2(0.5, 0.5)
+color = Color(0.721569, 0.721569, 0.721569, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="Star3" type="Node2D" parent="UI/Level1Button"]
+position = Vector2(200, 0)
+
+[node name="StarOutline" type="Polygon2D" parent="UI/Level1Button/Star3"]
+position = Vector2(318, 47)
+scale = Vector2(0.65, 0.65)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="StarMain" type="Polygon2D" parent="UI/Level1Button/Star3"]
+position = Vector2(318, 47)
+scale = Vector2(0.5, 0.5)
+color = Color(0.721569, 0.721569, 0.721569, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
 [node name="Level2Button" type="Button" parent="UI"]
 layout_mode = 0
 offset_left = 150.0
@@ -123,6 +167,50 @@ disabled = true
 text = "Level 2"
 alignment = 0
 
+[node name="Star1" type="Node2D" parent="UI/Level2Button"]
+
+[node name="StarOutline" type="Polygon2D" parent="UI/Level2Button/Star1"]
+position = Vector2(318, 47)
+scale = Vector2(0.65, 0.65)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="StarMain" type="Polygon2D" parent="UI/Level2Button/Star1"]
+position = Vector2(318, 47)
+scale = Vector2(0.5, 0.5)
+color = Color(0.721569, 0.721569, 0.721569, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="Star2" type="Node2D" parent="UI/Level2Button"]
+position = Vector2(100, 0)
+
+[node name="StarOutline" type="Polygon2D" parent="UI/Level2Button/Star2"]
+position = Vector2(318, 47)
+scale = Vector2(0.65, 0.65)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="StarMain" type="Polygon2D" parent="UI/Level2Button/Star2"]
+position = Vector2(318, 47)
+scale = Vector2(0.5, 0.5)
+color = Color(0.721569, 0.721569, 0.721569, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="Star3" type="Node2D" parent="UI/Level2Button"]
+position = Vector2(200, 0)
+
+[node name="StarOutline" type="Polygon2D" parent="UI/Level2Button/Star3"]
+position = Vector2(318, 47)
+scale = Vector2(0.65, 0.65)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="StarMain" type="Polygon2D" parent="UI/Level2Button/Star3"]
+position = Vector2(318, 47)
+scale = Vector2(0.5, 0.5)
+color = Color(0.721569, 0.721569, 0.721569, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
 [node name="Level3Button" type="Button" parent="UI"]
 layout_mode = 0
 offset_left = 150.0
@@ -133,5 +221,49 @@ theme = SubResource("Theme_ckc44")
 disabled = true
 text = "Level 3"
 alignment = 0
+
+[node name="Star1" type="Node2D" parent="UI/Level3Button"]
+
+[node name="StarOutline" type="Polygon2D" parent="UI/Level3Button/Star1"]
+position = Vector2(318, 47)
+scale = Vector2(0.65, 0.65)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="StarMain" type="Polygon2D" parent="UI/Level3Button/Star1"]
+position = Vector2(318, 47)
+scale = Vector2(0.5, 0.5)
+color = Color(0.721569, 0.721569, 0.721569, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="Star2" type="Node2D" parent="UI/Level3Button"]
+position = Vector2(100, 0)
+
+[node name="StarOutline" type="Polygon2D" parent="UI/Level3Button/Star2"]
+position = Vector2(318, 47)
+scale = Vector2(0.65, 0.65)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="StarMain" type="Polygon2D" parent="UI/Level3Button/Star2"]
+position = Vector2(318, 47)
+scale = Vector2(0.5, 0.5)
+color = Color(0.721569, 0.721569, 0.721569, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="Star3" type="Node2D" parent="UI/Level3Button"]
+position = Vector2(200, 0)
+
+[node name="StarOutline" type="Polygon2D" parent="UI/Level3Button/Star3"]
+position = Vector2(318, 47)
+scale = Vector2(0.65, 0.65)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="StarMain" type="Polygon2D" parent="UI/Level3Button/Star3"]
+position = Vector2(318, 47)
+scale = Vector2(0.5, 0.5)
+color = Color(0.721569, 0.721569, 0.721569, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
 
 [connection signal="pressed" from="UI/MenuButton" to="." method="_on_menu_button_pressed"]
