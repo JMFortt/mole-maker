@@ -67,7 +67,7 @@ func _on_hint_button_pressed():
 
 func _on_periodic_table_button_pressed():
 	# show periodic table overlay
-	pass
+	$UILayer/PeriodicTableOverlay.visible = true
 
 func _on_options_button_pressed():
 	# show options overlay
@@ -76,3 +76,7 @@ func _on_options_button_pressed():
 func _on_back_button_pressed() -> void:
 	# back to level select
 	get_tree().change_scene_to_file("res://scenes/level_select.tscn")
+
+func _on_close_periodic_table_button_pressed() -> void:
+	# hide periodic table overlay
+	$UILayer/PeriodicTableOverlay.visible = false
