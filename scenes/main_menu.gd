@@ -10,4 +10,8 @@ func _on_credits_button_pressed() -> void:
 
 
 func _on_how_to_play_button_pressed() -> void:
-	pass # Replace with function body.
+	$UI/HowToPlayOverlay.visible = true
+
+
+func _on_close_overlay_button_pressed() -> void:
+	$UI/HowToPlayOverlay.visible = false

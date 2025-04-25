@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://ckj04xs2msl6r"]
 
 [ext_resource type="Script" uid="uid://dmw7ead88nmeq" path="res://scenes/level1/level1.gd" id="1_eugj0"]
-[ext_resource type="StyleBox" uid="uid://c6rykowjenwip" path="res://themes/menu_panel_style_box.tres" id="2_edbe2"]
+[ext_resource type="StyleBox" uid="uid://c6rykowjenwip" path="res://themes/menu_panel_variant_1_style_box.tres" id="2_edbe2"]
 [ext_resource type="Theme" uid="uid://ceyd5jq3dbr2c" path="res://themes/button_variant_2.tres" id="3_38deu"]
 [ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="4_ospsn"]
 [ext_resource type="Texture2D" uid="uid://b3igypxwpe1tt" path="res://assets/figmaPeriodicTable.png" id="6_vc60b"]
@@ -195,28 +195,22 @@ offset_bottom = 70.0
 scale = Vector2(6.63143, 8.07874)
 theme_override_styles/panel = SubResource("StyleBoxFlat_qixek")
 
-[node name="MenuBackground1" type="Panel" parent="UILayer"]
+[node name="StageNavBar" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MenuBackground1" type="Panel" parent="UILayer/StageNavBar"]
+layout_mode = 0
 offset_left = -50.0
 offset_top = 560.0
 offset_right = 1350.0
 offset_bottom = 760.0
 theme_override_styles/panel = ExtResource("2_edbe2")
 
-[node name="MenuBackground2" type="Panel" parent="UILayer"]
-offset_left = -50.0
-offset_top = -30.0
-offset_right = 300.0
-offset_bottom = 100.0
-theme_override_styles/panel = ExtResource("2_edbe2")
-
-[node name="MenuBackground3" type="Panel" parent="UILayer"]
-offset_left = 990.0
-offset_top = -33.0
-offset_right = 1340.0
-offset_bottom = 97.0
-theme_override_styles/panel = ExtResource("2_edbe2")
-
-[node name="LabLineButton" type="Button" parent="UILayer"]
+[node name="LabLineButton" type="Button" parent="UILayer/StageNavBar"]
+layout_mode = 0
 offset_left = 60.0
 offset_top = 580.0
 offset_right = 310.0
@@ -224,7 +218,8 @@ offset_bottom = 705.0
 theme = ExtResource("3_38deu")
 text = "Lab Line"
 
-[node name="AtomAssemblerButton" type="Button" parent="UILayer"]
+[node name="AtomAssemblerButton" type="Button" parent="UILayer/StageNavBar"]
+layout_mode = 0
 offset_left = 360.0
 offset_top = 580.0
 offset_right = 610.0
@@ -233,7 +228,8 @@ theme = SubResource("Theme_38deu")
 text = "Atom
 Assembler"
 
-[node name="MoleculeMakerButton" type="Button" parent="UILayer"]
+[node name="MoleculeMakerButton" type="Button" parent="UILayer/StageNavBar"]
+layout_mode = 0
 offset_left = 660.0
 offset_top = 580.0
 offset_right = 910.0
@@ -242,7 +238,8 @@ theme = SubResource("Theme_tt0yq")
 text = "Molecule
 Maker"
 
-[node name="SynthesisStationButton" type="Button" parent="UILayer"]
+[node name="SynthesisStationButton" type="Button" parent="UILayer/StageNavBar"]
+layout_mode = 0
 offset_left = 960.0
 offset_top = 580.0
 offset_right = 1210.0
@@ -251,7 +248,22 @@ theme = SubResource("Theme_wvj7i")
 text = "Synthesis
 Station"
 
-[node name="BackButton" type="Button" parent="UILayer"]
+[node name="TopLeftMenu" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MenuBackground2" type="Panel" parent="UILayer/TopLeftMenu"]
+layout_mode = 0
+offset_left = -50.0
+offset_top = -30.0
+offset_right = 300.0
+offset_bottom = 100.0
+theme_override_styles/panel = ExtResource("2_edbe2")
+
+[node name="BackButton" type="Button" parent="UILayer/TopLeftMenu"]
+layout_mode = 0
 offset_left = 25.0
 offset_top = 25.0
 offset_right = 125.0
@@ -259,7 +271,8 @@ offset_bottom = 75.0
 theme = ExtResource("8_qixek")
 text = "Back"
 
-[node name="OptionsButton" type="Button" parent="UILayer"]
+[node name="OptionsButton" type="Button" parent="UILayer/TopLeftMenu"]
+layout_mode = 0
 offset_left = 150.0
 offset_top = 25.0
 offset_right = 250.0
@@ -267,7 +280,22 @@ offset_bottom = 75.0
 theme = ExtResource("8_qixek")
 text = "Options"
 
-[node name="PeriodicTableButton" type="Button" parent="UILayer"]
+[node name="TopRightMenu" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MenuBackground3" type="Panel" parent="UILayer/TopRightMenu"]
+layout_mode = 0
+offset_left = 990.0
+offset_top = -33.0
+offset_right = 1340.0
+offset_bottom = 97.0
+theme_override_styles/panel = ExtResource("2_edbe2")
+
+[node name="PeriodicTableButton" type="Button" parent="UILayer/TopRightMenu"]
+layout_mode = 0
 offset_left = 1030.0
 offset_top = 25.0
 offset_right = 1170.0
@@ -275,7 +303,8 @@ offset_bottom = 75.0
 theme = ExtResource("8_qixek")
 text = "Periodic Table"
 
-[node name="HintButton" type="Button" parent="UILayer"]
+[node name="HintButton" type="Button" parent="UILayer/TopRightMenu"]
+layout_mode = 0
 offset_left = 1195.0
 offset_top = 25.0
 offset_right = 1254.0
@@ -297,6 +326,7 @@ offset_right = 1285.0
 offset_bottom = 759.0
 
 [node name="PeriodicTableBackground" type="Panel" parent="UILayer/PeriodicTableOverlay"]
+layout_mode = 0
 offset_left = 98.0
 offset_top = 71.0
 offset_right = 1198.0
@@ -304,6 +334,7 @@ offset_bottom = 671.0
 theme_override_styles/panel = ExtResource("2_edbe2")
 
 [node name="ClosePeriodicTableButton" type="Button" parent="UILayer/PeriodicTableOverlay"]
+layout_mode = 0
 offset_left = 1064.0
 offset_top = 112.0
 offset_right = 1164.0
@@ -312,6 +343,7 @@ theme = ExtResource("8_qixek")
 text = "Close"
 
 [node name="PeriodicTableTextureRect" type="TextureRect" parent="UILayer/PeriodicTableOverlay"]
+layout_mode = 0
 offset_left = 133.0
 offset_top = 96.0
 offset_right = 10147.0
@@ -319,8 +351,8 @@ offset_bottom = 6137.0
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("6_vc60b")
 
-[connection signal="pressed" from="UILayer/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="UILayer/OptionsButton" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="UILayer/PeriodicTableButton" to="." method="_on_periodic_table_button_pressed"]
-[connection signal="pressed" from="UILayer/HintButton" to="." method="_on_hint_button_pressed"]
+[connection signal="pressed" from="UILayer/TopLeftMenu/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="UILayer/TopLeftMenu/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="UILayer/TopRightMenu/PeriodicTableButton" to="." method="_on_periodic_table_button_pressed"]
+[connection signal="pressed" from="UILayer/TopRightMenu/HintButton" to="." method="_on_hint_button_pressed"]
 [connection signal="pressed" from="UILayer/PeriodicTableOverlay/ClosePeriodicTableButton" to="." method="_on_close_periodic_table_button_pressed"]

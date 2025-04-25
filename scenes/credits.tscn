@@ -2,21 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://t5txvxvchhc3" path="res://assets/lablevelbackground.png" id="1_0bpdh"]
 [ext_resource type="Script" uid="uid://ce2bxhh6c01aq" path="res://scenes/credits.gd" id="1_2ckv8"]
+[ext_resource type="StyleBox" uid="uid://c0j65wo0rxbma" path="res://themes/menu_panel_variant_2style_box.tres" id="2_8gwij"]
 [ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="3_0ctdu"]
 [ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="3_2fbfq"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fbfq"]
-bg_color = Color(0.843137, 0.917647, 1, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-anti_aliasing = false
 
 [node name="Credits" type="Node2D"]
 script = ExtResource("1_2ckv8")
@@ -26,10 +14,10 @@ script = ExtResource("1_2ckv8")
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 offset_left = 429.0
 offset_top = 110.0
-offset_right = 477.0
-offset_bottom = 165.0
-scale = Vector2(6.63143, 8.07874)
-theme_override_styles/panel = SubResource("StyleBoxFlat_2fbfq")
+offset_right = 744.0
+offset_bottom = 477.0
+scale = Vector2(1, 1.218)
+theme_override_styles/panel = ExtResource("2_8gwij")
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 anchors_preset = -1

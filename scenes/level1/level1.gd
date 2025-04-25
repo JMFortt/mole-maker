@@ -31,10 +31,10 @@ func _ready():
 	synthesis_station.visible = false
 
 	# 5️⃣ Hook up your two buttons
-	$UILayer/LabLineButton.connect("pressed", Callable(self, "_on_LabLineButton_pressed"))
-	$UILayer/AtomAssemblerButton.connect("pressed", Callable(self, "_on_AtomAssemblerButton_pressed"))
-	$UILayer/MoleculeMakerButton.connect("pressed", Callable(self, "_on_MoleculeMakerButton_pressed"))
-	$UILayer/SynthesisStationButton.connect("pressed", Callable(self, "_on_SynthesisStationButton_pressed"))
+	$UILayer/StageNavBar/LabLineButton.connect("pressed", Callable(self, "_on_LabLineButton_pressed"))
+	$UILayer/StageNavBar/AtomAssemblerButton.connect("pressed", Callable(self, "_on_AtomAssemblerButton_pressed"))
+	$UILayer/StageNavBar/MoleculeMakerButton.connect("pressed", Callable(self, "_on_MoleculeMakerButton_pressed"))
+	$UILayer/StageNavBar/SynthesisStationButton.connect("pressed", Callable(self, "_on_SynthesisStationButton_pressed"))
 
 func _on_LabLineButton_pressed():
 	lab_line.visible = true
