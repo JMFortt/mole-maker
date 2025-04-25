@@ -1,9 +1,73 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1i2ucce87pfy"]
+[gd_scene load_steps=11 format=3 uid="uid://b1i2ucce87pfy"]
 
 [ext_resource type="Texture2D" uid="uid://t5txvxvchhc3" path="res://assets/lablevelbackground.png" id="1_p0wlc"]
 [ext_resource type="Script" uid="uid://cpaigou1bkyxi" path="res://scenes/LevelSelector.gd" id="1_rif6e"]
 [ext_resource type="Texture2D" uid="uid://cf5pas4ncoeg2" path="res://assets/selectalevel.png" id="2_2epne"]
-[ext_resource type="Texture2D" uid="uid://k1eixrpyyhea" path="res://assets/level1.png" id="4_chg43"]
+[ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="5_chg43"]
+[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="6_r77uv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chg43"]
+content_margin_left = 30.0
+bg_color = Color(0.57, 0.57, 0.57, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r77uv"]
+content_margin_left = 30.0
+bg_color = Color(1, 0.733333, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4nqmc"]
+content_margin_left = 30.0
+bg_color = Color(0.996078, 0.831373, 0.188235, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7plkq"]
+content_margin_left = 30.0
+bg_color = Color(0.984314, 0.588235, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Theme" id="Theme_ckc44"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 70
+Button/fonts/font = ExtResource("6_r77uv")
+Button/styles/disabled = SubResource("StyleBoxFlat_chg43")
+Button/styles/hover = SubResource("StyleBoxFlat_r77uv")
+Button/styles/normal = SubResource("StyleBoxFlat_4nqmc")
+Button/styles/pressed = SubResource("StyleBoxFlat_7plkq")
 
 [node name="LevelSelect" type="Node2D"]
 script = ExtResource("1_rif6e")
@@ -29,21 +93,45 @@ offset_bottom = 425.0
 scale = Vector2(0.270848, 0.270397)
 texture = ExtResource("2_2epne")
 
-[node name="Level1Button" type="TextureButton" parent="UI"]
-layout_mode = 0
-offset_left = 122.0
-offset_top = 171.0
-offset_right = 1658.0
-offset_bottom = 410.0
-scale = Vector2(0.679814, 0.679814)
-texture_normal = ExtResource("4_chg43")
-
 [node name="MenuButton" type="Button" parent="UI"]
 layout_mode = 0
 offset_left = 50.0
 offset_top = 50.0
 offset_right = 150.0
 offset_bottom = 100.0
+theme = ExtResource("5_chg43")
 text = "Menu"
+
+[node name="Level1Button" type="Button" parent="UI"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 200.0
+offset_right = 1150.0
+offset_bottom = 300.0
+theme = SubResource("Theme_ckc44")
+text = "Level 1"
+alignment = 0
+
+[node name="Level2Button" type="Button" parent="UI"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 325.0
+offset_right = 1150.0
+offset_bottom = 426.0
+theme = SubResource("Theme_ckc44")
+disabled = true
+text = "Level 2"
+alignment = 0
+
+[node name="Level3Button" type="Button" parent="UI"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 450.0
+offset_right = 1150.0
+offset_bottom = 551.0
+theme = SubResource("Theme_ckc44")
+disabled = true
+text = "Level 3"
+alignment = 0
 
 [connection signal="pressed" from="UI/MenuButton" to="." method="_on_menu_button_pressed"]

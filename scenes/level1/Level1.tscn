@@ -1,13 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://ckj04xs2msl6r"]
+[gd_scene load_steps=20 format=3 uid="uid://ckj04xs2msl6r"]
 
 [ext_resource type="Script" uid="uid://dmw7ead88nmeq" path="res://scenes/level1/level1.gd" id="1_eugj0"]
-[ext_resource type="Texture2D" uid="uid://cwkef68xdo8re" path="res://assets/lablinebutton.png" id="2_qixek"]
-[ext_resource type="Texture2D" uid="uid://5u0piiwxbmnf" path="res://assets/atomassemblerbutton.png" id="3_edbe2"]
-[ext_resource type="Texture2D" uid="uid://dtjfdp6w0e6er" path="res://assets/moleculemakerbutton.png" id="4_38deu"]
-[ext_resource type="Texture2D" uid="uid://ctws2l08xrejc" path="res://assets/lockedmoleculemakerbutton.png" id="5_dyap8"]
-[ext_resource type="Texture2D" uid="uid://dngr27uxrpljs" path="res://assets/synthesisstationbutton.png" id="6_3k3ue"]
-[ext_resource type="Texture2D" uid="uid://l6sdjb48o1g8" path="res://assets/lockedsynthesisstationbutton.png" id="7_2xkkt"]
-[ext_resource type="Theme" uid="uid://5mum1x2oq0ks" path="res://themes/MainButton.tres" id="8_qixek"]
+[ext_resource type="StyleBox" uid="uid://c6rykowjenwip" path="res://themes/menu_panel_style_box.tres" id="2_edbe2"]
+[ext_resource type="Theme" uid="uid://ceyd5jq3dbr2c" path="res://themes/button_variant_2.tres" id="3_38deu"]
+[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="4_ospsn"]
+[ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="8_qixek"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qixek"]
 bg_color = Color(1, 1, 1, 1)
@@ -22,18 +19,165 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eugj0"]
-bg_color = Color(1, 0.905882, 0.713726, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wfrcl"]
+bg_color = Color(0.568627, 0.568627, 0.568627, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
 border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-anti_aliasing = false
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vc60b"]
+bg_color = Color(0, 0.410667, 0.56, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eugj0"]
+bg_color = Color(0.0823529, 0.501961, 0.654902, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edbe2"]
+bg_color = Color(0, 0.33, 0.45, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="Theme" id="Theme_38deu"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/constants/outline_size = 30
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("4_ospsn")
+Button/styles/disabled = SubResource("StyleBoxFlat_wfrcl")
+Button/styles/hover = SubResource("StyleBoxFlat_vc60b")
+Button/styles/normal = SubResource("StyleBoxFlat_eugj0")
+Button/styles/pressed = SubResource("StyleBoxFlat_edbe2")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dyap8"]
+bg_color = Color(0.124575, 0.55, 0.0495, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3k3ue"]
+bg_color = Color(0.188235, 0.654902, 0.0901961, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xkkt"]
+bg_color = Color(0.0783334, 0.47, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="Theme" id="Theme_tt0yq"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/constants/outline_size = 30
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("4_ospsn")
+Button/styles/disabled = SubResource("StyleBoxFlat_wfrcl")
+Button/styles/hover = SubResource("StyleBoxFlat_dyap8")
+Button/styles/normal = SubResource("StyleBoxFlat_3k3ue")
+Button/styles/pressed = SubResource("StyleBoxFlat_2xkkt")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ik0s5"]
+bg_color = Color(0.3565, 0.155, 0.62, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40qvd"]
+bg_color = Color(0.419608, 0.270588, 0.611765, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ftmt"]
+bg_color = Color(0.26724, 0.0816, 0.51, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="Theme" id="Theme_wvj7i"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/constants/outline_size = 30
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("4_ospsn")
+Button/styles/disabled = SubResource("StyleBoxFlat_wfrcl")
+Button/styles/hover = SubResource("StyleBoxFlat_ik0s5")
+Button/styles/normal = SubResource("StyleBoxFlat_40qvd")
+Button/styles/pressed = SubResource("StyleBoxFlat_5ftmt")
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_eugj0")
@@ -56,14 +200,14 @@ offset_top = 560.0
 offset_right = 184.0
 offset_bottom = 582.0
 scale = Vector2(6.63143, 8.07874)
-theme_override_styles/panel = SubResource("StyleBoxFlat_eugj0")
+theme_override_styles/panel = ExtResource("2_edbe2")
 
 [node name="MenuBackground2" type="Panel" parent="UILayer"]
 offset_left = -50.0
 offset_top = -50.0
 offset_bottom = -30.0
 scale = Vector2(6.63143, 8.07874)
-theme_override_styles/panel = SubResource("StyleBoxFlat_eugj0")
+theme_override_styles/panel = ExtResource("2_edbe2")
 
 [node name="MenuBackground3" type="Panel" parent="UILayer"]
 offset_left = 1000.0
@@ -71,41 +215,42 @@ offset_top = -50.0
 offset_right = 1050.0
 offset_bottom = -30.0
 scale = Vector2(6.63143, 8.07874)
-theme_override_styles/panel = SubResource("StyleBoxFlat_eugj0")
+theme_override_styles/panel = ExtResource("2_edbe2")
 
-[node name="LabLineButton" type="TextureButton" parent="UILayer"]
-offset_left = 25.0
-offset_top = 582.0
-offset_right = 319.0
-offset_bottom = 721.0
-scale = Vector2(1, 0.914463)
-texture_normal = ExtResource("2_qixek")
+[node name="LabLineButton" type="Button" parent="UILayer"]
+offset_left = 60.0
+offset_top = 580.0
+offset_right = 310.0
+offset_bottom = 705.0
+theme = ExtResource("3_38deu")
+text = "Lab Line"
 
-[node name="AtomAssemblerButton" type="TextureButton" parent="UILayer"]
-offset_left = 337.0
-offset_top = 582.0
-offset_right = 625.0
-offset_bottom = 713.0
-scale = Vector2(1, 0.914463)
-texture_normal = ExtResource("3_edbe2")
+[node name="AtomAssemblerButton" type="Button" parent="UILayer"]
+offset_left = 360.0
+offset_top = 580.0
+offset_right = 610.0
+offset_bottom = 705.0
+theme = SubResource("Theme_38deu")
+text = "Atom
+Assembler"
 
-[node name="MoleculeMakerButton" type="TextureButton" parent="UILayer"]
-offset_left = 649.0
-offset_top = 582.0
-offset_right = 924.0
-offset_bottom = 711.0
-scale = Vector2(1, 0.914463)
-texture_normal = ExtResource("4_38deu")
-texture_disabled = ExtResource("5_dyap8")
+[node name="MoleculeMakerButton" type="Button" parent="UILayer"]
+offset_left = 660.0
+offset_top = 580.0
+offset_right = 910.0
+offset_bottom = 705.0
+theme = SubResource("Theme_tt0yq")
+text = "Molecule
+Maker"
 
-[node name="SynthesisStationButton" type="TextureButton" parent="UILayer"]
-offset_left = 945.0
-offset_top = 582.0
-offset_right = 1251.0
-offset_bottom = 710.0
-scale = Vector2(1, 0.914463)
-texture_normal = ExtResource("6_3k3ue")
-texture_disabled = ExtResource("7_2xkkt")
+[node name="SynthesisStationButton" type="Button" parent="UILayer"]
+offset_left = 960.0
+offset_top = 580.0
+offset_right = 1210.0
+offset_bottom = 705.0
+theme = SubResource("Theme_wvj7i")
+text = "Synthesis
+Station"
 
 [node name="BackButton" type="Button" parent="UILayer"]
 offset_left = 25.0
@@ -120,20 +265,23 @@ offset_left = 150.0
 offset_top = 25.0
 offset_right = 250.0
 offset_bottom = 75.0
+theme = ExtResource("8_qixek")
 text = "Options"
 
 [node name="PeriodicTableButton" type="Button" parent="UILayer"]
 offset_left = 1030.0
 offset_top = 25.0
-offset_right = 1155.0
+offset_right = 1170.0
 offset_bottom = 75.0
+theme = ExtResource("8_qixek")
 text = "Periodic Table"
 
 [node name="HintButton" type="Button" parent="UILayer"]
-offset_left = 1180.0
+offset_left = 1195.0
 offset_top = 25.0
-offset_right = 1255.0
+offset_right = 1254.0
 offset_bottom = 75.0
+theme = ExtResource("8_qixek")
 text = "Hint
 "
 
