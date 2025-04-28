@@ -80,3 +80,9 @@ func _on_back_button_pressed() -> void:
 func _on_close_periodic_table_button_pressed() -> void:
 	# hide periodic table overlay
 	$UILayer/PeriodicTableOverlay.visible = false
+
+func _switch_to_atom_assembler() -> void:
+	lab_line.visible = false
+	atom_assembler.visible = true
+	molecule_maker.visible = false
+	synthesis_station.visible = false

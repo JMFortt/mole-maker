@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://6vc6xqon6plj"]
+[gd_scene load_steps=6 format=3 uid="uid://6vc6xqon6plj"]
 
 [ext_resource type="Script" uid="uid://dcbh1bwjv7cwf" path="res://scenes/level1/lab_line.gd" id="1_8rmab"]
 [ext_resource type="Texture2D" uid="uid://8wpoh7wd7ocl" path="res://assets/lablinebackground.png" id="1_c5706"]
+[ext_resource type="Texture2D" uid="uid://brbfpffrofjsd" path="res://assets/molenpc1.png" id="3_88a4p"]
+[ext_resource type="Theme" uid="uid://cjt1wgi2nnutb" path="res://themes/ChatBubbleTheme.tres" id="3_frnu1"]
+[ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="4_rat2q"]
 
 [node name="LabLine" type="Node2D"]
 script = ExtResource("1_8rmab")
@@ -19,12 +22,27 @@ offset_bottom = 40.0
 
 [node name="DialogueLabel" type="Label" parent="DialogueUI"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 432.0
+offset_top = 117.0
+offset_right = 663.0
+offset_bottom = 238.0
+theme = ExtResource("3_frnu1")
+theme_override_font_sizes/font_size = 25
+text = "adssaads"
+autowrap_mode = 3
 
 [node name="SkipButton" type="Button" parent="DialogueUI"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 476.0
+offset_top = 388.0
+offset_right = 576.0
+offset_bottom = 438.0
+theme = ExtResource("4_rat2q")
+text = "Next"
+metadata/_edit_use_anchors_ = true
 
 [node name="TicketSpawn" type="Node2D" parent="."]
+
+[node name="CustomerSprite" type="Sprite2D" parent="TicketSpawn"]
+position = Vector2(327, 353)
+scale = Vector2(0.315918, 0.315918)
+texture = ExtResource("3_88a4p")

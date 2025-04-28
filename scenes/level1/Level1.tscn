@@ -187,19 +187,24 @@ script = ExtResource("1_eugj0")
 
 [node name="UILayer" type="CanvasLayer" parent="."]
 
-[node name="Ticket" type="Panel" parent="UILayer"]
+[node name="TicketSpawn" type="Panel" parent="UILayer"]
+anchors_preset = -1
+anchor_top = 0.0763889
+anchor_bottom = 0.0680556
 offset_left = 1027.0
-offset_top = 9.0
+offset_top = 49.0
 offset_right = 1063.0
-offset_bottom = 70.0
+offset_bottom = 110.0
 scale = Vector2(6.63143, 8.07874)
 theme_override_styles/panel = SubResource("StyleBoxFlat_qixek")
+metadata/_edit_use_anchors_ = true
 
 [node name="StageNavBar" type="Control" parent="UILayer"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="MenuBackground1" type="Panel" parent="UILayer/StageNavBar"]
 layout_mode = 0
@@ -208,6 +213,7 @@ offset_top = 560.0
 offset_right = 1350.0
 offset_bottom = 760.0
 theme_override_styles/panel = ExtResource("2_edbe2")
+metadata/_edit_use_anchors_ = true
 
 [node name="LabLineButton" type="Button" parent="UILayer/StageNavBar"]
 layout_mode = 0
@@ -217,6 +223,7 @@ offset_right = 310.0
 offset_bottom = 705.0
 theme = ExtResource("3_38deu")
 text = "Lab Line"
+metadata/_edit_use_anchors_ = true
 
 [node name="AtomAssemblerButton" type="Button" parent="UILayer/StageNavBar"]
 layout_mode = 0
@@ -227,6 +234,7 @@ offset_bottom = 705.0
 theme = SubResource("Theme_38deu")
 text = "Atom
 Assembler"
+metadata/_edit_use_anchors_ = true
 
 [node name="MoleculeMakerButton" type="Button" parent="UILayer/StageNavBar"]
 layout_mode = 0
@@ -237,6 +245,7 @@ offset_bottom = 705.0
 theme = SubResource("Theme_tt0yq")
 text = "Molecule
 Maker"
+metadata/_edit_use_anchors_ = true
 
 [node name="SynthesisStationButton" type="Button" parent="UILayer/StageNavBar"]
 layout_mode = 0
@@ -247,12 +256,14 @@ offset_bottom = 705.0
 theme = SubResource("Theme_wvj7i")
 text = "Synthesis
 Station"
+metadata/_edit_use_anchors_ = true
 
 [node name="TopLeftMenu" type="Control" parent="UILayer"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="MenuBackground2" type="Panel" parent="UILayer/TopLeftMenu"]
 layout_mode = 0
@@ -261,6 +272,7 @@ offset_top = -30.0
 offset_right = 300.0
 offset_bottom = 100.0
 theme_override_styles/panel = ExtResource("2_edbe2")
+metadata/_edit_use_anchors_ = true
 
 [node name="BackButton" type="Button" parent="UILayer/TopLeftMenu"]
 layout_mode = 0
@@ -270,6 +282,7 @@ offset_right = 125.0
 offset_bottom = 75.0
 theme = ExtResource("8_qixek")
 text = "Back"
+metadata/_edit_use_anchors_ = true
 
 [node name="OptionsButton" type="Button" parent="UILayer/TopLeftMenu"]
 layout_mode = 0
@@ -279,12 +292,14 @@ offset_right = 250.0
 offset_bottom = 75.0
 theme = ExtResource("8_qixek")
 text = "Options"
+metadata/_edit_use_anchors_ = true
 
 [node name="TopRightMenu" type="Control" parent="UILayer"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="MenuBackground3" type="Panel" parent="UILayer/TopRightMenu"]
 layout_mode = 0
@@ -293,6 +308,7 @@ offset_top = -33.0
 offset_right = 1340.0
 offset_bottom = 97.0
 theme_override_styles/panel = ExtResource("2_edbe2")
+metadata/_edit_use_anchors_ = true
 
 [node name="PeriodicTableButton" type="Button" parent="UILayer/TopRightMenu"]
 layout_mode = 0
@@ -302,6 +318,7 @@ offset_right = 1170.0
 offset_bottom = 75.0
 theme = ExtResource("8_qixek")
 text = "Periodic Table"
+metadata/_edit_use_anchors_ = true
 
 [node name="HintButton" type="Button" parent="UILayer/TopRightMenu"]
 layout_mode = 0
@@ -312,6 +329,7 @@ offset_bottom = 75.0
 theme = ExtResource("8_qixek")
 text = "Hint
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="PeriodicTableOverlay" type="Control" parent="UILayer"]
 visible = false

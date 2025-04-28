@@ -1,6 +1,8 @@
 class_name DraggableParticle
 extends Area2D
 
+signal released(p: DraggableParticle)
+
 var zone: int = -1
 @export var type: String
 @export var texture: Texture2D
@@ -10,9 +12,6 @@ func _ready():
 	$Sprite2D.texture = texture
 	set_process(true)
 
-func start_drag():
-	dragging = true
-
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
@@ -21,8 +20,8 @@ func _input_event(viewport, event, shape_idx):
 				zone = -1
 			dragging = true
 		else:
-			# STOP dragging, but do NOT notify parent here
 			dragging = false
+			released.emit(self)  # emit dropped event
 
 func _process(delta):
 	if dragging:
