@@ -201,6 +201,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_qixek")
 metadata/_edit_use_anchors_ = true
 
 [node name="TicketText" type="RichTextLabel" parent="UILayer/TicketSpawn"]
+visible = false
 layout_mode = 0
 offset_left = 10.0
 offset_top = 11.0
