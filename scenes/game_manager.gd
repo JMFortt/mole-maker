@@ -1,7 +1,7 @@
 extends Node
 
 var current_level_data = null
-signal level_flag_changed(flag_name: String, value)
+signal stage_access_enabled(stage_name: String)
 
 func start_level(level_name: String):
 	print("level start: " + level_name)
@@ -18,3 +18,7 @@ func start_level(level_name: String):
 func end_level():
 	print("level over!")
 	current_level_data = null
+
+# to prevent "declared but not used" warnings for things called by other scripts
+func _ignore():
+	stage_access_enabled

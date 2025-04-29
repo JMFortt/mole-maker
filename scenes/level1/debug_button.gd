@@ -14,7 +14,7 @@ func _on_pressed_molecule_maker() -> void:
 			print("Atom assembler stage completed!")
 			# enable next stage
 			GameManager.current_level_data.atom_assembler_completed = true
-			GameManager.emit_signal("level_flag_changed", "molecule_maker", true)
+			GameManager.emit_signal("stage_access_enabled", "molecule_maker")
 			print("next stage available!")
 		else:
 			print("Atom assembler stage not completed.")
@@ -33,7 +33,7 @@ func _on_pressed_synthesis_station() -> void:
 			print("Molecule maker stage completed!")
 			# enable next stage
 			GameManager.current_level_data.molecule_maker_completed = true
-			GameManager.emit_signal("level_flag_changed", "synthesis_station", true)
+			GameManager.emit_signal("stage_access_enabled", "synthesis_station")
 			print("next stage available!")
 		else:
 			print("Molecule maker stage not completed.")

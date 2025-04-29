@@ -39,9 +39,9 @@ func _ready():
 	$UILayer/StageNavBar/SynthesisStationButton.connect("pressed", Callable(self, "_on_SynthesisStationButton_pressed"))
 	
 	# stage access flag changed -> enable relevant stag button
-	GameManager.level_flag_changed.connect(self._on_level_flag_changed)
+	GameManager.stage_access_enabled.connect(self._on_stage_access_enabled)
 
-func _on_level_flag_changed(flag_name: String, value):
+func _on_stage_access_enabled(flag_name: String):
 	if flag_name == "atom_assembler":
 		$UILayer/StageNavBar/AtomAssemblerButton.disabled = false
 		print("button enabled!")

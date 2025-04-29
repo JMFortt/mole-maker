@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dm81utjpidtvv"]
+[gd_scene load_steps=6 format=3 uid="uid://dm81utjpidtvv"]
 
 [ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="2_37ckj"]
+[ext_resource type="StyleBox" uid="uid://c0j65wo0rxbma" path="res://themes/menu_panel_variant_2style_box.tres" id="2_cl3de"]
+[ext_resource type="Script" uid="uid://ddkyvcartl8tt" path="res://scenes/level1/guess_buttons.gd" id="3_5w20r"]
+[ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="3_cl3de"]
+[ext_resource type="Script" uid="uid://dgjybt40nolb7" path="res://scenes/level1/close_overlay_button.gd" id="5_r0y8g"]
 
 [node name="MoleculeMaker" type="Node2D"]
 
@@ -19,3 +23,93 @@ theme_override_fonts/normal_font = ExtResource("2_37ckj")
 theme_override_font_sizes/normal_font_size = 70
 text = "PLACEHOLDER
 (Synth Station)"
+
+[node name="QuestionOverlay" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="QuestionOverlay"]
+layout_mode = 0
+offset_right = 1320.0
+offset_bottom = 752.0
+
+[node name="Panel2" type="Panel" parent="QuestionOverlay"]
+layout_mode = 0
+offset_left = 294.0
+offset_top = 179.0
+offset_right = 957.0
+offset_bottom = 493.0
+theme_override_styles/panel = ExtResource("2_cl3de")
+
+[node name="QuestionText" type="RichTextLabel" parent="QuestionOverlay"]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 215.0
+offset_right = 938.0
+offset_bottom = 469.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_37ckj")
+theme_override_fonts/bold_font = ExtResource("2_37ckj")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]You're almost there![/b]
+
+Before we make NaOH, let's think - what else do you think will be made by putting Na and H20 together?
+
+Make a guess!"
+horizontal_alignment = 1
+
+[node name="GuessButtons" type="HBoxContainer" parent="QuestionOverlay"]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 0
+offset_left = 381.0
+offset_top = 384.0
+offset_right = 881.0
+offset_bottom = 434.0
+script = ExtResource("3_5w20r")
+
+[node name="GuessButton1" type="Button" parent="QuestionOverlay/GuessButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_cl3de")
+text = "H"
+
+[node name="GuessButton2" type="Button" parent="QuestionOverlay/GuessButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_cl3de")
+text = "H2"
+
+[node name="GuessButton3" type="Button" parent="QuestionOverlay/GuessButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_cl3de")
+text = "NaH"
+
+[node name="GuessButton4" type="Button" parent="QuestionOverlay/GuessButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_cl3de")
+text = "O2"
+
+[node name="CloseOverlayButton" type="Button" parent="QuestionOverlay"]
+visible = false
+layout_mode = 0
+offset_left = 579.0
+offset_top = 384.0
+offset_right = 679.0
+offset_bottom = 434.0
+theme = ExtResource("3_cl3de")
+text = "Lets go!"
+script = ExtResource("5_r0y8g")
+
+[connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton1" to="QuestionOverlay/GuessButtons" method="_on_guess_button_pressed"]
+[connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton2" to="QuestionOverlay/GuessButtons" method="_on_guess_button_pressed"]
+[connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton3" to="QuestionOverlay/GuessButtons" method="_on_guess_button_pressed"]
+[connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton4" to="QuestionOverlay/GuessButtons" method="_on_guess_button_pressed"]
+[connection signal="pressed" from="QuestionOverlay/CloseOverlayButton" to="QuestionOverlay/CloseOverlayButton" method="_on_pressed"]

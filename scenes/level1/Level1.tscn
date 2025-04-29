@@ -216,7 +216,7 @@ bbcode_enabled = true
 text = "[b]Want to make:
 NaOH[/b]
 -------------------
-Na + H2O → NaOH + H2
+Na + H2O → NaOH + ?
 -------------------
 [b]Make atoms:[/b]
 Na
@@ -322,6 +322,7 @@ offset_top = 25.0
 offset_right = 250.0
 offset_bottom = 75.0
 theme = ExtResource("8_qixek")
+disabled = true
 text = "Options"
 metadata/_edit_use_anchors_ = true
 
@@ -358,6 +359,7 @@ offset_top = 25.0
 offset_right = 1254.0
 offset_bottom = 75.0
 theme = ExtResource("8_qixek")
+disabled = true
 text = "Hint
 "
 metadata/_edit_use_anchors_ = true
