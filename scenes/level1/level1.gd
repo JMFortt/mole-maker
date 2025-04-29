@@ -14,6 +14,7 @@ var synthesis_station: Node2D
 
 func _ready():
 	# 3️⃣ Instance both, add under StageContainer
+	GameManager.start_level("level_1")
 	lab_line = LabLineScene.instantiate()
 	atom_assembler = AtomAssemblerScene.instantiate()
 	molecule_maker = MoleculeMakerScene.instantiate()
@@ -35,6 +36,22 @@ func _ready():
 	$UILayer/StageNavBar/AtomAssemblerButton.connect("pressed", Callable(self, "_on_AtomAssemblerButton_pressed"))
 	$UILayer/StageNavBar/MoleculeMakerButton.connect("pressed", Callable(self, "_on_MoleculeMakerButton_pressed"))
 	$UILayer/StageNavBar/SynthesisStationButton.connect("pressed", Callable(self, "_on_SynthesisStationButton_pressed"))
+	
+	# stage access flag changed -> enable relevant stag button
+	GameManager.level_flag_changed.connect(self._on_level_flag_changed)
+
+func _on_level_flag_changed(flag_name: String, value):
+	if flag_name == "atom_assembler":
+		$UILayer/StageNavBar/AtomAssemblerButton.disabled = false
+		print("button enabled!")
+	elif flag_name == "molecule_maker":
+		$UILayer/StageNavBar/MoleculeMakerButton.disabled = false
+		print("button enabled!")
+	elif flag_name == "synthesis_station":
+		$UILayer/StageNavBar/SynthesisStationButton.disabled = false
+		print("button enabled!")
+	else:
+		push_error("Unknown signal flag detected!")
 
 func _on_LabLineButton_pressed():
 	lab_line.visible = true
@@ -76,6 +93,7 @@ func _on_options_button_pressed():
 func _on_back_button_pressed() -> void:
 	# back to level select
 	get_tree().change_scene_to_file("res://scenes/level_select.tscn")
+	GameManager.end_level()
 
 func _on_close_periodic_table_button_pressed() -> void:
 	# hide periodic table overlay

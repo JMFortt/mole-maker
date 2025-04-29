@@ -32,6 +32,7 @@ text = "adssaads"
 autowrap_mode = 3
 
 [node name="SkipButton" type="Button" parent="DialogueUI"]
+layout_mode = 0
 offset_left = 476.0
 offset_top = 388.0
 offset_right = 576.0

@@ -36,4 +36,9 @@ func _on_skip_pressed() -> void:
 			$DialogueUI/SkipButton.text = "Continue"
 	elif current_line == lines.size():
 		dialogue_finished = true
+		# enable next stage
+		if GameManager.current_level_data:
+			GameManager.current_level_data.lab_line_completed = true
+			GameManager.emit_signal("level_flag_changed", "atom_assembler", true)
+			print("next stage available!")
 		$DialogueUI/SkipButton.text = "Next Stage"

@@ -189,7 +189,7 @@ script = ExtResource("1_eugj0")
 
 [node name="TicketSpawn" type="Panel" parent="UILayer"]
 anchors_preset = -1
-anchor_top = 0.0763889
+anchor_top = 0.0680556
 anchor_bottom = 0.0680556
 offset_left = 1027.0
 offset_top = 49.0
@@ -232,6 +232,7 @@ offset_top = 580.0
 offset_right = 610.0
 offset_bottom = 705.0
 theme = SubResource("Theme_38deu")
+disabled = true
 text = "Atom
 Assembler"
 metadata/_edit_use_anchors_ = true
@@ -243,6 +244,7 @@ offset_top = 580.0
 offset_right = 910.0
 offset_bottom = 705.0
 theme = SubResource("Theme_tt0yq")
+disabled = true
 text = "Molecule
 Maker"
 metadata/_edit_use_anchors_ = true
@@ -254,6 +256,7 @@ offset_top = 580.0
 offset_right = 1210.0
 offset_bottom = 705.0
 theme = SubResource("Theme_wvj7i")
+disabled = true
 text = "Synthesis
 Station"
 metadata/_edit_use_anchors_ = true
