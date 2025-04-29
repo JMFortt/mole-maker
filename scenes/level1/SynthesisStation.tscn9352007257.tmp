@@ -1,86 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://dm81utjpidtvv"]
+[gd_scene load_steps=9 format=3 uid="uid://dm81utjpidtvv"]
 
 [ext_resource type="Script" uid="uid://cgcbe4rlo1um8" path="res://scenes/level1/synthesis_station.gd" id="1_fbuuf"]
 [ext_resource type="Texture2D" uid="uid://cic0dipab7gi4" path="res://assets/circle.png" id="1_p5ay3"]
+[ext_resource type="Theme" uid="uid://ceyd5jq3dbr2c" path="res://themes/button_variant_2.tres" id="1_r0y8g"]
 [ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="2_37ckj"]
 [ext_resource type="StyleBox" uid="uid://c0j65wo0rxbma" path="res://themes/menu_panel_variant_2style_box.tres" id="2_cl3de"]
 [ext_resource type="Script" uid="uid://ddkyvcartl8tt" path="res://scenes/level1/guess_buttons.gd" id="3_5w20r"]
 [ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="3_cl3de"]
 [ext_resource type="Script" uid="uid://dgjybt40nolb7" path="res://scenes/level1/close_overlay_button.gd" id="5_r0y8g"]
-[ext_resource type="Texture2D" uid="uid://m1i46obw5w1v" path="res://assets/sparkle.png" id="9_v602c"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wfrcl"]
-bg_color = Color(0.568627, 0.568627, 0.568627, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-corner_detail = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_smmyo"]
-bg_color = Color(0.232314, 0.607576, 0.73566, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-corner_detail = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fbuuf"]
-bg_color = Color(0.418598, 0.729202, 0.835533, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-corner_detail = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v602c"]
-bg_color = Color(0.1769, 0.501725, 0.61, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-corner_detail = 20
-
-[sub_resource type="Theme" id="Theme_e8kf7"]
-Button/colors/font_color = Color(1, 1, 1, 1)
-Button/constants/outline_size = 30
-Button/font_sizes/font_size = 40
-Button/fonts/font = ExtResource("2_37ckj")
-Button/styles/disabled = SubResource("StyleBoxFlat_wfrcl")
-Button/styles/hover = SubResource("StyleBoxFlat_smmyo")
-Button/styles/normal = SubResource("StyleBoxFlat_fbuuf")
-Button/styles/pressed = SubResource("StyleBoxFlat_v602c")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fbuuf"]
-particle_flag_disable_z = true
-angle_min = -45.0
-angle_max = 45.0
-spread = 180.0
-initial_velocity_min = 40.0
-initial_velocity_max = 200.0
-gravity = Vector3(0, 0, 0)
-scale_min = 0.2
-scale_max = 0.4
 
 [node name="SynthesisStation" type="Node2D"]
 script = ExtResource("1_fbuuf")
@@ -88,7 +15,7 @@ script = ExtResource("1_fbuuf")
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1298.0
 offset_bottom = 736.0
-color = Color(0.0163784, 0.0713701, 0.196681, 1)
+color = Color(0.283725, 0.696441, 0.913216, 1)
 
 [node name="Ingredient1" type="Node2D" parent="."]
 position = Vector2(401, 302)
@@ -99,13 +26,13 @@ position = Vector2(-1, -2)
 texture = ExtResource("1_p5ay3")
 
 [node name="Label2" type="Label" parent="Ingredient1"]
-offset_left = -21.0
-offset_top = -20.0
-offset_right = 34.0
-offset_bottom = 35.0
+offset_left = -27.0
+offset_top = -24.0
+offset_right = 28.0
+offset_bottom = 31.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_37ckj")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 40
 text = "Na"
 
 [node name="Ingredient2" type="Node2D" parent="."]
@@ -117,19 +44,18 @@ position = Vector2(2, -2)
 texture = ExtResource("1_p5ay3")
 
 [node name="Label" type="Label" parent="Ingredient2"]
-offset_left = -21.0
-offset_top = -19.0
-offset_right = 55.0
-offset_bottom = 36.0
+offset_left = -34.0
+offset_top = -23.0
+offset_right = 42.0
+offset_bottom = 32.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_37ckj")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 40
 text = "H20"
 
 [node name="Result1" type="Node2D" parent="."]
 visible = false
-modulate = Color(1, 1, 1, 0)
-position = Vector2(500, 250)
+position = Vector2(550, 250)
 
 [node name="Sprite2D" type="Sprite2D" parent="Result1"]
 modulate = Color(0.0936, 0.72, 0.44856, 1)
@@ -137,18 +63,18 @@ position = Vector2(2, -2)
 texture = ExtResource("1_p5ay3")
 
 [node name="Label" type="Label" parent="Result1"]
-offset_left = -35.0
-offset_top = -19.0
-offset_right = 41.0
-offset_bottom = 36.0
+offset_left = -34.0
+offset_top = -23.0
+offset_right = 42.0
+offset_bottom = 32.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_37ckj")
-theme_override_font_sizes/font_size = 30
-text = "NaOH"
+theme_override_font_sizes/font_size = 40
+text = "H20"
 
 [node name="Result2" type="Node2D" parent="."]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(750, 250)
+visible = false
+position = Vector2(700, 250)
 
 [node name="Sprite2D" type="Sprite2D" parent="Result2"]
 modulate = Color(0.197572, 0.742062, 0.767917, 1)
@@ -156,24 +82,25 @@ position = Vector2(2, -2)
 texture = ExtResource("1_p5ay3")
 
 [node name="Label" type="Label" parent="Result2"]
-offset_left = -17.0
-offset_top = -18.0
-offset_right = 59.0
-offset_bottom = 37.0
+offset_left = -34.0
+offset_top = -23.0
+offset_right = 42.0
+offset_bottom = 32.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_37ckj")
-theme_override_font_sizes/font_size = 30
-text = "H2"
+theme_override_font_sizes/font_size = 40
+text = "H20"
 
 [node name="MixButton" type="Button" parent="."]
-offset_left = 529.0
+offset_left = 544.0
 offset_top = 352.0
-offset_right = 729.0
-offset_bottom = 452.0
-theme = SubResource("Theme_e8kf7")
-text = "MIX!"
+offset_right = 694.0
+offset_bottom = 432.0
+theme = ExtResource("1_r0y8g")
+text = "MIX"
 
 [node name="QuestionOverlay" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -256,41 +183,6 @@ offset_bottom = 434.0
 theme = ExtResource("3_cl3de")
 text = "Lets go!"
 script = ExtResource("5_r0y8g")
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-emitting = false
-amount = 50
-texture = ExtResource("9_v602c")
-one_shot = true
-process_material = SubResource("ParticleProcessMaterial_fbuuf")
-
-[node name="SuccessMessage" type="Node2D" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="SuccessMessage"]
-offset_left = 461.0
-offset_top = 79.0
-offset_right = 795.0
-offset_bottom = 181.0
-theme_override_fonts/normal_font = ExtResource("2_37ckj")
-theme_override_fonts/bold_font = ExtResource("2_37ckj")
-theme_override_font_sizes/normal_font_size = 20
-theme_override_font_sizes/bold_font_size = 30
-bbcode_enabled = true
-text = "[b]Congratulations![/b]
-
- You made NaOH successfully."
-horizontal_alignment = 1
-
-[node name="Button" type="Button" parent="SuccessMessage"]
-offset_left = 529.0
-offset_top = 352.0
-offset_right = 729.0
-offset_bottom = 452.0
-theme = ExtResource("3_cl3de")
-text = "Yay!
-LEVEL COMPLETE"
 
 [connection signal="pressed" from="MixButton" to="." method="_on_mix_button_pressed"]
 [connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton1" to="QuestionOverlay/GuessButtons" method="_on_guess_button_pressed"]

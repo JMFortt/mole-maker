@@ -128,8 +128,7 @@ text = "H20"
 
 [node name="Result1" type="Node2D" parent="."]
 visible = false
-modulate = Color(1, 1, 1, 0)
-position = Vector2(500, 250)
+position = Vector2(550, 250)
 
 [node name="Sprite2D" type="Sprite2D" parent="Result1"]
 modulate = Color(0.0936, 0.72, 0.44856, 1)
@@ -147,8 +146,8 @@ theme_override_font_sizes/font_size = 30
 text = "NaOH"
 
 [node name="Result2" type="Node2D" parent="."]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(750, 250)
+visible = false
+position = Vector2(700, 250)
 
 [node name="Sprite2D" type="Sprite2D" parent="Result2"]
 modulate = Color(0.197572, 0.742062, 0.767917, 1)
@@ -156,14 +155,14 @@ position = Vector2(2, -2)
 texture = ExtResource("1_p5ay3")
 
 [node name="Label" type="Label" parent="Result2"]
-offset_left = -17.0
-offset_top = -18.0
-offset_right = 59.0
-offset_bottom = 37.0
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 52.0
+offset_bottom = 35.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_37ckj")
 theme_override_font_sizes/font_size = 30
-text = "H2"
+text = "H20"
 
 [node name="MixButton" type="Button" parent="."]
 offset_left = 529.0
@@ -174,6 +173,7 @@ theme = SubResource("Theme_e8kf7")
 text = "MIX!"
 
 [node name="QuestionOverlay" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -263,34 +263,6 @@ amount = 50
 texture = ExtResource("9_v602c")
 one_shot = true
 process_material = SubResource("ParticleProcessMaterial_fbuuf")
-
-[node name="SuccessMessage" type="Node2D" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="SuccessMessage"]
-offset_left = 461.0
-offset_top = 79.0
-offset_right = 795.0
-offset_bottom = 181.0
-theme_override_fonts/normal_font = ExtResource("2_37ckj")
-theme_override_fonts/bold_font = ExtResource("2_37ckj")
-theme_override_font_sizes/normal_font_size = 20
-theme_override_font_sizes/bold_font_size = 30
-bbcode_enabled = true
-text = "[b]Congratulations![/b]
-
- You made NaOH successfully."
-horizontal_alignment = 1
-
-[node name="Button" type="Button" parent="SuccessMessage"]
-offset_left = 529.0
-offset_top = 352.0
-offset_right = 729.0
-offset_bottom = 452.0
-theme = ExtResource("3_cl3de")
-text = "Yay!
-LEVEL COMPLETE"
 
 [connection signal="pressed" from="MixButton" to="." method="_on_mix_button_pressed"]
 [connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton1" to="QuestionOverlay/GuessButtons" method="_on_guess_button_pressed"]
