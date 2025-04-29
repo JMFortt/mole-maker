@@ -9,15 +9,15 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qixek"]
 bg_color = Color(1, 1, 1, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
 border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wfrcl"]
@@ -189,15 +189,43 @@ script = ExtResource("1_eugj0")
 
 [node name="TicketSpawn" type="Panel" parent="UILayer"]
 anchors_preset = -1
-anchor_top = 0.0680556
-anchor_bottom = 0.0680556
+anchor_top = 0.0972222
+anchor_right = 0.16875
+anchor_bottom = 0.526389
 offset_left = 1027.0
 offset_top = 49.0
 offset_right = 1063.0
 offset_bottom = 110.0
-scale = Vector2(6.63143, 8.07874)
+scale = Vector2(1, 1.218)
 theme_override_styles/panel = SubResource("StyleBoxFlat_qixek")
 metadata/_edit_use_anchors_ = true
+
+[node name="TicketText" type="RichTextLabel" parent="UILayer/TicketSpawn"]
+visible = false
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 242.0
+offset_bottom = 361.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_ospsn")
+theme_override_fonts/bold_font = ExtResource("4_ospsn")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]Want to make:
+NaOH[/b]
+-------------------
+Na + H2O → NaOH + H2
+-------------------
+[b]Make atoms:[/b]
+Na
+H
+O
+[b]Make molecules:[/b]
+H20
+"
+horizontal_alignment = 1
 
 [node name="StageNavBar" type="Control" parent="UILayer"]
 layout_mode = 3

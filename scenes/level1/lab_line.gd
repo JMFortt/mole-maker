@@ -36,6 +36,12 @@ func _on_skip_pressed() -> void:
 			$DialogueUI/SkipButton.text = "Continue"
 	elif current_line == lines.size():
 		dialogue_finished = true
+		# reveal ticket text
+		var ticket_text = get_parent().get_parent().get_node("UILayer/TicketSpawn/TicketText")
+		if ticket_text:
+			ticket_text.visible = true
+		else:
+			push_error("Cannot find TicketText node!")
 		# enable next stage
 		if GameManager.current_level_data:
 			GameManager.current_level_data.lab_line_completed = true

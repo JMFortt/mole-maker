@@ -1,20 +1,21 @@
 extends Node2D
 
-# 1️⃣ Preload your two stage scenes
+# preload your stage scenes
 var LabLineScene = preload("res://scenes/level1/LabLine.tscn")
 var AtomAssemblerScene = preload("res://scenes/level1/AtomAssembler.tscn")
 var MoleculeMakerScene = preload("res://scenes/level1/MoleculeMaker.tscn")
 var SythesisStationScene = preload("res://scenes/level1/SynthesisStation.tscn")
 
-# 2️⃣ Hold references to the instances
+# hold references to the instances
 var lab_line: Node2D
 var atom_assembler: Node2D
 var molecule_maker: Node2D
 var synthesis_station: Node2D
 
 func _ready():
-	# 3️⃣ Instance both, add under StageContainer
 	GameManager.start_level("level_1")
+	
+	# instance them, add under StageContainer
 	lab_line = LabLineScene.instantiate()
 	atom_assembler = AtomAssemblerScene.instantiate()
 	molecule_maker = MoleculeMakerScene.instantiate()
@@ -25,13 +26,13 @@ func _ready():
 	$StageContainer.add_child(molecule_maker)
 	$StageContainer.add_child(synthesis_station)
 
-	# 4️⃣ Show only Lab Line by default
+	# show only Lab Line by default
 	lab_line.visible = true
 	atom_assembler.visible = false
 	molecule_maker.visible = false
 	synthesis_station.visible = false
 
-	# 5️⃣ Hook up your two buttons
+	# hook up your buttons
 	$UILayer/StageNavBar/LabLineButton.connect("pressed", Callable(self, "_on_LabLineButton_pressed"))
 	$UILayer/StageNavBar/AtomAssemblerButton.connect("pressed", Callable(self, "_on_AtomAssemblerButton_pressed"))
 	$UILayer/StageNavBar/MoleculeMakerButton.connect("pressed", Callable(self, "_on_MoleculeMakerButton_pressed"))
