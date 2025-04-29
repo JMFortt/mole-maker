@@ -6,11 +6,12 @@ var molecule_maker_completed = false
 var synthesis_station_completed = false # set true by Q/A button success
 
 # atom assembler variables
-const required_atoms = ["H"]
+const required_atoms = ["H", "O", "Na"]
 var current_atoms = []
 
 # molecule maker variables
-var atoms_placed_correctly = [false]
+const required_molecules = ["H20"]
+var current_molecules = []
 
 # run every time an atom is made successfully
 func check_atom_assembler_completed():
@@ -23,8 +24,8 @@ func check_atom_assembler_completed():
 
 # run every time an atom is placed successfully
 func check_molecule_maker_completed():
-	for placement in atoms_placed_correctly:
-		if placement == false:
+	for molecule in required_molecules:
+		if molecule not in current_molecules:
 			molecule_maker_completed = false
 			return
 	molecule_maker_completed = true

@@ -35,6 +35,7 @@ func _on_skip_pressed() -> void:
 		if current_line == 1:
 			$DialogueUI/SkipButton.text = "Continue"
 	elif current_line == lines.size():
+		# stage completed
 		dialogue_finished = true
 		# reveal ticket text
 		var ticket_text = get_parent().get_parent().get_node("UILayer/TicketSpawn/TicketText")

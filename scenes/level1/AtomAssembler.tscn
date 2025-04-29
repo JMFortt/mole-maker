@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cy8kfvob6180f"]
+[gd_scene load_steps=10 format=3 uid="uid://cy8kfvob6180f"]
 
 [ext_resource type="Script" uid="uid://dnejgg7lniuh4" path="res://scenes/level1/atom_assembler.gd" id="1_70k88"]
 [ext_resource type="Texture2D" uid="uid://bk7scx6n1xs2h" path="res://assets/atomassemblerbackground.png" id="1_ggkhf"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://fbgrj4y2yokf" path="res://assets/proton.png" id="4_0wguy"]
 [ext_resource type="Texture2D" uid="uid://v4fdbxbl52a7" path="res://assets/neutron.png" id="5_cbrif"]
 [ext_resource type="Texture2D" uid="uid://cw4lukm3b7flj" path="res://assets/electron.png" id="6_l7887"]
+[ext_resource type="Script" uid="uid://c5ixkdlesiqg5" path="res://scenes/level1/debug_button.gd" id="7_0wguy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_70k88"]
 radius = 350.38
@@ -157,3 +158,13 @@ shape = SubResource("CircleShape2D_0wguy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropZones/OuterShellZone"]
 position = Vector2(433.566, 259.491)
 shape = SubResource("CircleShape2D_70k88")
+
+[node name="DebugButton" type="Button" parent="."]
+offset_left = 585.0
+offset_top = 35.0
+offset_right = 733.0
+offset_bottom = 66.0
+text = "Enable Next Stage"
+script = ExtResource("7_0wguy")
+
+[connection signal="pressed" from="DebugButton" to="DebugButton" method="_on_pressed_molecule_maker"]
