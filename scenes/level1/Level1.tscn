@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://ckj04xs2msl6r"]
+[gd_scene load_steps=22 format=3 uid="uid://ckj04xs2msl6r"]
 
 [ext_resource type="Script" uid="uid://dmw7ead88nmeq" path="res://scenes/level1/level1.gd" id="1_eugj0"]
 [ext_resource type="StyleBox" uid="uid://c6rykowjenwip" path="res://themes/menu_panel_variant_1_style_box.tres" id="2_edbe2"]
 [ext_resource type="Theme" uid="uid://ceyd5jq3dbr2c" path="res://themes/button_variant_2.tres" id="3_38deu"]
 [ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="4_ospsn"]
+[ext_resource type="Texture2D" uid="uid://drdxldt5ox1cr" path="res://assets/lock.png" id="5_eugj0"]
 [ext_resource type="Texture2D" uid="uid://b3igypxwpe1tt" path="res://assets/figmaPeriodicTable.png" id="6_vc60b"]
 [ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="8_qixek"]
 
@@ -77,6 +78,7 @@ Button/colors/font_color = Color(1, 1, 1, 1)
 Button/constants/outline_size = 30
 Button/font_sizes/font_size = 40
 Button/fonts/font = ExtResource("4_ospsn")
+Button/icons/icon = null
 Button/styles/disabled = SubResource("StyleBoxFlat_wfrcl")
 Button/styles/hover = SubResource("StyleBoxFlat_vc60b")
 Button/styles/normal = SubResource("StyleBoxFlat_eugj0")
@@ -265,6 +267,15 @@ text = "Atom
 Assembler"
 metadata/_edit_use_anchors_ = true
 
+[node name="Lock" type="TextureRect" parent="UILayer/StageNavBar/AtomAssemblerButton"]
+offset_left = 75.0
+offset_top = 15.0
+offset_right = 175.0
+offset_bottom = 115.0
+mouse_filter = 2
+texture = ExtResource("5_eugj0")
+expand_mode = 1
+
 [node name="MoleculeMakerButton" type="Button" parent="UILayer/StageNavBar"]
 layout_mode = 0
 offset_left = 660.0
@@ -277,6 +288,15 @@ text = "Molecule
 Maker"
 metadata/_edit_use_anchors_ = true
 
+[node name="Lock" type="TextureRect" parent="UILayer/StageNavBar/MoleculeMakerButton"]
+offset_left = 75.0
+offset_top = 15.0
+offset_right = 175.0
+offset_bottom = 115.0
+mouse_filter = 2
+texture = ExtResource("5_eugj0")
+expand_mode = 1
+
 [node name="SynthesisStationButton" type="Button" parent="UILayer/StageNavBar"]
 layout_mode = 0
 offset_left = 960.0
@@ -288,6 +308,15 @@ disabled = true
 text = "Synthesis
 Station"
 metadata/_edit_use_anchors_ = true
+
+[node name="Lock" type="TextureRect" parent="UILayer/StageNavBar/SynthesisStationButton"]
+offset_left = 75.0
+offset_top = 15.0
+offset_right = 175.0
+offset_bottom = 115.0
+mouse_filter = 2
+texture = ExtResource("5_eugj0")
+expand_mode = 1
 
 [node name="TopLeftMenu" type="Control" parent="UILayer"]
 layout_mode = 3

@@ -44,12 +44,15 @@ func _ready():
 func _on_stage_access_enabled(flag_name: String):
 	if flag_name == "atom_assembler":
 		$UILayer/StageNavBar/AtomAssemblerButton.disabled = false
+		get_node("UILayer/StageNavBar/AtomAssemblerButton/Lock").visible = false
 		print("button enabled!")
 	elif flag_name == "molecule_maker":
 		$UILayer/StageNavBar/MoleculeMakerButton.disabled = false
+		get_node("UILayer/StageNavBar/MoleculeMakerButton/Lock").visible = false
 		print("button enabled!")
 	elif flag_name == "synthesis_station":
 		$UILayer/StageNavBar/SynthesisStationButton.disabled = false
+		get_node("UILayer/StageNavBar/SynthesisStationButton/Lock").visible = false
 		print("button enabled!")
 	else:
 		push_error("Unknown signal flag detected!")
