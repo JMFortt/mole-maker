@@ -150,23 +150,20 @@ theme_override_font_sizes/bold_font_size = 60
 bbcode_enabled = true
 text = "[b]Welcome to Mole Maker![/b]
 
-[Instructions]--------------------------------------
+In this game you will combine atoms to make new chemical compounds for the many mole poeple of Molville.
 
-[Instructions]--------------------------------------
+- Click the \"Periodic Table\" button at the top right to access one
+- Click the \"Hint\" button at the top right if you get stuck                
 
-[Instructions]--------------------------------------
-
-[Instructions]--------------------------------------
-
-[Instructions]--------------------------------------
-"
+Good luck!"
+horizontal_alignment = 1
 
 [node name="CloseOverlayButton" type="Button" parent="UI/HowToPlayOverlay"]
 layout_mode = 0
-offset_left = 945.0
-offset_top = 143.0
-offset_right = 1015.0
-offset_bottom = 183.0
+offset_left = 590.0
+offset_top = 500.0
+offset_right = 660.0
+offset_bottom = 540.0
 theme = ExtResource("5_rtw2f")
 text = "Close
 "

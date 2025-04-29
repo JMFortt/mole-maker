@@ -18,7 +18,3 @@ func start_level(level_name: String):
 func end_level():
 	print("level over!")
 	current_level_data = null
-
-# to prevent "declared but not used" warnings for things called by other scripts
-func _ignore():
-	stage_access_enabled
