@@ -433,6 +433,8 @@ offset_right = 10147.0
 offset_bottom = 6137.0
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("6_vc60b")
+expand_mode = 5
+stretch_mode = 5
 
 [connection signal="pressed" from="UILayer/TopLeftMenu/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="UILayer/TopLeftMenu/OptionsButton" to="." method="_on_options_button_pressed"]
