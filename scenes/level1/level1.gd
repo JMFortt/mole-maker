@@ -13,45 +13,33 @@ var molecule_maker: Node2D
 var synthesis_station: Node2D
 
 func _ready():
+	# start level
 	GameManager.start_level("level_1")
 
-	# 3️⃣ Instance them, add under StageContainer
-	lab_line      = LabLineScene.instantiate()
+	# instance them, add under StageContainer
+	lab_line = LabLineScene.instantiate()
 	atom_assembler = AtomAssemblerScene.instantiate()
 	molecule_maker = MoleculeMakerScene.instantiate()
 	synthesis_station = SynthesisStationScene.instantiate()
-
 	$StageContainer.add_child(lab_line)
-	lab_line.connect("stage_complete", Callable(self, "_switch_to_atom_assembler"))
-	$StageContainer.add_child(atom_assembler)
 	$StageContainer.add_child(atom_assembler)
 	$StageContainer.add_child(molecule_maker)
 	$StageContainer.add_child(synthesis_station)
 
-	# Connect LabLine’s completion
-	lab_line.connect("stage_complete", Callable(self, "_switch_to_atom_assembler"))
-
-	# Show only Lab Line
-	lab_line.visible       = true
+	# show only Lab Line
+	lab_line.visible = true
 	atom_assembler.visible = false
 	molecule_maker.visible = false
 	synthesis_station.visible = false
 
-	# Hook up nav‐bar buttons correctly using get_node() or $path
+	# hook up nav‐bar buttons correctly using get_node() or $path
 	var nav = $UILayer/StageNavBar
-	nav.get_node("LabLineButton")     .connect("pressed", Callable(self, "_on_LabLineButton_pressed"))
+	nav.get_node("LabLineButton").connect("pressed", Callable(self, "_on_LabLineButton_pressed"))
 	nav.get_node("AtomAssemblerButton").connect("pressed", Callable(self, "_on_AtomAssemblerButton_pressed"))
 	nav.get_node("MoleculeMakerButton").connect("pressed", Callable(self, "_on_MoleculeMakerButton_pressed"))
 	nav.get_node("SynthesisStationButton").connect("pressed", Callable(self, "_on_SynthesisStationButton_pressed"))
 
-	# (Optional for testing) enable AtomAssembler immediately
-	nav.get_node("AtomAssemblerButton").disabled = false
-	nav.get_node("AtomAssemblerButton/Lock").visible = false
-
 	GameManager.stage_access_enabled.connect(self._on_stage_access_enabled)
-	
-	
-
 
 func _on_stage_access_enabled(flag_name: String):
 	if flag_name == "atom_assembler":
@@ -116,7 +104,6 @@ func _on_close_periodic_table_button_pressed() -> void:
 	$UILayer/PeriodicTableOverlay.visible = false
 
 func _switch_to_atom_assembler() -> void:
-	print("🔀 Switching to AtomAssembler")
 	lab_line.visible       = false
 	atom_assembler.visible = true
 	molecule_maker.visible = false
