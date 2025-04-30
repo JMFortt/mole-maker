@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://hag0anlsah6s"]
+
+[node name="ParticleSprite" type="Node2D"]

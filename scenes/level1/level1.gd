@@ -4,7 +4,7 @@ extends Node2D
 var LabLineScene = preload("res://scenes/level1/LabLine.tscn")
 var AtomAssemblerScene = preload("res://scenes/level1/AtomAssembler.tscn")
 var MoleculeMakerScene = preload("res://scenes/level1/MoleculeMaker.tscn")
-var SythesisStationScene = preload("res://scenes/level1/SynthesisStation.tscn")
+var SynthesisStationScene = preload("res://scenes/level1/SynthesisStation.tscn")
 
 # hold references to the instances
 var lab_line: Node2D
@@ -14,32 +14,44 @@ var synthesis_station: Node2D
 
 func _ready():
 	GameManager.start_level("level_1")
-	
-	# instance them, add under StageContainer
-	lab_line = LabLineScene.instantiate()
+
+	# 3️⃣ Instance them, add under StageContainer
+	lab_line      = LabLineScene.instantiate()
 	atom_assembler = AtomAssemblerScene.instantiate()
 	molecule_maker = MoleculeMakerScene.instantiate()
-	synthesis_station = SythesisStationScene.instantiate()
-	
+	synthesis_station = SynthesisStationScene.instantiate()
+
 	$StageContainer.add_child(lab_line)
+	lab_line.connect("stage_complete", Callable(self, "_switch_to_atom_assembler"))
+	$StageContainer.add_child(atom_assembler)
 	$StageContainer.add_child(atom_assembler)
 	$StageContainer.add_child(molecule_maker)
 	$StageContainer.add_child(synthesis_station)
 
-	# show only Lab Line by default
-	lab_line.visible = true
+	# Connect LabLine’s completion
+	lab_line.connect("stage_complete", Callable(self, "_switch_to_atom_assembler"))
+
+	# Show only Lab Line
+	lab_line.visible       = true
 	atom_assembler.visible = false
 	molecule_maker.visible = false
 	synthesis_station.visible = false
 
-	# hook up your buttons
-	$UILayer/StageNavBar/LabLineButton.connect("pressed", Callable(self, "_on_LabLineButton_pressed"))
-	$UILayer/StageNavBar/AtomAssemblerButton.connect("pressed", Callable(self, "_on_AtomAssemblerButton_pressed"))
-	$UILayer/StageNavBar/MoleculeMakerButton.connect("pressed", Callable(self, "_on_MoleculeMakerButton_pressed"))
-	$UILayer/StageNavBar/SynthesisStationButton.connect("pressed", Callable(self, "_on_SynthesisStationButton_pressed"))
-	
-	# stage access flag changed -> enable relevant stag button
+	# Hook up nav‐bar buttons correctly using get_node() or $path
+	var nav = $UILayer/StageNavBar
+	nav.get_node("LabLineButton")     .connect("pressed", Callable(self, "_on_LabLineButton_pressed"))
+	nav.get_node("AtomAssemblerButton").connect("pressed", Callable(self, "_on_AtomAssemblerButton_pressed"))
+	nav.get_node("MoleculeMakerButton").connect("pressed", Callable(self, "_on_MoleculeMakerButton_pressed"))
+	nav.get_node("SynthesisStationButton").connect("pressed", Callable(self, "_on_SynthesisStationButton_pressed"))
+
+	# (Optional for testing) enable AtomAssembler immediately
+	nav.get_node("AtomAssemblerButton").disabled = false
+	nav.get_node("AtomAssemblerButton/Lock").visible = false
+
 	GameManager.stage_access_enabled.connect(self._on_stage_access_enabled)
+	
+	
+
 
 func _on_stage_access_enabled(flag_name: String):
 	if flag_name == "atom_assembler":
@@ -104,7 +116,8 @@ func _on_close_periodic_table_button_pressed() -> void:
 	$UILayer/PeriodicTableOverlay.visible = false
 
 func _switch_to_atom_assembler() -> void:
-	lab_line.visible = false
+	print("🔀 Switching to AtomAssembler")
+	lab_line.visible       = false
 	atom_assembler.visible = true
 	molecule_maker.visible = false
 	synthesis_station.visible = false

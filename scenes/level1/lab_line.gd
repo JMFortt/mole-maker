@@ -50,3 +50,4 @@ func _on_skip_pressed() -> void:
 			GameManager.emit_signal("stage_access_enabled", "atom_assembler")
 			print("next stage available!")
 		$DialogueUI/SkipButton.text = "Next Stage"
+		emit_signal("stage_complete")

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dhi7m7668ujst" path="res://scenes/level1/DraggableParticle.gd" id="1_pmwd1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yf48t"]
+radius = 95.1315
 
 [node name="DraggableParticle" type="Area2D"]
 script = ExtResource("1_pmwd1")
