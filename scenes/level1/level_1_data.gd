@@ -52,6 +52,6 @@ func get_star_rating() -> Array:
 	if guess_answered_correctly:
 		num_stars += 1
 	else:
-		messages.append("Was the extra product what you guessed?")
+		messages.append("Was the extra product what you expected?")
 	star_rating = num_stars
 	return [num_stars, messages]

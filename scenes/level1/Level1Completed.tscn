@@ -68,6 +68,7 @@ grow_vertical = 0
 theme_override_styles/panel = ExtResource("3_ighv1")
 
 [node name="StarMessage" type="RichTextLabel" parent="UILayer/StarDisplay"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_top = 82.0
 offset_right = 1274.0
@@ -96,6 +97,7 @@ text = "[b]Level 1 Completed![/b]"
 horizontal_alignment = 1
 
 [node name="Star1" type="Node2D" parent="UILayer/StarDisplay"]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(485, 60)
 
 [node name="StarOutline" type="Polygon2D" parent="UILayer/StarDisplay/Star1"]
@@ -109,6 +111,7 @@ color = Color(0.996078, 0.831373, 0.188235, 1)
 polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
 
 [node name="Star2" type="Node2D" parent="UILayer/StarDisplay"]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(635, 60)
 
 [node name="StarOutline" type="Polygon2D" parent="UILayer/StarDisplay/Star2"]
@@ -122,6 +125,7 @@ color = Color(0.721569, 0.721569, 0.721569, 1)
 polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
 
 [node name="Star3" type="Node2D" parent="UILayer/StarDisplay"]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(785, 60)
 
 [node name="StarOutline" type="Polygon2D" parent="UILayer/StarDisplay/Star3"]
@@ -135,7 +139,7 @@ color = Color(0.721569, 0.721569, 0.721569, 1)
 polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
 
 [node name="Sprite2D" type="Sprite2D" parent="UILayer"]
-position = Vector2(646, 212)
+position = Vector2(641, 276)
 scale = Vector2(0.2, 0.219)
 texture = ExtResource("5_bt32j")
 

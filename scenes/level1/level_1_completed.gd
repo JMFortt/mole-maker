@@ -36,6 +36,17 @@ func animate_star_display():
 		star2.get_node("StarMain").color = star_color
 	if star_rating[0] >= 3:
 		star3.get_node("StarMain").color = star_color
+	for star in [star1, star2, star3]:
+		star.scale = Vector2(0.1, 0.1)
+		# animate stars using a tween method
+		var star_tween = create_tween()
+		star_tween.parallel().tween_property(star, "modulate", Color("#ffffff"), 1)
+		star_tween.parallel().tween_property(star, "scale", Vector2.ONE, 1)
+		star_tween.parallel().tween_property(star, "rotation", TAU, 1)
+		await star_tween.finished
+	var message_tween = create_tween()
+	message_tween.parallel().tween_property(star_message, "modulate", Color("#ffffff"), 1)
+	await message_tween.finished
 
 func _on_back_button_pressed() -> void:
 	# back to level select
