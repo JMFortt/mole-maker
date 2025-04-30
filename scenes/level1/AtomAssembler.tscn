@@ -119,33 +119,121 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(345, 128)
 scale = Vector2(0.686403, 0.649792)
 
+[node name="InnerShellZone2" type="TextureRect" parent="DropZones"]
+offset_left = 518.646
+offset_top = 66.175
+offset_right = 1018.64
+offset_bottom = 566.175
+scale = Vector2(0.178504, 0.178504)
+texture = ExtResource("8_hgrql")
+script = ExtResource("7_ke74j")
+allowed_types = Array[String](["electron"])
+zone_id = 1
+
 [node name="NucleusZone" type="TextureRect" parent="DropZones"]
-offset_left = 706.582
-offset_top = -64.6361
-offset_right = 1206.58
-offset_bottom = 435.364
+offset_left = 314.684
+offset_top = 133.889
+offset_right = 814.682
+offset_bottom = 633.889
 scale = Vector2(0.452592, 0.484671)
 texture = ExtResource("6_ke74j")
 script = ExtResource("7_ke74j")
 allowed_types = Array[String](["proton", "neutron"])
 
 [node name="InnerShellZone" type="TextureRect" parent="DropZones"]
-offset_left = 710.953
-offset_top = 196.986
-offset_right = 1210.95
-offset_bottom = 696.986
-scale = Vector2(0.4516, 0.4516)
+offset_left = 254.952
+offset_top = 330.875
+offset_right = 754.949
+offset_bottom = 830.875
+scale = Vector2(0.184212, 0.184212)
 texture = ExtResource("8_hgrql")
 script = ExtResource("7_ke74j")
 allowed_types = Array[String](["electron"])
 zone_id = 1
 
 [node name="OuterShellZone" type="TextureRect" parent="DropZones"]
-offset_left = 689.1
-offset_top = 461.686
-offset_right = 1189.1
-offset_bottom = 961.686
-scale = Vector2(0.452123, 0.452123)
+offset_left = 638.109
+offset_top = 367.81
+offset_right = 1138.11
+offset_bottom = 867.81
+scale = Vector2(0.207694, 0.207694)
+texture = ExtResource("9_ufhks")
+script = ExtResource("7_ke74j")
+allowed_types = Array[String](["electron"])
+zone_id = 2
+
+[node name="OuterShellZone2" type="TextureRect" parent="DropZones"]
+offset_left = 224.358
+offset_top = -41.5518
+offset_right = 724.358
+offset_bottom = 458.448
+scale = Vector2(0.207694, 0.207694)
+texture = ExtResource("9_ufhks")
+script = ExtResource("7_ke74j")
+allowed_types = Array[String](["electron"])
+zone_id = 2
+
+[node name="OuterShellZone3" type="TextureRect" parent="DropZones"]
+offset_left = 106.352
+offset_top = 118.499
+offset_right = 606.352
+offset_bottom = 618.499
+scale = Vector2(0.207694, 0.207694)
+texture = ExtResource("9_ufhks")
+script = ExtResource("7_ke74j")
+allowed_types = Array[String](["electron"])
+zone_id = 2
+
+[node name="OuterShellZone4" type="TextureRect" parent="DropZones"]
+offset_left = 118.006
+offset_top = 313.947
+offset_right = 618.006
+offset_bottom = 813.947
+scale = Vector2(0.207694, 0.207694)
+texture = ExtResource("9_ufhks")
+script = ExtResource("7_ke74j")
+allowed_types = Array[String](["electron"])
+zone_id = 2
+
+[node name="OuterShellZone5" type="TextureRect" parent="DropZones"]
+offset_left = 244.754
+offset_top = 460.147
+offset_right = 744.754
+offset_bottom = 960.147
+scale = Vector2(0.207694, 0.207694)
+texture = ExtResource("9_ufhks")
+script = ExtResource("7_ke74j")
+allowed_types = Array[String](["electron"])
+zone_id = 2
+
+[node name="OuterShellZone6" type="TextureRect" parent="DropZones"]
+offset_left = 448.716
+offset_top = 472.459
+offset_right = 948.716
+offset_bottom = 972.459
+scale = Vector2(0.207694, 0.207694)
+texture = ExtResource("9_ufhks")
+script = ExtResource("7_ke74j")
+allowed_types = Array[String](["electron"])
+zone_id = 2
+
+[node name="OuterShellZone7" type="TextureRect" parent="DropZones"]
+offset_left = 664.333
+offset_top = 210.837
+offset_right = 1164.33
+offset_bottom = 710.837
+scale = Vector2(0.207694, 0.207694)
+texture = ExtResource("9_ufhks")
+script = ExtResource("7_ke74j")
+allowed_types = Array[String](["electron"])
+zone_id = 2
+
+[node name="OuterShellZone8" type="TextureRect" parent="DropZones"]
+offset_left = 523.016
+offset_top = -78.4867
+offset_right = 1023.02
+offset_bottom = 421.513
+scale = Vector2(0.207694, 0.207694)
 texture = ExtResource("9_ufhks")
 script = ExtResource("7_ke74j")
 allowed_types = Array[String](["electron"])
