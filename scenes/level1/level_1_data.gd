@@ -1,8 +1,10 @@
 extends Node
 
+# level select record variables
 var level_name = "level_1"
 var star_rating = null
 
+# stage completed variables
 var lab_line_completed = false # set true by dialogue button completion
 var atom_assembler_completed = false
 var molecule_maker_completed = false

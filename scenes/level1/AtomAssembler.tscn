@@ -2,15 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://bk7scx6n1xs2h" path="res://assets/atomassemblerbackground.png" id="1_ggkhf"]
 [ext_resource type="Script" uid="uid://du3gc74e7p6hp" path="res://scenes/level1/AtomAssembler.gd" id="1_hgrql"]
-[ext_resource type="Script" uid="uid://p6ops3lpnto4" path="res://scenes/level1/ParticleSource.gd" id="3_cbrif"]
 [ext_resource type="Texture2D" uid="uid://fbgrj4y2yokf" path="res://assets/proton.png" id="4_0wguy"]
 [ext_resource type="Texture2D" uid="uid://v4fdbxbl52a7" path="res://assets/neutron.png" id="5_cbrif"]
-[ext_resource type="Texture2D" uid="uid://blmx5km62s1jh" path="res://assets/nucleus.jpg" id="6_ke74j"]
+[ext_resource type="Script" uid="uid://dc233iitfsmv8" path="res://scenes/level1/number_field.gd" id="5_ke74j"]
 [ext_resource type="Texture2D" uid="uid://cw4lukm3b7flj" path="res://assets/electron.png" id="6_l7887"]
 [ext_resource type="Script" uid="uid://c5ixkdlesiqg5" path="res://scenes/level1/debug_button.gd" id="7_0wguy"]
-[ext_resource type="Script" uid="uid://c1ws6s17i0pnh" path="res://scenes/level1/DropZone.gd" id="7_ke74j"]
-[ext_resource type="Texture2D" uid="uid://dmsbxk6xahixy" path="res://assets/outershell.jpg" id="8_hgrql"]
-[ext_resource type="Texture2D" uid="uid://d0t3065nokojs" path="res://assets/innershell.jpg" id="9_ufhks"]
+[ext_resource type="Script" uid="uid://c1jje0fl4pjqo" path="res://scenes/level1/add_atom_component_button.gd" id="9_hgrql"]
+[ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="12_lxf7n"]
+[ext_resource type="StyleBox" uid="uid://c6rykowjenwip" path="res://themes/menu_panel_variant_1_style_box.tres" id="13_j3f87"]
+[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="14_2t3cr"]
 
 [node name="AtomAssembler" type="Node2D"]
 script = ExtResource("1_hgrql")
@@ -21,230 +21,240 @@ offset_bottom = 730.0
 color = Color(0, 0.368627, 0.658824, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AtomImage" type="Sprite2D" parent="."]
 position = Vector2(634.439, 291.479)
 scale = Vector2(0.53543, 0.528701)
 texture = ExtResource("1_ggkhf")
 region_enabled = true
 region_rect = Rect2(301.051, 0, 928.661, 887.41)
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(103.716, 338.618)
-scale = Vector2(0.53543, 0.528701)
+[node name="InputBackground" type="Sprite2D" parent="."]
+position = Vector2(177.5, 338.618)
+scale = Vector2(1.15546, 0.528701)
 texture = ExtResource("1_ggkhf")
 region_enabled = true
 region_rect = Rect2(22.31, 0, 238.207, 827.883)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 10.0
-offset_top = 78.0
-offset_right = 50.0
-offset_bottom = 118.0
-scale = Vector2(0.817455, 0.783436)
-metadata/_edit_use_anchors_ = true
+[node name="Protons" type="Node2D" parent="."]
 
-[node name="ProtonSource" type="TextureButton" parent="."]
+[node name="ProtonSource" type="TextureButton" parent="Protons"]
 offset_left = 72.7162
 offset_top = 166.618
 offset_right = 253.716
 offset_bottom = 351.618
 scale = Vector2(0.363646, 0.348512)
 texture_normal = ExtResource("4_0wguy")
-script = ExtResource("3_cbrif")
-particle_type = "proton"
-icon = ExtResource("4_0wguy")
 metadata/_edit_use_anchors_ = true
 
-[node name="NeutronSource" type="TextureButton" parent="."]
+[node name="LineEdit" type="LineEdit" parent="Protons"]
+offset_left = 150.0
+offset_top = 180.0
+offset_right = 218.563
+offset_bottom = 211.0
+theme_override_fonts/font = ExtResource("14_2t3cr")
+placeholder_text = "Number"
+alignment = 1
+virtual_keyboard_type = 2
+script = ExtResource("5_ke74j")
+
+[node name="Count" type="Label" parent="Protons"]
+offset_left = 305.0
+offset_top = 175.0
+offset_right = 413.0
+offset_bottom = 224.0
+scale = Vector2(0.817455, 0.783436)
+text = "Proton Count:
+0"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AddAtomComponentButton" type="Button" parent="Protons"]
+offset_left = 230.0
+offset_top = 178.0
+offset_right = 280.0
+offset_bottom = 210.0
+theme = ExtResource("12_lxf7n")
+text = "Add"
+script = ExtResource("9_hgrql")
+
+[node name="Neutrons" type="Node2D" parent="."]
+
+[node name="NeutronSource" type="TextureButton" parent="Neutrons"]
 offset_left = 75.7162
 offset_top = 303.618
 offset_right = 256.716
 offset_bottom = 503.618
 scale = Vector2(0.326273, 0.312695)
 texture_normal = ExtResource("5_cbrif")
-script = ExtResource("3_cbrif")
-particle_type = "neutron"
-icon = ExtResource("5_cbrif")
 metadata/_edit_use_anchors_ = true
 
-[node name="ElectronSource" type="TextureButton" parent="."]
+[node name="LineEdit" type="LineEdit" parent="Neutrons"]
+offset_left = 150.0
+offset_top = 324.0
+offset_right = 218.563
+offset_bottom = 355.0
+theme_override_fonts/font = ExtResource("14_2t3cr")
+placeholder_text = "Number"
+alignment = 1
+virtual_keyboard_type = 2
+script = ExtResource("5_ke74j")
+
+[node name="Count" type="Label" parent="Neutrons"]
+offset_left = 300.0
+offset_top = 324.0
+offset_right = 421.0
+offset_bottom = 373.0
+scale = Vector2(0.817455, 0.783436)
+text = "Neutron Count:
+0"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AddAtomComponentButton" type="Button" parent="Neutrons"]
+offset_left = 230.0
+offset_top = 322.0
+offset_right = 280.0
+offset_bottom = 354.0
+theme = ExtResource("12_lxf7n")
+text = "Add"
+script = ExtResource("9_hgrql")
+
+[node name="Electrons" type="Node2D" parent="."]
+
+[node name="ElectronSource" type="TextureButton" parent="Electrons"]
 offset_left = 72.7162
 offset_top = 442.618
 offset_right = 253.716
 offset_bottom = 627.618
 scale = Vector2(0.368308, 0.35298)
 texture_normal = ExtResource("6_l7887")
-script = ExtResource("3_cbrif")
-particle_type = "electron"
-icon = ExtResource("6_l7887")
 metadata/_edit_use_anchors_ = true
 
-[node name="ProtonCountLabel" type="Label" parent="."]
-offset_left = 244.0
-offset_top = 241.0
-offset_right = 352.0
-offset_bottom = 264.0
+[node name="LineEdit" type="LineEdit" parent="Electrons"]
+offset_left = 150.0
+offset_top = 465.0
+offset_right = 218.563
+offset_bottom = 496.0
+theme_override_fonts/font = ExtResource("14_2t3cr")
+placeholder_text = "Number"
+alignment = 1
+virtual_keyboard_type = 2
+script = ExtResource("5_ke74j")
+
+[node name="Count" type="Label" parent="Electrons"]
+offset_left = 300.0
+offset_top = 461.0
+offset_right = 419.0
+offset_bottom = 510.0
 scale = Vector2(0.817455, 0.783436)
-text = "Proton Count:"
+text = "Electron Count:
+0"
+horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="NeutronCountLabel" type="Label" parent="."]
-offset_left = 242.0
-offset_top = 270.0
-offset_right = 363.0
-offset_bottom = 293.0
-scale = Vector2(0.817455, 0.783436)
-text = "Neutron Count:"
-metadata/_edit_use_anchors_ = true
+[node name="AddAtomComponentButton" type="Button" parent="Electrons"]
+offset_left = 230.0
+offset_top = 464.0
+offset_right = 280.0
+offset_bottom = 496.0
+theme = ExtResource("12_lxf7n")
+text = "Add"
+script = ExtResource("9_hgrql")
 
-[node name="InnerECountLabel" type="Label" parent="."]
-offset_left = 242.0
-offset_top = 292.0
-offset_right = 352.0
-offset_bottom = 315.0
-scale = Vector2(0.817455, 0.783436)
-text = "Inner E Count:"
-metadata/_edit_use_anchors_ = true
+[node name="AtomList" type="Node2D" parent="."]
+position = Vector2(971, 124)
 
-[node name="OuterECountLabel" type="Label" parent="."]
-offset_left = 242.0
-offset_top = 327.0
-offset_right = 356.0
-offset_bottom = 350.0
-scale = Vector2(0.817455, 0.783436)
-text = "Outer E Count:"
-metadata/_edit_use_anchors_ = true
+[node name="Panel" type="Panel" parent="AtomList"]
+offset_left = -69.0
+offset_top = -5.0
+offset_right = 41.0
+offset_bottom = 422.0
+theme_override_styles/panel = ExtResource("13_j3f87")
 
-[node name="DropZones" type="Node2D" parent="."]
-position = Vector2(345, 128)
-scale = Vector2(0.686403, 0.649792)
+[node name="RichTextLabel" type="RichTextLabel" parent="AtomList"]
+offset_left = -57.0
+offset_top = 7.0
+offset_right = 27.0
+offset_bottom = 409.0
+theme_override_fonts/normal_font = ExtResource("14_2t3cr")
+theme_override_fonts/bold_font = ExtResource("14_2t3cr")
+theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[b]Your Atoms:[/b]
 
-[node name="InnerShellZone2" type="TextureRect" parent="DropZones"]
-offset_left = 518.646
-offset_top = 66.175
-offset_right = 1018.64
-offset_bottom = 566.175
-scale = Vector2(0.178504, 0.178504)
-texture = ExtResource("8_hgrql")
-script = ExtResource("7_ke74j")
-allowed_types = Array[String](["electron"])
-zone_id = 1
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+"
+horizontal_alignment = 1
 
-[node name="NucleusZone" type="TextureRect" parent="DropZones"]
-offset_left = 314.684
-offset_top = 133.889
-offset_right = 814.682
-offset_bottom = 633.889
-scale = Vector2(0.452592, 0.484671)
-texture = ExtResource("6_ke74j")
-script = ExtResource("7_ke74j")
-allowed_types = Array[String](["proton", "neutron"])
+[node name="ResetAtomButton" type="Button" parent="."]
+offset_left = 834.0
+offset_top = 35.0
+offset_right = 949.0
+offset_bottom = 85.0
+theme = ExtResource("12_lxf7n")
+text = "Reset Atom"
 
-[node name="InnerShellZone" type="TextureRect" parent="DropZones"]
-offset_left = 254.952
-offset_top = 330.875
-offset_right = 754.949
-offset_bottom = 830.875
-scale = Vector2(0.184212, 0.184212)
-texture = ExtResource("8_hgrql")
-script = ExtResource("7_ke74j")
-allowed_types = Array[String](["electron"])
-zone_id = 1
-
-[node name="OuterShellZone" type="TextureRect" parent="DropZones"]
-offset_left = 638.109
-offset_top = 367.81
-offset_right = 1138.11
-offset_bottom = 867.81
-scale = Vector2(0.207694, 0.207694)
-texture = ExtResource("9_ufhks")
-script = ExtResource("7_ke74j")
-allowed_types = Array[String](["electron"])
-zone_id = 2
-
-[node name="OuterShellZone2" type="TextureRect" parent="DropZones"]
-offset_left = 224.358
-offset_top = -41.5518
-offset_right = 724.358
-offset_bottom = 458.448
-scale = Vector2(0.207694, 0.207694)
-texture = ExtResource("9_ufhks")
-script = ExtResource("7_ke74j")
-allowed_types = Array[String](["electron"])
-zone_id = 2
-
-[node name="OuterShellZone3" type="TextureRect" parent="DropZones"]
-offset_left = 106.352
-offset_top = 118.499
-offset_right = 606.352
-offset_bottom = 618.499
-scale = Vector2(0.207694, 0.207694)
-texture = ExtResource("9_ufhks")
-script = ExtResource("7_ke74j")
-allowed_types = Array[String](["electron"])
-zone_id = 2
-
-[node name="OuterShellZone4" type="TextureRect" parent="DropZones"]
-offset_left = 118.006
-offset_top = 313.947
-offset_right = 618.006
-offset_bottom = 813.947
-scale = Vector2(0.207694, 0.207694)
-texture = ExtResource("9_ufhks")
-script = ExtResource("7_ke74j")
-allowed_types = Array[String](["electron"])
-zone_id = 2
-
-[node name="OuterShellZone5" type="TextureRect" parent="DropZones"]
-offset_left = 244.754
-offset_top = 460.147
-offset_right = 744.754
-offset_bottom = 960.147
-scale = Vector2(0.207694, 0.207694)
-texture = ExtResource("9_ufhks")
-script = ExtResource("7_ke74j")
-allowed_types = Array[String](["electron"])
-zone_id = 2
-
-[node name="OuterShellZone6" type="TextureRect" parent="DropZones"]
-offset_left = 448.716
-offset_top = 472.459
-offset_right = 948.716
-offset_bottom = 972.459
-scale = Vector2(0.207694, 0.207694)
-texture = ExtResource("9_ufhks")
-script = ExtResource("7_ke74j")
-allowed_types = Array[String](["electron"])
-zone_id = 2
-
-[node name="OuterShellZone7" type="TextureRect" parent="DropZones"]
-offset_left = 664.333
-offset_top = 210.837
-offset_right = 1164.33
-offset_bottom = 710.837
-scale = Vector2(0.207694, 0.207694)
-texture = ExtResource("9_ufhks")
-script = ExtResource("7_ke74j")
-allowed_types = Array[String](["electron"])
-zone_id = 2
-
-[node name="OuterShellZone8" type="TextureRect" parent="DropZones"]
-offset_left = 523.016
-offset_top = -78.4867
-offset_right = 1023.02
-offset_bottom = 421.513
-scale = Vector2(0.207694, 0.207694)
-texture = ExtResource("9_ufhks")
-script = ExtResource("7_ke74j")
-allowed_types = Array[String](["electron"])
-zone_id = 2
+[node name="MakeAtomButton" type="Button" parent="."]
+offset_left = 353.0
+offset_top = 35.0
+offset_right = 468.0
+offset_bottom = 85.0
+theme = ExtResource("12_lxf7n")
+text = "Make Atom"
 
 [node name="DebugButton" type="Button" parent="."]
-offset_left = 585.0
-offset_top = 35.0
-offset_right = 733.0
-offset_bottom = 66.0
+offset_left = 541.0
+offset_top = 516.0
+offset_right = 689.0
+offset_bottom = 547.0
 text = "Enable Next Stage"
 script = ExtResource("7_0wguy")
 
+[connection signal="text_changed" from="Protons/LineEdit" to="Protons/LineEdit" method="_on_text_changed"]
+[connection signal="pressed" from="Protons/AddAtomComponentButton" to="Protons/AddAtomComponentButton" method="_on_add_button_pressed"]
+[connection signal="text_changed" from="Neutrons/LineEdit" to="Neutrons/LineEdit" method="_on_text_changed"]
+[connection signal="pressed" from="Neutrons/AddAtomComponentButton" to="Neutrons/AddAtomComponentButton" method="_on_add_button_pressed"]
+[connection signal="text_changed" from="Electrons/LineEdit" to="Electrons/LineEdit" method="_on_text_changed"]
+[connection signal="pressed" from="Electrons/AddAtomComponentButton" to="Electrons/AddAtomComponentButton" method="_on_add_button_pressed"]
+[connection signal="pressed" from="ResetAtomButton" to="." method="_on_reset_atom_button_pressed"]
+[connection signal="pressed" from="MakeAtomButton" to="." method="create_atom"]
 [connection signal="pressed" from="DebugButton" to="DebugButton" method="_on_pressed_molecule_maker"]

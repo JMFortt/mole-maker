@@ -1,74 +1,102 @@
 class_name AtomAssembler 
 extends Node2D
 
-var ParticleScene : PackedScene = preload("res://scenes/level1/ParticleSprite.tscn")
-
-var proton  : int = 0
-var neutron : int = 0
-var inner_e : int = 0
-var outer_e : int = 0
+@onready var atom_list = $AtomList/RichTextLabel
+@onready var proton_counter = $Protons/Count
+@onready var neutron_counter = $Neutrons/Count
+@onready var electron_counter = $Electrons/Count
+var protons  : int = 0
+var neutrons : int = 0
+var electrons : int = 0
+# structure: <number protons>: [<number electrons>, <number neutrons>, <full name>, <shorthand name>]
+const possible_atoms = {
+	1:  [1, 0, "Hydrogen", "H"],
+	2:  [2, 2, "Helium", "He"],
+	3:  [3, 4, "Lithium", "Li"],
+	4:  [4, 5, "Beryllium", "Be"],
+	5:  [5, 6, "Boron", "B"],
+	6:  [6, 6, "Carbon", "C"],
+	7:  [7, 7, "Nitrogen", "N"],
+	8:  [8, 8, "Oxygen", "O"],
+	9:  [9, 10, "Fluorine", "F"],
+	10: [10, 10, "Neon", "Ne"],
+	11: [11, 12, "Sodium", "Na"],
+	12: [12, 12, "Magnesium", "Mg"],
+	13: [13, 14, "Aluminum", "Al"],
+	14: [14, 14, "Silicon", "Si"],
+	15: [15, 16, "Phosphorus", "P"],
+	16: [16, 16, "Sulfur", "S"],
+	17: [17, 18, "Chlorine", "Cl"],
+	18: [18, 22, "Argon", "Ar"],
+	19: [19, 20, "Potassium", "K"],
+	20: [20, 20, "Calcium", "Ca"]
+}
 
 func _ready():
-	name = "AtomAssembler"      # ensure the node’s actual name
-	print("[ASM] ready —", self)
-	_update_labels()
+	_update_atom_list()
+	update_counters()
 
-func spawn_particle_at(zone: int, ptype: String) -> void:
-	# ------------------------------------------------ 1.  load texture
-	var tex_path := "res://assets/%s.png" % ptype
-	var tex: Texture2D = load(tex_path)
-	if tex == null:
-		push_error("[ASM] ⚠ texture missing → " + tex_path)
-		return
+func create_atom():
+	if protons in possible_atoms.keys():
+		var element_dict_entry = possible_atoms[protons]
+		if electrons == element_dict_entry[0] && neutrons == element_dict_entry[1]:
+			print("made " + element_dict_entry[2] + "!")
+			GameManager.current_level_data.current_atoms.append(element_dict_entry[3])
+			_update_atom_list()
+			_on_reset_atom_button_pressed()
+	else:
+		print("Not a known atom!")
+	print("current atoms: ", GameManager.current_level_data.current_atoms)
+	_stage_complete_check()
 
-	# ------------------------------------------------ 2.  build particle (Control)
-	var rect := TextureRect.new()
-	rect.texture        = tex
-	rect.expand_mode    = TextureRect.EXPAND_KEEP_SIZE
-	rect.size           = tex.get_size()          # be sure size ≠ 0
-	rect.pivot_offset   = rect.size * 0.5
-	rect.anchor_left    = 0.5                     # anchor in parent centre
-	rect.anchor_top     = 0.5
-	rect.anchor_right   = 0.5
-	rect.anchor_bottom  = 0.5
-	rect.position       = Vector2.ZERO            # so anchor == final pos
-	rect.mouse_filter   = Control.MOUSE_FILTER_IGNORE
-	rect.z_index        = 10                      # draw above zone art
+func add_atom_components(component_type: String, number: int):
+	if component_type == "proton":
+		protons = min(1000, protons + number)
+	elif component_type == "neutron":
+		neutrons = min(1000, neutrons + number)
+	elif component_type == "electron":
+		electrons = min(1000, electrons + number)
+	else:
+		push_error("Invalid atom component type!")
+	update_counters()
 
-	# ------------------------------------------------ 3.  pick target zone
-	var target: Control = null                    # declare first
-	match zone:
-		0:
-			target = $DropZones/NucleusZone
-		1:
-			target = $DropZones/InnerShellZone
-		2:
-			target = $DropZones/OuterShellZone
-		_:
-			push_error("[ASM] ❌ invalid zone id " + str(zone))
-			return
+func update_counters():
+	proton_counter.text = "Proton Count:\n"
+	neutron_counter.text = "Neutron Count:\n"
+	electron_counter.text = "Electron Count:\n"
+	proton_counter.text += str(protons)
+	neutron_counter.text += str(neutrons)
+	electron_counter.text += str(electrons)
 
-	target.add_child(rect)
-	print("[ASM] ✔ added", ptype, "to", target.name)
+func _update_atom_list():
+	atom_list.text = "[b]Your Atoms:[/b]\n\n"
+	for atom in GameManager.current_level_data.current_atoms:
+		atom_list.text += atom + "\n"
 
-	# ------------------------------------------------ 4.  update counters
-	match ptype:
-		"proton":
-			if zone == 0: proton += 1
-		"neutron":
-			if zone == 0: neutron += 1
-		"electron":
-			if zone == 1:
-				inner_e += 1
-			elif zone == 2:
-				outer_e += 1
+func _stage_complete_check():
+	## start of debug section:
+	#GameManager.current_level_data.current_atoms.append("H")
+	#GameManager.current_level_data.current_atoms.append("Na")
+	#GameManager.current_level_data.current_atoms.append("O")
+	#_update_atom_list()
+	## end of debug section:
+	print("checking if stage is completed...")
+	if GameManager.current_level_data:
+		GameManager.current_level_data.check_atom_assembler_completed()
+		if GameManager.current_level_data.atom_assembler_completed:
+			print("Atom assembler stage completed!")
+			# enable next stage
+			GameManager.current_level_data.atom_assembler_completed = true
+			GameManager.emit_signal("stage_access_enabled", "molecule_maker")
+			print("next stage available!")
+		else:
+			print("Atom assembler stage not completed.")
+	else:
+		push_error("No current level data!")
 
-	_update_labels()
 
-
-func _update_labels():
-	$ProtonCountLabel.text   = str(proton)
-	$NeutronCountLabel.text  = str(neutron)
-	$InnerECountLabel.text   = str(inner_e)
-	$OuterECountLabel.text   = str(outer_e)
-	print("[ASM] counts  P", proton, " N", neutron, " e(1)", inner_e, " e(2)", outer_e)
+func _on_reset_atom_button_pressed() -> void:
+	protons = 0
+	neutrons = 0
+	electrons = 0
+	update_counters()
