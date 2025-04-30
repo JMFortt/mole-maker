@@ -77,3 +77,7 @@ func _update_swirl(angle: float):
 	var modifier = lerp(1.0, 0.5, progress)
 	ingredient1.scale = Vector2.ONE * modifier
 	ingredient2.scale = Vector2.ONE * modifier
+
+
+func _on_success_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/level1/Level1Completed.tscn")

@@ -1,9 +1,16 @@
 extends Node
 
+var level_name = "level_1"
+var star_rating = null
+
 var lab_line_completed = false # set true by dialogue button completion
 var atom_assembler_completed = false
 var molecule_maker_completed = false
 var synthesis_station_completed = false # set true by Q/A button success
+
+# star system variables
+var guess_answered_correctly = false
+var level_start_time = Time.get_ticks_msec()
 
 # atom assembler variables
 const required_atoms = ["H", "O", "Na"]
@@ -30,3 +37,21 @@ func check_molecule_maker_completed():
 			return
 	molecule_maker_completed = true
 	return
+
+func get_star_rating() -> Array:
+	var num_stars = 1
+	var messages = []
+	# check timer
+	var time_elapsed = (Time.get_ticks_msec() - level_start_time) / 1000.0
+	print("time to complete level: ", time_elapsed)
+	if time_elapsed  <= 60:
+		num_stars += 1
+	else:
+		messages.append("See if you can go even faster next time!")
+	# check if final guess was correct
+	if guess_answered_correctly:
+		num_stars += 1
+	else:
+		messages.append("Was the extra product what you guessed?")
+	star_rating = num_stars
+	return [num_stars, messages]

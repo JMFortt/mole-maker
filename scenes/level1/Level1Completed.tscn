@@ -1,0 +1,143 @@
+[gd_scene load_steps=6 format=3 uid="uid://c58g52qlgypy3"]
+
+[ext_resource type="Script" uid="uid://bsmkf3rgjxnoa" path="res://scenes/level1/level_1_completed.gd" id="1_0u3g7"]
+[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="2_piifd"]
+[ext_resource type="StyleBox" uid="uid://c6rykowjenwip" path="res://themes/menu_panel_variant_1_style_box.tres" id="3_ighv1"]
+[ext_resource type="Texture2D" uid="uid://brbfpffrofjsd" path="res://assets/molenpc1.png" id="5_bt32j"]
+[ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="6_uf55i"]
+
+[node name="Level1Completed" type="Node2D"]
+script = ExtResource("1_0u3g7")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="UILayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.368627, 0.658824, 1)
+
+[node name="TopLeftMenu" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="MenuBackground2" type="Panel" parent="UILayer/TopLeftMenu"]
+layout_mode = 0
+offset_left = -50.0
+offset_top = -30.0
+offset_right = 300.0
+offset_bottom = 100.0
+theme_override_styles/panel = ExtResource("3_ighv1")
+metadata/_edit_use_anchors_ = true
+
+[node name="BackButton" type="Button" parent="UILayer/TopLeftMenu"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 25.0
+offset_right = 135.0
+offset_bottom = 75.0
+theme = ExtResource("6_uf55i")
+text = "Level Select"
+metadata/_edit_use_anchors_ = true
+
+[node name="OptionsButton" type="Button" parent="UILayer/TopLeftMenu"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 25.0
+offset_right = 250.0
+offset_bottom = 75.0
+theme = ExtResource("6_uf55i")
+disabled = true
+text = "Options"
+metadata/_edit_use_anchors_ = true
+
+[node name="StarDisplay" type="Panel" parent="UILayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -306.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = ExtResource("3_ighv1")
+
+[node name="StarMessage" type="RichTextLabel" parent="UILayer/StarDisplay"]
+layout_mode = 0
+offset_top = 82.0
+offset_right = 1274.0
+offset_bottom = 280.0
+theme_override_fonts/normal_font = ExtResource("2_piifd")
+theme_override_fonts/bold_font = ExtResource("2_piifd")
+theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "[Feedback]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Heading" type="RichTextLabel" parent="UILayer/StarDisplay"]
+layout_mode = 0
+offset_top = -364.0
+offset_right = 1274.0
+offset_bottom = -303.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("2_piifd")
+theme_override_fonts/bold_font = ExtResource("2_piifd")
+theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "[b]Level 1 Completed![/b]"
+horizontal_alignment = 1
+
+[node name="Star1" type="Node2D" parent="UILayer/StarDisplay"]
+position = Vector2(485, 60)
+
+[node name="StarOutline" type="Polygon2D" parent="UILayer/StarDisplay/Star1"]
+scale = Vector2(0.65, 0.65)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="StarMain" type="Polygon2D" parent="UILayer/StarDisplay/Star1"]
+scale = Vector2(0.5, 0.5)
+color = Color(0.996078, 0.831373, 0.188235, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="Star2" type="Node2D" parent="UILayer/StarDisplay"]
+position = Vector2(635, 60)
+
+[node name="StarOutline" type="Polygon2D" parent="UILayer/StarDisplay/Star2"]
+scale = Vector2(0.65, 0.65)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="StarMain" type="Polygon2D" parent="UILayer/StarDisplay/Star2"]
+scale = Vector2(0.5, 0.5)
+color = Color(0.721569, 0.721569, 0.721569, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="Star3" type="Node2D" parent="UILayer/StarDisplay"]
+position = Vector2(785, 60)
+
+[node name="StarOutline" type="Polygon2D" parent="UILayer/StarDisplay/Star3"]
+scale = Vector2(0.65, 0.65)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="StarMain" type="Polygon2D" parent="UILayer/StarDisplay/Star3"]
+scale = Vector2(0.5, 0.5)
+color = Color(0.721569, 0.721569, 0.721569, 1)
+polygon = PackedVector2Array(0, -50, 14.43, -15.45, 47.55, -15.45, 23.51, 5.9, 29.39, 40.45, 0, 22, -29.39, 40.45, -23.51, 5.9, -47.55, -15.45, -14.43, -15.45)
+
+[node name="Sprite2D" type="Sprite2D" parent="UILayer"]
+position = Vector2(646, 212)
+scale = Vector2(0.2, 0.219)
+texture = ExtResource("5_bt32j")
+
+[connection signal="pressed" from="UILayer/TopLeftMenu/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="UILayer/TopLeftMenu/OptionsButton" to="." method="_on_options_button_pressed"]

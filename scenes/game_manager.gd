@@ -2,6 +2,7 @@ extends Node
 
 var current_level_data = null
 signal stage_access_enabled(stage_name: String)
+var level_records = {}
 
 func start_level(level_name: String):
 	print("level start: " + level_name)
@@ -17,4 +18,16 @@ func start_level(level_name: String):
 
 func end_level():
 	print("level over!")
+	# record star rating if level is completed
+	if current_level_data.star_rating:
+		print("star rating recorded: ", current_level_data.star_rating)
+		# if rating already achieved, keep best
+		if level_records.has(current_level_data.level_name):
+			level_records[current_level_data.level_name] = max(current_level_data.star_rating, level_records[current_level_data.level_name])
+		# otherwise record new rating
+		else:
+			level_records[current_level_data.level_name] = current_level_data.star_rating
+	else:
+		print("no star rating found")
 	current_level_data = null
+	print("level records: ", level_records)

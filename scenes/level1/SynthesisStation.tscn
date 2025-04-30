@@ -293,8 +293,9 @@ text = "Yay!
 LEVEL COMPLETE"
 
 [connection signal="pressed" from="MixButton" to="." method="_on_mix_button_pressed"]
-[connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton1" to="QuestionOverlay/GuessButtons" method="_on_guess_button_pressed"]
-[connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton2" to="QuestionOverlay/GuessButtons" method="_on_guess_button_pressed"]
-[connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton3" to="QuestionOverlay/GuessButtons" method="_on_guess_button_pressed"]
-[connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton4" to="QuestionOverlay/GuessButtons" method="_on_guess_button_pressed"]
+[connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton1" to="QuestionOverlay/GuessButtons" method="_on_correct_guess_button_pressed"]
+[connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton2" to="QuestionOverlay/GuessButtons" method="_on_incorrect_guess_button_pressed"]
+[connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton3" to="QuestionOverlay/GuessButtons" method="_on_incorrect_guess_button_pressed"]
+[connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton4" to="QuestionOverlay/GuessButtons" method="_on_incorrect_guess_button_pressed"]
 [connection signal="pressed" from="QuestionOverlay/CloseOverlayButton" to="QuestionOverlay/CloseOverlayButton" method="_on_pressed"]
+[connection signal="pressed" from="SuccessMessage/Button" to="." method="_on_success_button_pressed"]

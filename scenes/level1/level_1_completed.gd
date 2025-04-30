@@ -1,0 +1,47 @@
+extends Node2D
+
+@onready var star1 = $UILayer/StarDisplay/Star1
+@onready var star2 = $UILayer/StarDisplay/Star2
+@onready var star3 = $UILayer/StarDisplay/Star3
+@onready var star_message = $UILayer/StarDisplay/StarMessage
+var star_color = Color("#fed430")
+var star_rating = null
+
+func _ready() -> void:
+	print("sending star message!")
+	star_rating = GameManager.current_level_data.get_star_rating()
+	set_star_message()
+	animate_star_display()
+
+func set_star_message():
+	print("star messages: ", star_rating[1])
+	# make message
+	var message = ""
+	for lost_star_message in star_rating[1]:
+		message += "Hint: " + lost_star_message + "\n\n"
+	if message == "":
+		message = "3 stars - great job!"
+		
+	# remove 2 trailing newlines
+	message = message.substr(0, len(message))
+	
+	# set message
+	star_message.text = message
+	
+func animate_star_display():
+	print("num stars: ", star_rating[0])
+	if star_rating[0] >= 1:
+		star1.get_node("StarMain").color = star_color
+	if star_rating[0] >= 2:
+		star2.get_node("StarMain").color = star_color
+	if star_rating[0] >= 3:
+		star3.get_node("StarMain").color = star_color
+
+func _on_back_button_pressed() -> void:
+	# back to level select
+	get_tree().change_scene_to_file("res://scenes/level_select.tscn")
+	GameManager.end_level()
+
+
+func _on_options_button_pressed() -> void:
+	pass # Replace with function body.

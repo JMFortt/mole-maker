@@ -268,6 +268,7 @@ Assembler"
 metadata/_edit_use_anchors_ = true
 
 [node name="Lock" type="TextureRect" parent="UILayer/StageNavBar/AtomAssemblerButton"]
+layout_mode = 0
 offset_left = 75.0
 offset_top = 15.0
 offset_right = 175.0
@@ -289,6 +290,7 @@ Maker"
 metadata/_edit_use_anchors_ = true
 
 [node name="Lock" type="TextureRect" parent="UILayer/StageNavBar/MoleculeMakerButton"]
+layout_mode = 0
 offset_left = 75.0
 offset_top = 15.0
 offset_right = 175.0
@@ -310,6 +312,7 @@ Station"
 metadata/_edit_use_anchors_ = true
 
 [node name="Lock" type="TextureRect" parent="UILayer/StageNavBar/SynthesisStationButton"]
+layout_mode = 0
 offset_left = 75.0
 offset_top = 15.0
 offset_right = 175.0
@@ -336,12 +339,12 @@ metadata/_edit_use_anchors_ = true
 
 [node name="BackButton" type="Button" parent="UILayer/TopLeftMenu"]
 layout_mode = 0
-offset_left = 25.0
+offset_left = 20.0
 offset_top = 25.0
-offset_right = 125.0
+offset_right = 135.0
 offset_bottom = 75.0
 theme = ExtResource("8_qixek")
-text = "Back"
+text = "Level Select"
 metadata/_edit_use_anchors_ = true
 
 [node name="OptionsButton" type="Button" parent="UILayer/TopLeftMenu"]
