@@ -84,8 +84,9 @@ vertical_alignment = 1
 
 [node name="Heading" type="RichTextLabel" parent="UILayer/StarDisplay"]
 layout_mode = 0
+offset_left = 297.0
 offset_top = -364.0
-offset_right = 1274.0
+offset_right = 994.0
 offset_bottom = -303.0
 theme_override_constants/outline_size = 20
 theme_override_fonts/normal_font = ExtResource("2_piifd")
