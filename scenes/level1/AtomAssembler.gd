@@ -42,11 +42,11 @@ func create_atom():
 		if electrons == element_dict_entry[0] && neutrons == element_dict_entry[1]:
 			print("made " + element_dict_entry[2] + "!")
 			GameManager.current_level_data.current_atoms.append(element_dict_entry[3])
-			_update_atom_list()
-			_on_reset_atom_button_pressed()
 	else:
 		print("Not a known atom!")
 	print("current atoms: ", GameManager.current_level_data.current_atoms)
+	_update_atom_list()
+	_on_reset_atom_button_pressed()
 	_stage_complete_check()
 
 func add_atom_components(component_type: String, number: int):
