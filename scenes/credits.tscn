@@ -20,7 +20,6 @@ scale = Vector2(1, 1.218)
 theme_override_styles/panel = ExtResource("2_8gwij")
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-anchors_preset = -1
 offset_left = 434.0
 offset_top = 162.0
 offset_right = 740.0
@@ -36,7 +35,6 @@ text = "Credits:"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
-anchors_preset = -1
 offset_left = 435.0
 offset_top = 233.0
 offset_right = 739.0

@@ -29,8 +29,7 @@ func display_stars_and_unlocks():
 				level_button.get_node("Star3/StarMain").color = star_color
 
 func _on_Level1Button_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level1.tscn")
-
+	get_tree().change_scene_to_file("res://scenes/LevelMain.tscn")
 
 func _on_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
