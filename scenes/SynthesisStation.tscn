@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cic0dipab7gi4" path="res://assets/circle.png" id="2_lrnjc"]
 [ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="3_1jmi5"]
 [ext_resource type="StyleBox" uid="uid://c0j65wo0rxbma" path="res://themes/menu_panel_variant_2style_box.tres" id="4_7udph"]
-[ext_resource type="Script" uid="uid://ddkyvcartl8tt" path="res://guess_buttons.gd" id="5_s30pj"]
+[ext_resource type="Script" uid="uid://ddkyvcartl8tt" path="res://scripts/guess_buttons.gd" id="5_s30pj"]
 [ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="6_k7a2w"]
 [ext_resource type="Script" uid="uid://dgjybt40nolb7" path="res://scripts/close_parent_button.gd" id="7_aucy0"]
 [ext_resource type="Texture2D" uid="uid://m1i46obw5w1v" path="res://assets/sparkle.png" id="8_n6kdc"]

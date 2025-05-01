@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cqidq1m1tw1h"]
 
 [ext_resource type="Texture2D" uid="uid://t5txvxvchhc3" path="res://assets/lablevelbackground.png" id="1_0bpdh"]
-[ext_resource type="Script" uid="uid://ce2bxhh6c01aq" path="res://credits.gd" id="1_2ckv8"]
+[ext_resource type="Script" uid="uid://ce2bxhh6c01aq" path="res://scripts/credits.gd" id="1_2ckv8"]
 [ext_resource type="StyleBox" uid="uid://c0j65wo0rxbma" path="res://themes/menu_panel_variant_2style_box.tres" id="2_8gwij"]
 [ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="3_0ctdu"]
 [ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="3_2fbfq"]
