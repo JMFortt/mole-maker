@@ -414,7 +414,7 @@ offset_left = 98.0
 offset_top = 71.0
 offset_right = 1198.0
 offset_bottom = 671.0
-theme_override_styles/panel = ExtResource("3_7l2ql")
+theme_override_styles/panel = ExtResource("8_wqqpw")
 
 [node name="ClosePeriodicTableButton" type="Button" parent="UILayer/PeriodicTableOverlay"]
 layout_mode = 0
@@ -484,7 +484,7 @@ theme_override_fonts/bold_font = ExtResource("2_wqqpw")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 30
 bbcode_enabled = true
-text = "[b]Hint:[/b]"
+text = "[u][b]Hint:[/b][/u]"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UILayer/HintOverlay"]
@@ -562,7 +562,7 @@ theme_override_fonts/bold_font = ExtResource("2_wqqpw")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 30
 bbcode_enabled = true
-text = "[b]Options:[/b]"
+text = "[u][b]Options:[/b][/u]"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UILayer/OptionsOverlay"]

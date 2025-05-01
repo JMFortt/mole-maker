@@ -13,6 +13,7 @@ var synthesis_station_completed = false # set true by Q/A button success
 # star system variables
 var guess_answered_correctly = false
 var level_start_time = Time.get_ticks_msec()
+var timer_limit = 120
 
 # atom assembler variables
 const required_atoms = ["H", "O", "Na"]
@@ -46,7 +47,7 @@ func get_star_rating() -> Array:
 	# check timer
 	var time_elapsed = (Time.get_ticks_msec() - level_start_time) / 1000.0
 	print("time to complete level: ", time_elapsed)
-	if time_elapsed  <= 60:
+	if time_elapsed  <= timer_limit:
 		num_stars += 1
 	else:
 		messages.append("See if you can go even faster next time!")
