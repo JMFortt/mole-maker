@@ -4,12 +4,14 @@ extends Node2D
 @onready var ingredient2 = $Ingredient2
 @onready var result1 = $Result1
 @onready var result2 = $Result2
+@onready var result3 = $Result3
 @onready var poof = $GPUParticles2D
 @onready var success_message = $SuccessMessage
 var starting_pos1 = null
 var starting_pos2 = null
 var ending_pos1 = null
 var ending_pos2 = null
+var ending_pos3 = null
 var center = null
 
 func _ready() -> void:
@@ -18,6 +20,7 @@ func _ready() -> void:
 	starting_pos2 = ingredient2.position
 	ending_pos1 = result1.position
 	ending_pos2 = result2.position
+	ending_pos3 = result3.position
 
 func _on_mix_button_pressed() -> void:
 	mix()
@@ -49,15 +52,19 @@ func mix():
 	# show result
 	result1.position = center
 	result2.position = center
+	result3.position = center
 	result1.visible = true
 	result2.visible = true
+	result3.visible = true
 	success_message.visible = true
 	# animate fade-in with a tween
 	var result_tween = create_tween()
 	result_tween.parallel().tween_property(result1, "modulate", Color("#ffffff"), swirl_time)
 	result_tween.parallel().tween_property(result2, "modulate", Color("#ffffff"), swirl_time)
+	result_tween.parallel().tween_property(result3, "modulate", Color("#ffffff"), swirl_time)
 	result_tween.parallel().tween_property(result1, "position", ending_pos1, swirl_time)
 	result_tween.parallel().tween_property(result2, "position", ending_pos2, swirl_time)
+	result_tween.parallel().tween_property(result3, "position", ending_pos3, swirl_time)
 	# face in success message
 	result_tween.parallel().tween_property(success_message, "modulate", Color("#ffffff"), swirl_time)
 	await result_tween.finished

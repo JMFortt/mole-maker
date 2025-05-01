@@ -99,14 +99,14 @@ position = Vector2(-1, -2)
 texture = ExtResource("2_lrnjc")
 
 [node name="Label2" type="Label" parent="Ingredient1"]
-offset_left = -21.0
+offset_left = -31.0
 offset_top = -20.0
-offset_right = 34.0
+offset_right = 39.0
 offset_bottom = 35.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_1jmi5")
 theme_override_font_sizes/font_size = 30
-text = "Na"
+text = "NaCl"
 
 [node name="Ingredient2" type="Node2D" parent="."]
 position = Vector2(848, 302)
@@ -127,9 +127,8 @@ theme_override_font_sizes/font_size = 30
 text = "H20"
 
 [node name="Result1" type="Node2D" parent="."]
-visible = false
 modulate = Color(1, 1, 1, 0)
-position = Vector2(500, 250)
+position = Vector2(501, 300)
 
 [node name="Sprite2D" type="Sprite2D" parent="Result1"]
 modulate = Color(0.0936, 0.72, 0.44856, 1)
@@ -148,7 +147,7 @@ text = "NaOH"
 
 [node name="Result2" type="Node2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(750, 250)
+position = Vector2(750, 243)
 
 [node name="Sprite2D" type="Sprite2D" parent="Result2"]
 modulate = Color(0.197572, 0.742062, 0.767917, 1)
@@ -164,6 +163,26 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_1jmi5")
 theme_override_font_sizes/font_size = 30
 text = "H2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Result3" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(750, 363)
+
+[node name="Sprite2D" type="Sprite2D" parent="Result3"]
+modulate = Color(0.197572, 0.742062, 0.767917, 1)
+position = Vector2(2, -2)
+texture = ExtResource("2_lrnjc")
+
+[node name="Label" type="Label" parent="Result3"]
+offset_left = -17.0
+offset_top = -18.0
+offset_right = 59.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1jmi5")
+theme_override_font_sizes/font_size = 30
+text = "Cl2"
 
 [node name="MixButton" type="Button" parent="."]
 offset_left = 529.0
@@ -226,13 +245,13 @@ script = ExtResource("5_s30pj")
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("6_k7a2w")
-text = "H"
+text = "H2"
 
 [node name="GuessButton2" type="Button" parent="QuestionOverlay/GuessButtons"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("6_k7a2w")
-text = "H2"
+text = "Cl2"
 
 [node name="GuessButton3" type="Button" parent="QuestionOverlay/GuessButtons"]
 layout_mode = 2
@@ -284,10 +303,10 @@ text = "[b]Congratulations![/b]
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="SuccessMessage"]
-offset_left = 529.0
-offset_top = 352.0
-offset_right = 729.0
-offset_bottom = 452.0
+offset_left = 538.0
+offset_top = 427.0
+offset_right = 738.0
+offset_bottom = 527.0
 theme = ExtResource("6_k7a2w")
 text = "Yay!
 LEVEL COMPLETE"

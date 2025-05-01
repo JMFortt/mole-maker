@@ -16,7 +16,7 @@ var level_start_time = Time.get_ticks_msec()
 var timer_limit = 120
 
 # atom assembler variables
-const required_atoms = ["H", "O", "Na"]
+const required_atoms = ["H", "O", "Na", "Cl"]
 var current_atoms = []
 
 # molecule maker variables

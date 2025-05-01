@@ -41,7 +41,8 @@ func create_atom():
 		var element_dict_entry = possible_atoms[protons]
 		if electrons == element_dict_entry[0] && neutrons == element_dict_entry[1]:
 			print("made " + element_dict_entry[2] + "!")
-			GameManager.current_level_data.current_atoms.append(element_dict_entry[3])
+			if element_dict_entry[3] not in GameManager.current_level_data.current_atoms:
+				GameManager.current_level_data.current_atoms.append(element_dict_entry[3])
 	else:
 		print("Not a known atom!")
 	print("current atoms: ", GameManager.current_level_data.current_atoms)

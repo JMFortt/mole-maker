@@ -178,7 +178,7 @@ offset_right = 27.0
 offset_bottom = 409.0
 theme_override_fonts/normal_font = ExtResource("4_np5r3")
 theme_override_fonts/bold_font = ExtResource("4_np5r3")
-theme_override_font_sizes/normal_font_size = 15
+theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 20
 bbcode_enabled = true
 text = "[b]Your Atoms:[/b]
@@ -249,6 +249,40 @@ offset_right = 689.0
 offset_bottom = 547.0
 text = "Enable Next Stage"
 script = ExtResource("11_dvb2t")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D"]
+offset_left = 397.0
+offset_top = 350.0
+offset_right = 648.0
+offset_bottom = 355.0
+rotation = -0.237684
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Node2D"]
+offset_left = 406.0
+offset_top = 488.0
+offset_right = 557.0
+offset_bottom = 493.0
+rotation = -0.237684
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Node2D"]
+offset_left = 406.0
+offset_top = 488.0
+offset_right = 597.0
+offset_bottom = 493.0
+rotation = -0.504124
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D"]
+offset_left = 408.0
+offset_top = 206.0
+offset_right = 659.0
+offset_bottom = 211.0
+rotation = 0.341945
+color = Color(0, 0, 0, 1)
 
 [connection signal="text_changed" from="Protons/LineEdit" to="Protons/LineEdit" method="_on_text_changed"]
 [connection signal="pressed" from="Protons/AddAtomComponentButton" to="Protons/AddAtomComponentButton" method="_on_add_button_pressed"]

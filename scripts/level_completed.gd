@@ -52,4 +52,5 @@ func _on_back_button_pressed() -> void:
 	GameManager.end_level()
 
 func _on_options_button_pressed() -> void:
-	pass # Replace with function body.
+	# show options overlay
+	$UILayer/OptionsOverlay.visible = true
