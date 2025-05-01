@@ -84,7 +84,7 @@ func _on_SynthesisStationButton_pressed():
 func _on_hint_button_pressed():
 	# get hint overlay for that scene
 	# show hint overlay
-	pass
+	$UILayer/HintOverlay.visible = true
 
 func _on_periodic_table_button_pressed():
 	# show periodic table overlay
@@ -92,16 +92,12 @@ func _on_periodic_table_button_pressed():
 
 func _on_options_button_pressed():
 	# show options overlay
-	pass
+	$UILayer/OptionsOverlay.visible = true
 
 func _on_back_button_pressed() -> void:
 	# back to level select
 	get_tree().change_scene_to_file("res://scenes/LevelSelect.tscn")
 	GameManager.end_level()
-
-func _on_close_periodic_table_button_pressed() -> void:
-	# hide periodic table overlay
-	$UILayer/PeriodicTableOverlay.visible = false
 
 func _switch_to_atom_assembler() -> void:
 	lab_line.visible       = false

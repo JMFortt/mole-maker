@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ckj04xs2msl6r"]
+[gd_scene load_steps=24 format=3 uid="uid://ckj04xs2msl6r"]
 
 [ext_resource type="Script" uid="uid://dmw7ead88nmeq" path="res://scripts/level_main.gd" id="1_8mxaj"]
 [ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="2_wqqpw"]
@@ -6,7 +6,9 @@
 [ext_resource type="Theme" uid="uid://ceyd5jq3dbr2c" path="res://themes/button_variant_2.tres" id="4_x0gfo"]
 [ext_resource type="Texture2D" uid="uid://drdxldt5ox1cr" path="res://assets/lock.png" id="5_t23ro"]
 [ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="6_t5hfu"]
+[ext_resource type="Script" uid="uid://dgjybt40nolb7" path="res://scripts/close_parent_button.gd" id="7_7l2ql"]
 [ext_resource type="Texture2D" uid="uid://b3igypxwpe1tt" path="res://assets/figmaPeriodicTable.png" id="7_ugd7i"]
+[ext_resource type="StyleBox" uid="uid://c0j65wo0rxbma" path="res://themes/menu_panel_variant_2style_box.tres" id="8_wqqpw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qixek"]
 bg_color = Color(1, 1, 1, 1)
@@ -354,7 +356,6 @@ offset_top = 25.0
 offset_right = 250.0
 offset_bottom = 75.0
 theme = ExtResource("6_t5hfu")
-disabled = true
 text = "Options"
 metadata/_edit_use_anchors_ = true
 
@@ -391,7 +392,6 @@ offset_top = 25.0
 offset_right = 1254.0
 offset_bottom = 75.0
 theme = ExtResource("6_t5hfu")
-disabled = true
 text = "Hint
 "
 metadata/_edit_use_anchors_ = true
@@ -424,6 +424,7 @@ offset_right = 1164.0
 offset_bottom = 162.0
 theme = ExtResource("6_t5hfu")
 text = "Close"
+script = ExtResource("7_7l2ql")
 
 [node name="PeriodicTableTextureRect" type="TextureRect" parent="UILayer/PeriodicTableOverlay"]
 layout_mode = 0
@@ -436,8 +437,140 @@ texture = ExtResource("7_ugd7i")
 expand_mode = 5
 stretch_mode = 5
 
+[node name="HintOverlay" type="Control" parent="UILayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="UILayer/HintOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HintBackground" type="Panel" parent="UILayer/HintOverlay"]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 161.0
+offset_right = 1005.0
+offset_bottom = 493.0
+theme_override_styles/panel = ExtResource("8_wqqpw")
+
+[node name="CloseHintButton" type="Button" parent="UILayer/HintOverlay"]
+layout_mode = 0
+offset_left = 876.0
+offset_top = 186.0
+offset_right = 976.0
+offset_bottom = 236.0
+theme = ExtResource("6_t5hfu")
+text = "Close"
+script = ExtResource("7_7l2ql")
+
+[node name="Header" type="RichTextLabel" parent="UILayer/HintOverlay"]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 188.0
+offset_right = 868.0
+offset_bottom = 239.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_wqqpw")
+theme_override_fonts/bold_font = ExtResource("2_wqqpw")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]Hint:[/b]"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UILayer/HintOverlay"]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 248.0
+offset_right = 979.0
+offset_bottom = 477.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_wqqpw")
+theme_override_fonts/bold_font = ExtResource("2_wqqpw")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[text]"
+horizontal_alignment = 1
+
+[node name="OptionsOverlay" type="Control" parent="UILayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="UILayer/OptionsOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionsBackground" type="Panel" parent="UILayer/OptionsOverlay"]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 161.0
+offset_right = 1005.0
+offset_bottom = 493.0
+theme_override_styles/panel = ExtResource("8_wqqpw")
+
+[node name="CloseOptionsButton" type="Button" parent="UILayer/OptionsOverlay"]
+layout_mode = 0
+offset_left = 876.0
+offset_top = 186.0
+offset_right = 976.0
+offset_bottom = 236.0
+theme = ExtResource("6_t5hfu")
+text = "Close"
+script = ExtResource("7_7l2ql")
+
+[node name="Header" type="RichTextLabel" parent="UILayer/OptionsOverlay"]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 188.0
+offset_right = 868.0
+offset_bottom = 239.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_wqqpw")
+theme_override_fonts/bold_font = ExtResource("2_wqqpw")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]Options:[/b]"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UILayer/OptionsOverlay"]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 248.0
+offset_right = 979.0
+offset_bottom = 477.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_wqqpw")
+theme_override_fonts/bold_font = ExtResource("2_wqqpw")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[placeholder]"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="UILayer/TopLeftMenu/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="UILayer/TopLeftMenu/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="UILayer/TopRightMenu/PeriodicTableButton" to="." method="_on_periodic_table_button_pressed"]
 [connection signal="pressed" from="UILayer/TopRightMenu/HintButton" to="." method="_on_hint_button_pressed"]
-[connection signal="pressed" from="UILayer/PeriodicTableOverlay/ClosePeriodicTableButton" to="." method="_on_close_periodic_table_button_pressed"]
+[connection signal="pressed" from="UILayer/PeriodicTableOverlay/ClosePeriodicTableButton" to="UILayer/PeriodicTableOverlay/ClosePeriodicTableButton" method="_on_pressed"]
+[connection signal="pressed" from="UILayer/HintOverlay/CloseHintButton" to="UILayer/HintOverlay/CloseHintButton" method="_on_pressed"]
+[connection signal="pressed" from="UILayer/OptionsOverlay/CloseOptionsButton" to="UILayer/OptionsOverlay/CloseOptionsButton" method="_on_pressed"]
