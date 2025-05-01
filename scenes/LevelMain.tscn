@@ -492,14 +492,27 @@ layout_mode = 0
 offset_left = 296.0
 offset_top = 248.0
 offset_right = 979.0
-offset_bottom = 477.0
+offset_bottom = 458.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_wqqpw")
 theme_override_fonts/bold_font = ExtResource("2_wqqpw")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 30
 bbcode_enabled = true
-text = "[text]"
+text = "[b] Lab Line: [/b]
+Talk to the person at the counter and see what they need!
+
+[b] Atom Assembler: [/b]
+To move to the next stage, you need to make the atoms on the left side of the chemical equation on the ticket.
+Use the periodic table to select the correct number of protons, neutrons, and electrons for the elements you need.
+NOTE: For our purposes here, you only need to make neutral-charge, standard mass isotopes.
+
+[b] Molecule Maker: [/b]
+Place the atoms in their correct places on the lewis diagram.
+Check the periodic table for each element's number of valence electrons if you need some help!
+
+[b] Synthesis Station: [/b]
+Make a guess at what the \"?\" in the ticket equation will be, then combine your molecules and see what happens!"
 horizontal_alignment = 1
 
 [node name="OptionsOverlay" type="Control" parent="UILayer"]
@@ -564,7 +577,7 @@ theme_override_fonts/bold_font = ExtResource("2_wqqpw")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 30
 bbcode_enabled = true
-text = "[placeholder]"
+text = "[None for now]"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="UILayer/TopLeftMenu/BackButton" to="." method="_on_back_button_pressed"]
