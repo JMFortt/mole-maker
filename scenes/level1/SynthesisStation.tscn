@@ -1,12 +1,12 @@
 [gd_scene load_steps=15 format=3 uid="uid://dm81utjpidtvv"]
 
-[ext_resource type="Script" uid="uid://cgcbe4rlo1um8" path="res://scenes/level1/synthesis_station.gd" id="1_fbuuf"]
+[ext_resource type="Script" uid="uid://cgcbe4rlo1um8" path="res://scripts/synthesis_station.gd" id="1_fbuuf"]
 [ext_resource type="Texture2D" uid="uid://cic0dipab7gi4" path="res://assets/circle.png" id="1_p5ay3"]
 [ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="2_37ckj"]
 [ext_resource type="StyleBox" uid="uid://c0j65wo0rxbma" path="res://themes/menu_panel_variant_2style_box.tres" id="2_cl3de"]
-[ext_resource type="Script" uid="uid://ddkyvcartl8tt" path="res://scenes/level1/guess_buttons.gd" id="3_5w20r"]
+[ext_resource type="Script" uid="uid://ddkyvcartl8tt" path="res://guess_buttons.gd" id="3_5w20r"]
 [ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="3_cl3de"]
-[ext_resource type="Script" uid="uid://dgjybt40nolb7" path="res://scenes/level1/close_overlay_button.gd" id="5_r0y8g"]
+[ext_resource type="Script" uid="uid://dgjybt40nolb7" path="res://scripts/close_overlay_button.gd" id="5_r0y8g"]
 [ext_resource type="Texture2D" uid="uid://m1i46obw5w1v" path="res://assets/sparkle.png" id="9_v602c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wfrcl"]

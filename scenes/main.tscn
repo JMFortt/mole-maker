@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://pgsnpo7tekxp"]
 
-[ext_resource type="Script" uid="uid://clsksg8t2awuw" path="res://scenes/main_menu.gd" id="1_sugp2"]
+[ext_resource type="Script" uid="uid://clsksg8t2awuw" path="res://scripts/main_menu.gd" id="1_sugp2"]
 [ext_resource type="Texture2D" uid="uid://6ltboip8yqbm" path="res://assets/mainmenubackground.png" id="2_jyhfs"]
 [ext_resource type="FontFile" uid="uid://bmyn1kbi20r4s" path="res://fonts/LuckiestGuy-Regular.ttf" id="3_tbgi4"]
 

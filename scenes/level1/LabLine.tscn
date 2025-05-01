@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://6vc6xqon6plj"]
 
-[ext_resource type="Script" uid="uid://dcbh1bwjv7cwf" path="res://scenes/level1/lab_line.gd" id="1_8rmab"]
+[ext_resource type="Script" uid="uid://dcbh1bwjv7cwf" path="res://scripts/lab_line.gd" id="1_8rmab"]
 [ext_resource type="Texture2D" uid="uid://8wpoh7wd7ocl" path="res://assets/lablinebackground.png" id="1_c5706"]
 [ext_resource type="Texture2D" uid="uid://brbfpffrofjsd" path="res://assets/molenpc1.png" id="3_88a4p"]
 [ext_resource type="Theme" uid="uid://cjt1wgi2nnutb" path="res://themes/ChatBubbleTheme.tres" id="3_frnu1"]

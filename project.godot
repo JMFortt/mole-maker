@@ -17,7 +17,7 @@ config/icon="uid://cot4giw7wqkyu"
 
 [autoload]
 
-GameManager="*res://scenes/game_manager.gd"
+GameManager="*res://scripts/game_manager.gd"
 
 [display]
 
