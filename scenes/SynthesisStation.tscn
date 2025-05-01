@@ -6,7 +6,7 @@
 [ext_resource type="StyleBox" uid="uid://c0j65wo0rxbma" path="res://themes/menu_panel_variant_2style_box.tres" id="4_7udph"]
 [ext_resource type="Script" uid="uid://ddkyvcartl8tt" path="res://guess_buttons.gd" id="5_s30pj"]
 [ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="6_k7a2w"]
-[ext_resource type="Script" uid="uid://dgjybt40nolb7" path="res://scripts/close_overlay_button.gd" id="7_aucy0"]
+[ext_resource type="Script" uid="uid://dgjybt40nolb7" path="res://scripts/close_parent_button.gd" id="7_aucy0"]
 [ext_resource type="Texture2D" uid="uid://m1i46obw5w1v" path="res://assets/sparkle.png" id="8_n6kdc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wfrcl"]

@@ -21,10 +21,8 @@ func set_star_message():
 		message += "Hint: " + lost_star_message + "\n\n"
 	if message == "":
 		message = "3 stars - great job!"
-		
 	# remove 2 trailing newlines
 	message = message.substr(0, len(message))
-	
 	# set message
 	star_message.text = message
 	

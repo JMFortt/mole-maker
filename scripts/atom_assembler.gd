@@ -8,7 +8,7 @@ extends Node2D
 var protons  : int = 0
 var neutrons : int = 0
 var electrons : int = 0
-# structure: <number protons>: [<number electrons>, <number neutrons>, <full name>, <shorthand name>]
+# structure: <protons>: [<electrons>, <neutrons>, <full name>, <shorthand>]
 const possible_atoms = {
 	1:  [1, 0, "Hydrogen", "H"],
 	2:  [2, 2, "Helium", "He"],
@@ -74,26 +74,19 @@ func _update_atom_list():
 		atom_list.text += atom + "\n"
 
 func _stage_complete_check():
-	## start of debug section:
-	#GameManager.current_level_data.current_atoms.append("H")
-	#GameManager.current_level_data.current_atoms.append("Na")
-	#GameManager.current_level_data.current_atoms.append("O")
-	#_update_atom_list()
-	## end of debug section:
-	print("checking if stage is completed...")
+	#print("checking if stage is completed...")
 	if GameManager.current_level_data:
 		GameManager.current_level_data.check_atom_assembler_completed()
 		if GameManager.current_level_data.atom_assembler_completed:
-			print("Atom assembler stage completed!")
+			#print("Atom assembler stage completed!")
 			# enable next stage
 			GameManager.current_level_data.atom_assembler_completed = true
 			GameManager.emit_signal("stage_access_enabled", "molecule_maker")
-			print("next stage available!")
-		else:
-			print("Atom assembler stage not completed.")
+			#print("next stage available!")
+		#else:
+			#print("Atom assembler stage not completed.")
 	else:
 		push_error("No current level data!")
-
 
 func _on_reset_atom_button_pressed() -> void:
 	protons = 0

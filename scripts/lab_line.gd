@@ -3,7 +3,7 @@ extends Node2D
 var customer_dialogues: Array = []
 var current_customer: int = 0
 var current_line: int = 0
-var dialogue_finished: bool = false  # NEW: track if finished
+var dialogue_finished: bool = false
 
 func _ready() -> void:
 	customer_dialogues = [

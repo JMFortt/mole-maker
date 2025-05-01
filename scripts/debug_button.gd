@@ -1,6 +1,5 @@
 extends Button
 
-
 func _on_pressed_molecule_maker() -> void:
 	# start of debug section:
 	GameManager.current_level_data.current_atoms.append("H")
