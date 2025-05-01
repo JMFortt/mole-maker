@@ -1,19 +1,19 @@
 [gd_scene load_steps=12 format=3 uid="uid://cy8kfvob6180f"]
 
-[ext_resource type="Texture2D" uid="uid://bk7scx6n1xs2h" path="res://assets/atomassemblerbackground.png" id="1_ggkhf"]
-[ext_resource type="Script" uid="uid://du3gc74e7p6hp" path="res://scripts/atom_assembler.gd" id="1_hgrql"]
-[ext_resource type="Texture2D" uid="uid://fbgrj4y2yokf" path="res://assets/proton.png" id="4_0wguy"]
-[ext_resource type="Texture2D" uid="uid://v4fdbxbl52a7" path="res://assets/neutron.png" id="5_cbrif"]
-[ext_resource type="Script" uid="uid://dc233iitfsmv8" path="res://scripts/number_field.gd" id="5_ke74j"]
-[ext_resource type="Texture2D" uid="uid://cw4lukm3b7flj" path="res://assets/electron.png" id="6_l7887"]
-[ext_resource type="Script" uid="uid://c5ixkdlesiqg5" path="res://scripts/debug_button.gd" id="7_0wguy"]
-[ext_resource type="Script" uid="uid://c1jje0fl4pjqo" path="res://scripts/add_atom_component_button.gd" id="9_hgrql"]
-[ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="12_lxf7n"]
-[ext_resource type="StyleBox" uid="uid://c6rykowjenwip" path="res://themes/menu_panel_variant_1_style_box.tres" id="13_j3f87"]
-[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="14_2t3cr"]
+[ext_resource type="Script" uid="uid://du3gc74e7p6hp" path="res://scripts/atom_assembler.gd" id="1_yqg2x"]
+[ext_resource type="Texture2D" uid="uid://bk7scx6n1xs2h" path="res://assets/atomassemblerbackground.png" id="2_vovuf"]
+[ext_resource type="Texture2D" uid="uid://fbgrj4y2yokf" path="res://assets/proton.png" id="3_3752f"]
+[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="4_np5r3"]
+[ext_resource type="Script" uid="uid://dc233iitfsmv8" path="res://scripts/number_field.gd" id="5_3b5xh"]
+[ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="6_5dn1n"]
+[ext_resource type="Script" uid="uid://c1jje0fl4pjqo" path="res://scripts/add_atom_component_button.gd" id="7_cs70e"]
+[ext_resource type="Texture2D" uid="uid://v4fdbxbl52a7" path="res://assets/neutron.png" id="8_m02th"]
+[ext_resource type="Texture2D" uid="uid://cw4lukm3b7flj" path="res://assets/electron.png" id="9_5lhjy"]
+[ext_resource type="StyleBox" uid="uid://c6rykowjenwip" path="res://themes/menu_panel_variant_1_style_box.tres" id="10_ly6pu"]
+[ext_resource type="Script" uid="uid://c5ixkdlesiqg5" path="res://scripts/debug_button.gd" id="11_dvb2t"]
 
 [node name="AtomAssembler" type="Node2D"]
-script = ExtResource("1_hgrql")
+script = ExtResource("1_yqg2x")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1293.0
@@ -24,14 +24,14 @@ metadata/_edit_use_anchors_ = true
 [node name="AtomImage" type="Sprite2D" parent="."]
 position = Vector2(634.439, 291.479)
 scale = Vector2(0.53543, 0.528701)
-texture = ExtResource("1_ggkhf")
+texture = ExtResource("2_vovuf")
 region_enabled = true
 region_rect = Rect2(301.051, 0, 928.661, 887.41)
 
 [node name="InputBackground" type="Sprite2D" parent="."]
 position = Vector2(177.5, 338.618)
 scale = Vector2(1.15546, 0.528701)
-texture = ExtResource("1_ggkhf")
+texture = ExtResource("2_vovuf")
 region_enabled = true
 region_rect = Rect2(22.31, 0, 238.207, 827.883)
 
@@ -43,7 +43,7 @@ offset_top = 166.618
 offset_right = 253.716
 offset_bottom = 351.618
 scale = Vector2(0.363646, 0.348512)
-texture_normal = ExtResource("4_0wguy")
+texture_normal = ExtResource("3_3752f")
 metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit" type="LineEdit" parent="Protons"]
@@ -51,11 +51,11 @@ offset_left = 150.0
 offset_top = 180.0
 offset_right = 218.563
 offset_bottom = 211.0
-theme_override_fonts/font = ExtResource("14_2t3cr")
+theme_override_fonts/font = ExtResource("4_np5r3")
 placeholder_text = "Number"
 alignment = 1
 virtual_keyboard_type = 2
-script = ExtResource("5_ke74j")
+script = ExtResource("5_3b5xh")
 
 [node name="Count" type="Label" parent="Protons"]
 offset_left = 305.0
@@ -73,9 +73,9 @@ offset_left = 230.0
 offset_top = 178.0
 offset_right = 280.0
 offset_bottom = 210.0
-theme = ExtResource("12_lxf7n")
+theme = ExtResource("6_5dn1n")
 text = "Add"
-script = ExtResource("9_hgrql")
+script = ExtResource("7_cs70e")
 
 [node name="Neutrons" type="Node2D" parent="."]
 
@@ -85,7 +85,7 @@ offset_top = 303.618
 offset_right = 256.716
 offset_bottom = 503.618
 scale = Vector2(0.326273, 0.312695)
-texture_normal = ExtResource("5_cbrif")
+texture_normal = ExtResource("8_m02th")
 metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit" type="LineEdit" parent="Neutrons"]
@@ -93,11 +93,11 @@ offset_left = 150.0
 offset_top = 324.0
 offset_right = 218.563
 offset_bottom = 355.0
-theme_override_fonts/font = ExtResource("14_2t3cr")
+theme_override_fonts/font = ExtResource("4_np5r3")
 placeholder_text = "Number"
 alignment = 1
 virtual_keyboard_type = 2
-script = ExtResource("5_ke74j")
+script = ExtResource("5_3b5xh")
 
 [node name="Count" type="Label" parent="Neutrons"]
 offset_left = 300.0
@@ -115,9 +115,9 @@ offset_left = 230.0
 offset_top = 322.0
 offset_right = 280.0
 offset_bottom = 354.0
-theme = ExtResource("12_lxf7n")
+theme = ExtResource("6_5dn1n")
 text = "Add"
-script = ExtResource("9_hgrql")
+script = ExtResource("7_cs70e")
 
 [node name="Electrons" type="Node2D" parent="."]
 
@@ -127,7 +127,7 @@ offset_top = 442.618
 offset_right = 253.716
 offset_bottom = 627.618
 scale = Vector2(0.368308, 0.35298)
-texture_normal = ExtResource("6_l7887")
+texture_normal = ExtResource("9_5lhjy")
 metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit" type="LineEdit" parent="Electrons"]
@@ -135,11 +135,11 @@ offset_left = 150.0
 offset_top = 465.0
 offset_right = 218.563
 offset_bottom = 496.0
-theme_override_fonts/font = ExtResource("14_2t3cr")
+theme_override_fonts/font = ExtResource("4_np5r3")
 placeholder_text = "Number"
 alignment = 1
 virtual_keyboard_type = 2
-script = ExtResource("5_ke74j")
+script = ExtResource("5_3b5xh")
 
 [node name="Count" type="Label" parent="Electrons"]
 offset_left = 300.0
@@ -157,9 +157,9 @@ offset_left = 230.0
 offset_top = 464.0
 offset_right = 280.0
 offset_bottom = 496.0
-theme = ExtResource("12_lxf7n")
+theme = ExtResource("6_5dn1n")
 text = "Add"
-script = ExtResource("9_hgrql")
+script = ExtResource("7_cs70e")
 
 [node name="AtomList" type="Node2D" parent="."]
 position = Vector2(971, 124)
@@ -169,15 +169,15 @@ offset_left = -69.0
 offset_top = -5.0
 offset_right = 41.0
 offset_bottom = 422.0
-theme_override_styles/panel = ExtResource("13_j3f87")
+theme_override_styles/panel = ExtResource("10_ly6pu")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="AtomList"]
 offset_left = -57.0
 offset_top = 7.0
 offset_right = 27.0
 offset_bottom = 409.0
-theme_override_fonts/normal_font = ExtResource("14_2t3cr")
-theme_override_fonts/bold_font = ExtResource("14_2t3cr")
+theme_override_fonts/normal_font = ExtResource("4_np5r3")
+theme_override_fonts/bold_font = ExtResource("4_np5r3")
 theme_override_font_sizes/normal_font_size = 15
 theme_override_font_sizes/bold_font_size = 20
 bbcode_enabled = true
@@ -230,7 +230,7 @@ offset_left = 834.0
 offset_top = 35.0
 offset_right = 949.0
 offset_bottom = 85.0
-theme = ExtResource("12_lxf7n")
+theme = ExtResource("6_5dn1n")
 text = "Reset Atom"
 
 [node name="MakeAtomButton" type="Button" parent="."]
@@ -238,7 +238,7 @@ offset_left = 353.0
 offset_top = 35.0
 offset_right = 468.0
 offset_bottom = 85.0
-theme = ExtResource("12_lxf7n")
+theme = ExtResource("6_5dn1n")
 text = "Make Atom"
 
 [node name="DebugButton" type="Button" parent="."]
@@ -247,7 +247,7 @@ offset_top = 516.0
 offset_right = 689.0
 offset_bottom = 547.0
 text = "Enable Next Stage"
-script = ExtResource("7_0wguy")
+script = ExtResource("11_dvb2t")
 
 [connection signal="text_changed" from="Protons/LineEdit" to="Protons/LineEdit" method="_on_text_changed"]
 [connection signal="pressed" from="Protons/AddAtomComponentButton" to="Protons/AddAtomComponentButton" method="_on_add_button_pressed"]

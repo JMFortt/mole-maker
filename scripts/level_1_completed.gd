@@ -50,9 +50,8 @@ func animate_star_display():
 
 func _on_back_button_pressed() -> void:
 	# back to level select
-	get_tree().change_scene_to_file("res://scenes/level_select.tscn")
+	get_tree().change_scene_to_file("res://scenes/LevelSelect.tscn")
 	GameManager.end_level()
-
 
 func _on_options_button_pressed() -> void:
 	pass # Replace with function body.

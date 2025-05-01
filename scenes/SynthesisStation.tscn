@@ -1,13 +1,13 @@
 [gd_scene load_steps=15 format=3 uid="uid://dm81utjpidtvv"]
 
-[ext_resource type="Script" uid="uid://cgcbe4rlo1um8" path="res://scripts/synthesis_station.gd" id="1_fbuuf"]
-[ext_resource type="Texture2D" uid="uid://cic0dipab7gi4" path="res://assets/circle.png" id="1_p5ay3"]
-[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="2_37ckj"]
-[ext_resource type="StyleBox" uid="uid://c0j65wo0rxbma" path="res://themes/menu_panel_variant_2style_box.tres" id="2_cl3de"]
-[ext_resource type="Script" uid="uid://ddkyvcartl8tt" path="res://guess_buttons.gd" id="3_5w20r"]
-[ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="3_cl3de"]
-[ext_resource type="Script" uid="uid://dgjybt40nolb7" path="res://scripts/close_overlay_button.gd" id="5_r0y8g"]
-[ext_resource type="Texture2D" uid="uid://m1i46obw5w1v" path="res://assets/sparkle.png" id="9_v602c"]
+[ext_resource type="Script" uid="uid://cgcbe4rlo1um8" path="res://scripts/synthesis_station.gd" id="1_37p1m"]
+[ext_resource type="Texture2D" uid="uid://cic0dipab7gi4" path="res://assets/circle.png" id="2_lrnjc"]
+[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="3_1jmi5"]
+[ext_resource type="StyleBox" uid="uid://c0j65wo0rxbma" path="res://themes/menu_panel_variant_2style_box.tres" id="4_7udph"]
+[ext_resource type="Script" uid="uid://ddkyvcartl8tt" path="res://guess_buttons.gd" id="5_s30pj"]
+[ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="6_k7a2w"]
+[ext_resource type="Script" uid="uid://dgjybt40nolb7" path="res://scripts/close_overlay_button.gd" id="7_aucy0"]
+[ext_resource type="Texture2D" uid="uid://m1i46obw5w1v" path="res://assets/sparkle.png" id="8_n6kdc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wfrcl"]
 bg_color = Color(0.568627, 0.568627, 0.568627, 1)
@@ -65,7 +65,7 @@ corner_detail = 20
 Button/colors/font_color = Color(1, 1, 1, 1)
 Button/constants/outline_size = 30
 Button/font_sizes/font_size = 40
-Button/fonts/font = ExtResource("2_37ckj")
+Button/fonts/font = ExtResource("3_1jmi5")
 Button/styles/disabled = SubResource("StyleBoxFlat_wfrcl")
 Button/styles/hover = SubResource("StyleBoxFlat_smmyo")
 Button/styles/normal = SubResource("StyleBoxFlat_fbuuf")
@@ -83,7 +83,7 @@ scale_min = 0.2
 scale_max = 0.4
 
 [node name="SynthesisStation" type="Node2D"]
-script = ExtResource("1_fbuuf")
+script = ExtResource("1_37p1m")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1298.0
@@ -96,7 +96,7 @@ position = Vector2(401, 302)
 [node name="Sprite2D2" type="Sprite2D" parent="Ingredient1"]
 modulate = Color(0.132742, 0.8539, 0.296264, 1)
 position = Vector2(-1, -2)
-texture = ExtResource("1_p5ay3")
+texture = ExtResource("2_lrnjc")
 
 [node name="Label2" type="Label" parent="Ingredient1"]
 offset_left = -21.0
@@ -104,7 +104,7 @@ offset_top = -20.0
 offset_right = 34.0
 offset_bottom = 35.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_37ckj")
+theme_override_fonts/font = ExtResource("3_1jmi5")
 theme_override_font_sizes/font_size = 30
 text = "Na"
 
@@ -114,7 +114,7 @@ position = Vector2(848, 302)
 [node name="Sprite2D" type="Sprite2D" parent="Ingredient2"]
 modulate = Color(0.0631161, 0.435643, 0.906755, 1)
 position = Vector2(2, -2)
-texture = ExtResource("1_p5ay3")
+texture = ExtResource("2_lrnjc")
 
 [node name="Label" type="Label" parent="Ingredient2"]
 offset_left = -21.0
@@ -122,7 +122,7 @@ offset_top = -19.0
 offset_right = 55.0
 offset_bottom = 36.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_37ckj")
+theme_override_fonts/font = ExtResource("3_1jmi5")
 theme_override_font_sizes/font_size = 30
 text = "H20"
 
@@ -134,7 +134,7 @@ position = Vector2(500, 250)
 [node name="Sprite2D" type="Sprite2D" parent="Result1"]
 modulate = Color(0.0936, 0.72, 0.44856, 1)
 position = Vector2(2, -2)
-texture = ExtResource("1_p5ay3")
+texture = ExtResource("2_lrnjc")
 
 [node name="Label" type="Label" parent="Result1"]
 offset_left = -35.0
@@ -142,7 +142,7 @@ offset_top = -19.0
 offset_right = 41.0
 offset_bottom = 36.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_37ckj")
+theme_override_fonts/font = ExtResource("3_1jmi5")
 theme_override_font_sizes/font_size = 30
 text = "NaOH"
 
@@ -153,7 +153,7 @@ position = Vector2(750, 250)
 [node name="Sprite2D" type="Sprite2D" parent="Result2"]
 modulate = Color(0.197572, 0.742062, 0.767917, 1)
 position = Vector2(2, -2)
-texture = ExtResource("1_p5ay3")
+texture = ExtResource("2_lrnjc")
 
 [node name="Label" type="Label" parent="Result2"]
 offset_left = -17.0
@@ -161,7 +161,7 @@ offset_top = -18.0
 offset_right = 59.0
 offset_bottom = 37.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_37ckj")
+theme_override_fonts/font = ExtResource("3_1jmi5")
 theme_override_font_sizes/font_size = 30
 text = "H2"
 
@@ -192,7 +192,7 @@ offset_left = 294.0
 offset_top = 179.0
 offset_right = 957.0
 offset_bottom = 493.0
-theme_override_styles/panel = ExtResource("2_cl3de")
+theme_override_styles/panel = ExtResource("4_7udph")
 
 [node name="QuestionText" type="RichTextLabel" parent="QuestionOverlay"]
 layout_mode = 0
@@ -201,8 +201,8 @@ offset_top = 215.0
 offset_right = 938.0
 offset_bottom = 469.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("2_37ckj")
-theme_override_fonts/bold_font = ExtResource("2_37ckj")
+theme_override_fonts/normal_font = ExtResource("3_1jmi5")
+theme_override_fonts/bold_font = ExtResource("3_1jmi5")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 30
 bbcode_enabled = true
@@ -220,30 +220,30 @@ offset_left = 381.0
 offset_top = 384.0
 offset_right = 881.0
 offset_bottom = 434.0
-script = ExtResource("3_5w20r")
+script = ExtResource("5_s30pj")
 
 [node name="GuessButton1" type="Button" parent="QuestionOverlay/GuessButtons"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("3_cl3de")
+theme = ExtResource("6_k7a2w")
 text = "H"
 
 [node name="GuessButton2" type="Button" parent="QuestionOverlay/GuessButtons"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("3_cl3de")
+theme = ExtResource("6_k7a2w")
 text = "H2"
 
 [node name="GuessButton3" type="Button" parent="QuestionOverlay/GuessButtons"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("3_cl3de")
+theme = ExtResource("6_k7a2w")
 text = "NaH"
 
 [node name="GuessButton4" type="Button" parent="QuestionOverlay/GuessButtons"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("3_cl3de")
+theme = ExtResource("6_k7a2w")
 text = "O2"
 
 [node name="CloseOverlayButton" type="Button" parent="QuestionOverlay"]
@@ -253,14 +253,14 @@ offset_left = 579.0
 offset_top = 384.0
 offset_right = 679.0
 offset_bottom = 434.0
-theme = ExtResource("3_cl3de")
+theme = ExtResource("6_k7a2w")
 text = "Lets go!"
-script = ExtResource("5_r0y8g")
+script = ExtResource("7_aucy0")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 emitting = false
 amount = 50
-texture = ExtResource("9_v602c")
+texture = ExtResource("8_n6kdc")
 one_shot = true
 process_material = SubResource("ParticleProcessMaterial_fbuuf")
 
@@ -273,8 +273,8 @@ offset_left = 461.0
 offset_top = 79.0
 offset_right = 795.0
 offset_bottom = 181.0
-theme_override_fonts/normal_font = ExtResource("2_37ckj")
-theme_override_fonts/bold_font = ExtResource("2_37ckj")
+theme_override_fonts/normal_font = ExtResource("3_1jmi5")
+theme_override_fonts/bold_font = ExtResource("3_1jmi5")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 30
 bbcode_enabled = true
@@ -288,7 +288,7 @@ offset_left = 529.0
 offset_top = 352.0
 offset_right = 729.0
 offset_bottom = 452.0
-theme = ExtResource("3_cl3de")
+theme = ExtResource("6_k7a2w")
 text = "Yay!
 LEVEL COMPLETE"
 

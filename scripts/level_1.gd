@@ -1,10 +1,10 @@
 extends Node2D
 
 # preload your stage scenes
-var LabLineScene = preload("res://scenes/level1/LabLine.tscn")
-var AtomAssemblerScene = preload("res://scenes/level1/AtomAssembler.tscn")
-var MoleculeMakerScene = preload("res://scenes/level1/MoleculeMaker.tscn")
-var SynthesisStationScene = preload("res://scenes/level1/SynthesisStation.tscn")
+var LabLineScene = preload("res://scenes/LabLine.tscn")
+var AtomAssemblerScene = preload("res://scenes/AtomAssembler.tscn")
+var MoleculeMakerScene = preload("res://scenes/MoleculeMaker.tscn")
+var SynthesisStationScene = preload("res://scenes/SynthesisStation.tscn")
 
 # hold references to the instances
 var lab_line: Node2D
@@ -96,7 +96,7 @@ func _on_options_button_pressed():
 
 func _on_back_button_pressed() -> void:
 	# back to level select
-	get_tree().change_scene_to_file("res://scenes/level_select.tscn")
+	get_tree().change_scene_to_file("res://scenes/LevelSelect.tscn")
 	GameManager.end_level()
 
 func _on_close_periodic_table_button_pressed() -> void:
