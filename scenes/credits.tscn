@@ -21,11 +21,9 @@ theme_override_styles/panel = ExtResource("2_8gwij")
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 offset_left = 434.0
-offset_top = 162.0
+offset_top = 142.0
 offset_right = 740.0
 offset_bottom = 342.0
-grow_horizontal = 2
-grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
@@ -36,11 +34,9 @@ horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
 offset_left = 435.0
-offset_top = 233.0
+offset_top = 202.0
 offset_right = 739.0
 offset_bottom = 562.0
-grow_horizontal = 2
-grow_vertical = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_0ctdu")
 theme_override_fonts/bold_font = ExtResource("3_0ctdu")
@@ -50,6 +46,9 @@ bbcode_enabled = true
 text = "[b]Programmers:[/b]
 Kent Brought
 Julia Fortt
+
+[b]Artists:[/b]
+Kent Brought
 
 [b]Designers:[/b]
 Kent Brought

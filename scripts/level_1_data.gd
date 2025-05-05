@@ -13,7 +13,7 @@ var synthesis_station_completed = false # set true by Q/A button success
 # star system variables
 var guess_answered_correctly = false
 var level_start_time = Time.get_ticks_msec()
-var timer_limit = 120
+var timer_limit = 180
 
 # atom assembler variables
 const required_atoms = ["H", "O", "Na", "Cl"]
