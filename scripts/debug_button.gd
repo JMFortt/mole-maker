@@ -5,6 +5,7 @@ func _on_pressed_molecule_maker() -> void:
 	GameManager.current_level_data.current_atoms.append("H")
 	GameManager.current_level_data.current_atoms.append("Na")
 	GameManager.current_level_data.current_atoms.append("O")
+	GameManager.current_level_data.current_atoms.append("Cl")
 	# end of debug section:
 	
 	if GameManager.current_level_data:
