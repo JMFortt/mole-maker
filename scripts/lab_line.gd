@@ -10,7 +10,7 @@ func _ready() -> void:
 		[
 			"Hi there!",
 			"I would like to order some NaOH, please.",
-			"I want to make soap with it!",
+			"I want to make more soap with it!",
 			"Thanks! I'll be waiting!"
 		]
 	]
