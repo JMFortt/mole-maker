@@ -14,12 +14,13 @@ func check_solution():
 		if GameManager.current_level_data:
 			GameManager.current_level_data.molecule_maker_completed = true
 			if GameManager.current_level_data.molecule_maker_completed:
-				print("Molecule maker stage completed!")
+				#print("Molecule maker stage completed!")
 				# enable next stage
 				GameManager.current_level_data.molecule_maker_completed = true
 				GameManager.emit_signal("stage_access_enabled", "synthesis_station")
-				print("next stage available!")
+				#print("next stage available!")
 			else:
-				print("Molecule maker stage not completed.")
+				#print("Molecule maker stage not completed.")
+				pass
 		else:
 			push_error("No current level data!")

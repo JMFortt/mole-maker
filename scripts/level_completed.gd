@@ -8,13 +8,13 @@ var star_color = Color("#fed430")
 var star_rating = null
 
 func _ready() -> void:
-	print("sending star message!")
+	#print("sending star message!")
 	star_rating = GameManager.current_level_data.get_star_rating()
 	set_star_message()
 	animate_star_display()
 
 func set_star_message():
-	print("star messages: ", star_rating[1])
+	#print("star messages: ", star_rating[1])
 	# make message
 	var message = ""
 	for lost_star_message in star_rating[1]:
@@ -27,7 +27,7 @@ func set_star_message():
 	star_message.text = message
 	
 func animate_star_display():
-	print("num stars: ", star_rating[0])
+	#print("num stars: ", star_rating[0])
 	if star_rating[0] >= 1:
 		star1.get_node("StarMain").color = star_color
 	if star_rating[0] >= 2:

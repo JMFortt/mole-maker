@@ -15,7 +15,7 @@ script = ExtResource("1_2ckv8")
 offset_left = 429.0
 offset_top = 110.0
 offset_right = 744.0
-offset_bottom = 477.0
+offset_bottom = 502.0
 scale = Vector2(1, 1.218)
 theme_override_styles/panel = ExtResource("2_8gwij")
 

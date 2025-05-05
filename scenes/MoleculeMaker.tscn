@@ -28,7 +28,7 @@ script = ExtResource("3_2wf33")
 position = Vector2(-34, -27)
 
 [node name="OTemplate" type="Sprite2D" parent="H2OEquationTemplate"]
-position = Vector2(698, 191)
+position = Vector2(700, 191)
 texture = ExtResource("2_ytkcq")
 
 [node name="HTemplate1" type="Sprite2D" parent="H2OEquationTemplate"]
@@ -43,33 +43,33 @@ texture = ExtResource("2_ytkcq")
 
 [node name="Sprite2D1" type="Sprite2D" parent="H2OEquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(683, 265)
+position = Vector2(675, 260)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_ytkcq")
 
 [node name="Sprite2D2" type="Sprite2D" parent="H2OEquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(726, 267)
+position = Vector2(725, 260)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_ytkcq")
 
 [node name="Sprite2D3" type="Sprite2D" parent="H2OEquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(690, 113)
+position = Vector2(675, 120)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_ytkcq")
 
 [node name="Sprite2D4" type="Sprite2D" parent="H2OEquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(724, 115)
+position = Vector2(725, 120)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_ytkcq")
 
 [node name="Label5" type="Label" parent="H2OEquationTemplate/DiagramComponents"]
 offset_left = 756.0
-offset_top = 53.0
+offset_top = 50.0
 offset_right = 861.0
-offset_bottom = 282.0
+offset_bottom = 279.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ur06j")
 theme_override_font_sizes/font_size = 200
@@ -77,9 +77,9 @@ text = "-"
 
 [node name="Label6" type="Label" parent="H2OEquationTemplate/DiagramComponents"]
 offset_left = 531.0
-offset_top = 53.0
+offset_top = 50.0
 offset_right = 636.0
-offset_bottom = 282.0
+offset_bottom = 279.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ur06j")
 theme_override_font_sizes/font_size = 200
@@ -89,7 +89,7 @@ text = "-"
 position = Vector2(-148, -38)
 
 [node name="NaTemplate" type="Sprite2D" parent="NaClEquationTemplate"]
-position = Vector2(569, 453)
+position = Vector2(569, 442)
 texture = ExtResource("2_ytkcq")
 
 [node name="ClTemplate" type="Sprite2D" parent="NaClEquationTemplate"]
@@ -101,87 +101,87 @@ position = Vector2(125, 160)
 
 [node name="Sprite2D" type="Sprite2D" parent="NaClEquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(684, 186.8)
+position = Vector2(680, 200)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_ytkcq")
 
 [node name="Sprite2D2" type="Sprite2D" parent="NaClEquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(738, 192.8)
+position = Vector2(730, 200)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_ytkcq")
 
 [node name="Sprite2D3" type="Sprite2D" parent="NaClEquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(809, 278.8)
+position = Vector2(790, 270)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_ytkcq")
 
 [node name="Sprite2D4" type="Sprite2D" parent="NaClEquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(813, 321.8)
+position = Vector2(790, 310)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_ytkcq")
 
 [node name="Sprite2D5" type="Sprite2D" parent="NaClEquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(687, 379.8)
+position = Vector2(680, 360)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_ytkcq")
 
 [node name="Sprite2D6" type="Sprite2D" parent="NaClEquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(736, 379.8)
+position = Vector2(730, 360)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_ytkcq")
 
 [node name="Sprite2D7" type="Sprite2D" parent="NaClEquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(612, 263.8)
+position = Vector2(630, 270)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_ytkcq")
 
 [node name="Sprite2D8" type="Sprite2D" parent="NaClEquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(614, 310.8)
+position = Vector2(630, 310)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_ytkcq")
 
 [node name="Label" type="Label" parent="NaClEquationTemplate/DiagramComponents"]
 offset_left = 485.0
-offset_top = 186.0
+offset_top = 200.0
 offset_right = 525.0
-offset_bottom = 244.0
+offset_bottom = 258.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ur06j")
 theme_override_font_sizes/font_size = 50
 text = "+"
 
 [node name="Label2" type="Label" parent="NaClEquationTemplate/DiagramComponents"]
-offset_left = 803.0
-offset_top = 177.8
-offset_right = 843.0
-offset_bottom = 235.8
+offset_left = 771.0
+offset_top = 200.0
+offset_right = 811.0
+offset_bottom = 258.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ur06j")
 theme_override_font_sizes/font_size = 50
 text = "-"
 
 [node name="Label3" type="Label" parent="NaClEquationTemplate/DiagramComponents"]
-offset_left = 532.0
-offset_top = 161.0
-offset_right = 609.0
-offset_bottom = 390.0
+offset_left = 535.0
+offset_top = 170.0
+offset_right = 612.0
+offset_bottom = 399.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ur06j")
 theme_override_font_sizes/font_size = 200
 text = "["
 
 [node name="Label4" type="Label" parent="NaClEquationTemplate/DiagramComponents"]
-offset_left = 843.0
-offset_top = 165.0
-offset_right = 920.0
-offset_bottom = 394.0
+offset_left = 820.0
+offset_top = 170.0
+offset_right = 897.0
+offset_bottom = 399.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ur06j")
 theme_override_font_sizes/font_size = 200
@@ -254,7 +254,10 @@ position = Vector2(45, 48)
 texture = ExtResource("2_ytkcq")
 
 [node name="Label2" type="Label" parent="Ingredient3"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0215054
+anchor_right = 0.0215054
 offset_left = 33.0
 offset_top = 32.0
 offset_right = 103.0
@@ -280,7 +283,10 @@ position = Vector2(46, 45)
 texture = ExtResource("2_ytkcq")
 
 [node name="Label2" type="Label" parent="Ingredient4"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0421053
+anchor_right = 0.0421053
 offset_left = 32.0
 offset_top = 31.0
 offset_right = 102.0
@@ -296,50 +302,50 @@ metadata/_edit_use_anchors_ = true
 [node name="H1" type="Control" parent="DropSpots"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 390.0
-offset_top = 114.0
-offset_right = 482.0
-offset_bottom = 209.0
+offset_left = 391.0
+offset_top = 113.0
+offset_right = 483.0
+offset_bottom = 208.0
 script = ExtResource("6_ga7vs")
 correct_name = "Ingredient3"
 
 [node name="O" type="Control" parent="DropSpots"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 618.0
-offset_top = 116.0
-offset_right = 713.0
-offset_bottom = 214.0
+offset_left = 620.0
+offset_top = 118.0
+offset_right = 715.0
+offset_bottom = 216.0
 script = ExtResource("6_ga7vs")
 correct_name = "Ingredient4"
 
 [node name="H2" type="Control" parent="DropSpots"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 837.0
-offset_top = 117.0
-offset_right = 935.0
-offset_bottom = 217.0
+offset_left = 840.0
+offset_top = 118.0
+offset_right = 938.0
+offset_bottom = 218.0
 script = ExtResource("6_ga7vs")
 correct_name = "Ingredient3"
 
 [node name="Na" type="Control" parent="DropSpots"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 369.0
-offset_top = 367.0
-offset_right = 471.0
-offset_bottom = 464.0
+offset_left = 371.0
+offset_top = 356.0
+offset_right = 473.0
+offset_bottom = 453.0
 script = ExtResource("6_ga7vs")
 correct_name = "Ingredient1"
 
 [node name="Cl" type="Control" parent="DropSpots"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 637.0
-offset_top = 359.0
-offset_right = 737.0
-offset_bottom = 451.0
+offset_left = 636.0
+offset_top = 357.0
+offset_right = 736.0
+offset_bottom = 449.0
 script = ExtResource("6_ga7vs")
 correct_name = "Ingredient2"
 

@@ -39,7 +39,7 @@ func mix():
 	await ingredient_tween.finished
 
 	# poof
-	print("poof!")
+	#print("poof!")
 	poof.position = center
 	poof.emitting = true
 	
