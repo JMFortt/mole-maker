@@ -1,21 +1,14 @@
-[gd_scene load_steps=31 format=3 uid="uid://ckj04xs2msl6r"]
+[gd_scene load_steps=24 format=3 uid="uid://ckj04xs2msl6r"]
 
 [ext_resource type="Script" uid="uid://dmw7ead88nmeq" path="res://scripts/level_main.gd" id="1_8mxaj"]
 [ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="2_wqqpw"]
-[ext_resource type="Script" uid="uid://bhfxgiio8tees" path="res://scenes/ui_layer.gd" id="2_x0gfo"]
 [ext_resource type="StyleBox" uid="uid://c6rykowjenwip" path="res://themes/menu_panel_variant_1_style_box.tres" id="3_7l2ql"]
 [ext_resource type="Theme" uid="uid://ceyd5jq3dbr2c" path="res://themes/button_variant_2.tres" id="4_x0gfo"]
 [ext_resource type="Texture2D" uid="uid://drdxldt5ox1cr" path="res://assets/lock.png" id="5_t23ro"]
 [ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="6_t5hfu"]
 [ext_resource type="Script" uid="uid://dgjybt40nolb7" path="res://scripts/close_parent_button.gd" id="7_7l2ql"]
 [ext_resource type="Texture2D" uid="uid://b3igypxwpe1tt" path="res://assets/figmaPeriodicTable.png" id="7_ugd7i"]
-[ext_resource type="Texture2D" uid="uid://o25rtjl1m71c" path="res://assets/periodictablebutton.png" id="8_4ohlc"]
 [ext_resource type="StyleBox" uid="uid://c0j65wo0rxbma" path="res://themes/menu_panel_variant_2style_box.tres" id="8_wqqpw"]
-[ext_resource type="Texture2D" uid="uid://dxbslmjfqke6v" path="res://assets/pressedperiodictablebutton.png" id="9_amrb8"]
-[ext_resource type="Texture2D" uid="uid://c14kaug8121f2" path="res://assets/hoverperiodictablebutton.png" id="10_ay76c"]
-[ext_resource type="Texture2D" uid="uid://if5qwvalvorr" path="res://assets/helpbutton.png" id="11_brpn3"]
-[ext_resource type="Texture2D" uid="uid://c4m53on4njbrj" path="res://assets/pressedhelpbutton.png" id="12_b8tex"]
-[ext_resource type="Texture2D" uid="uid://8ma36l1du3c7" path="res://assets/hoverhelpbutton.png" id="13_64wss"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qixek"]
 bg_color = Color(1, 1, 1, 1)
@@ -197,7 +190,6 @@ script = ExtResource("1_8mxaj")
 [node name="StageContainer" type="Node" parent="."]
 
 [node name="UILayer" type="CanvasLayer" parent="."]
-script = ExtResource("2_x0gfo")
 
 [node name="TicketSpawn" type="Panel" parent="UILayer"]
 anchors_preset = -1
@@ -338,10 +330,7 @@ offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
 [node name="MenuBackground2" type="Panel" parent="UILayer/TopLeftMenu"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.8
-anchor_right = 0.975
+layout_mode = 0
 offset_left = -50.0
 offset_top = -30.0
 offset_right = 300.0
@@ -350,33 +339,21 @@ theme_override_styles/panel = ExtResource("3_7l2ql")
 metadata/_edit_use_anchors_ = true
 
 [node name="BackButton" type="Button" parent="UILayer/TopLeftMenu"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.175
-anchor_top = -0.275
-anchor_right = -0.175
-anchor_bottom = -0.275
+layout_mode = 0
 offset_left = 20.0
 offset_top = 25.0
 offset_right = 135.0
 offset_bottom = 75.0
-scale = Vector2(1.37265, 1.37265)
 theme = ExtResource("6_t5hfu")
 text = "Level Select"
 metadata/_edit_use_anchors_ = true
 
 [node name="OptionsButton" type="Button" parent="UILayer/TopLeftMenu"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.725
-anchor_top = -0.275
-anchor_right = 0.725
-anchor_bottom = -0.275
+layout_mode = 0
 offset_left = 150.0
 offset_top = 25.0
 offset_right = 250.0
 offset_bottom = 75.0
-scale = Vector2(1.38023, 1.38023)
 theme = ExtResource("6_t5hfu")
 text = "Options"
 metadata/_edit_use_anchors_ = true
@@ -397,40 +374,25 @@ offset_bottom = 97.0
 theme_override_styles/panel = ExtResource("3_7l2ql")
 metadata/_edit_use_anchors_ = true
 
-[node name="PeriodicTableButton" type="TextureButton" parent="UILayer/TopRightMenu"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 2.475
-anchor_top = -0.425
-anchor_right = 2.475
-anchor_bottom = 1.45
+[node name="PeriodicTableButton" type="Button" parent="UILayer/TopRightMenu"]
+layout_mode = 0
 offset_left = 1030.0
 offset_top = 25.0
 offset_right = 1170.0
 offset_bottom = 75.0
-scale = Vector2(0.612269, 0.610058)
 theme = ExtResource("6_t5hfu")
-texture_normal = ExtResource("8_4ohlc")
-texture_pressed = ExtResource("9_amrb8")
-texture_hover = ExtResource("10_ay76c")
+text = "Periodic Table"
 metadata/_edit_use_anchors_ = true
 
-[node name="HintButton" type="TextureButton" parent="UILayer/TopRightMenu"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.225003
-anchor_top = -0.45
-anchor_right = 1.55
-anchor_bottom = 1.425
+[node name="HintButton" type="Button" parent="UILayer/TopRightMenu"]
+layout_mode = 0
 offset_left = 1195.0
 offset_top = 25.0
 offset_right = 1254.0
 offset_bottom = 75.0
-scale = Vector2(0.610682, 0.610682)
 theme = ExtResource("6_t5hfu")
-texture_normal = ExtResource("11_brpn3")
-texture_pressed = ExtResource("12_b8tex")
-texture_hover = ExtResource("13_64wss")
+text = "Hint
+"
 metadata/_edit_use_anchors_ = true
 
 [node name="PeriodicTableOverlay" type="Control" parent="UILayer"]
@@ -617,23 +579,6 @@ bbcode_enabled = true
 text = "[None for now]"
 horizontal_alignment = 1
 
-[node name="TimerLabel" type="Label" parent="UILayer"]
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 1007.0
-offset_top = -340.0
-offset_right = 1111.0
-offset_bottom = -285.0
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_wqqpw")
-theme_override_font_sizes/font_size = 42
-text = "0:00"
-horizontal_alignment = 1
-
-[node name="UpdateTimer" type="Timer" parent="UILayer/TimerLabel"]
-autostart = true
-
 [connection signal="pressed" from="UILayer/TopLeftMenu/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="UILayer/TopLeftMenu/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="UILayer/TopRightMenu/PeriodicTableButton" to="." method="_on_periodic_table_button_pressed"]
@@ -641,4 +586,3 @@ autostart = true
 [connection signal="pressed" from="UILayer/PeriodicTableOverlay/ClosePeriodicTableButton" to="UILayer/PeriodicTableOverlay/ClosePeriodicTableButton" method="_on_pressed"]
 [connection signal="pressed" from="UILayer/HintOverlay/CloseHintButton" to="UILayer/HintOverlay/CloseHintButton" method="_on_pressed"]
 [connection signal="pressed" from="UILayer/OptionsOverlay/CloseOptionsButton" to="UILayer/OptionsOverlay/CloseOptionsButton" method="_on_pressed"]
-[connection signal="timeout" from="UILayer/TimerLabel/UpdateTimer" to="UILayer" method="_on_UpdateTimer_timeout"]
