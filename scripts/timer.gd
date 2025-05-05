@@ -1,11 +1,11 @@
-extends CanvasLayer
+extends Node2D
 
 var elapsed_time := 0
 
 func _ready():
-	$TimerLabel/UpdateTimer.start()
+	$UpdateTimer.start()
 
-func _on_UpdateTimer_timeout():
+func _on_update_timer_timeout():
 	elapsed_time += 1
 	var minutes = elapsed_time / 60
 	var seconds = elapsed_time % 60
