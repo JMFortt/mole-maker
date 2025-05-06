@@ -4,8 +4,9 @@ var levels = ["level_1", "level_2", "level_3"]
 var star_color = Color("#fed430")
 
 func _ready():
-	# correct path: UI → Level1Button
-	$UI/Level1Button.pressed.connect(_on_Level1Button_pressed)
+	$UI/Level1Button.pressed.connect(_on_level_1_button_pressed)
+	$UI/Level2Button.pressed.connect(_on_level_2_button_pressed)
+	$UI/Level3Button.pressed.connect(_on_level_3_button_pressed)
 	display_stars_and_unlocks()
 
 func display_stars_and_unlocks():
@@ -28,8 +29,17 @@ func display_stars_and_unlocks():
 			if star_rating >= 3:
 				level_button.get_node("Star3/StarMain").color = star_color
 
-func _on_Level1Button_pressed():
+func _on_level_1_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/LevelMain.tscn")
+	GameManager.start_level("level_1")
+
+func _on_level_2_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/LevelMain.tscn")
+	GameManager.start_level("level_2")
+
+func _on_level_3_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/LevelMain.tscn")
+	GameManager.start_level("level_3")
 
 func _on_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")

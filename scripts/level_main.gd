@@ -13,9 +13,6 @@ var molecule_maker: Node2D
 var synthesis_station: Node2D
 
 func _ready():
-	# start level
-	GameManager.start_level("level_1")
-
 	# instance them, add under StageContainer
 	lab_line = LabLineScene.instantiate()
 	atom_assembler = AtomAssemblerScene.instantiate()

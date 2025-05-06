@@ -10,7 +10,8 @@ func start_level(level_name: String):
 		var level_data_script = preload("res://prefabs/level1/level_1_data.gd")
 		current_level_data = level_data_script.new()
 	elif level_name == "level_2":
-		pass
+		var level_data_script = preload("res://prefabs/level2/level_2_data.gd")
+		current_level_data = level_data_script.new()
 	elif level_name == "level_3":
 		pass
 	else:
