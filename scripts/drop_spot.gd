@@ -16,7 +16,7 @@ func try_place(obj: Control):
 			current_object = obj
 			obj.global_position = global_position # snap object into position
 			obj.set_process(false) # stop dragging
-			get_parent().get_parent().check_solution() # check if all spots matched
+			get_parent().get_parent().get_parent().check_solution() # check if all spots matched
 	# object placed incorrectly
 	else:
 		obj.queue_free() # delete object

@@ -37,6 +37,9 @@ var customer = preload("res://Prefabs/Level1/customer.tscn")
 const required_atoms = ["H", "O", "Na", "Cl"]
 var current_atoms = []
 
+# molecule maker variables
+var drag_and_drop = preload("res://Prefabs/Level1/DragAndDrop.tscn")
+
 # run every time an atom is made successfully
 func check_atom_assembler_completed():
 	for atom in required_atoms:

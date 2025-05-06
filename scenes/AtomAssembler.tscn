@@ -242,7 +242,6 @@ theme = ExtResource("6_5dn1n")
 text = "Make Atom"
 
 [node name="DebugButton" type="Button" parent="."]
-visible = false
 offset_left = 541.0
 offset_top = 516.0
 offset_right = 689.0

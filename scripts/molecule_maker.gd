@@ -1,6 +1,15 @@
 extends Node
 
-@onready var drop_spots = $DropSpots.get_children() 
+var drop_spots
+
+func _ready() -> void:
+	# instantiate drag and drop
+	var drag_and_drop = GameManager.current_level_data.drag_and_drop.instantiate()
+	drag_and_drop.position = Vector2(0, 0)
+	add_child(drag_and_drop)
+
+	# get child node referernces
+	drop_spots = $DragAndDrop/DropSpots.get_children() 
 
 func check_solution():
 	var correct = true
