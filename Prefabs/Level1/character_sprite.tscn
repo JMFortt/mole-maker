@@ -3,5 +3,5 @@
 [ext_resource type="Texture2D" uid="uid://brbfpffrofjsd" path="res://assets/molenpc1.png" id="1_s5kiw"]
 
 [node name="CharacterSprite" type="Sprite2D"]
-scale = Vector2(0.2, 0.219)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_s5kiw")

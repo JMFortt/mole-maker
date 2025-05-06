@@ -7,7 +7,7 @@
 [ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="5_o82m6"]
 [ext_resource type="Script" uid="uid://dgjybt40nolb7" path="res://scripts/close_parent_button.gd" id="6_wg0ba"]
 [ext_resource type="Texture2D" uid="uid://m1i46obw5w1v" path="res://assets/sparkle.png" id="7_mg7g8"]
-[ext_resource type="Script" uid="uid://bdtk48ojnjtcq" path="res://scenes/success_button.gd" id="8_duhuo"]
+[ext_resource type="Script" uid="uid://bdtk48ojnjtcq" path="res://scripts/success_button.gd" id="8_duhuo"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fbuuf"]
 particle_flag_disable_z = true
