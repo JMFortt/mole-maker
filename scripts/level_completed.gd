@@ -4,14 +4,23 @@ extends Node2D
 @onready var star2 = $UILayer/StarDisplay/Star2
 @onready var star3 = $UILayer/StarDisplay/Star3
 @onready var star_message = $UILayer/StarDisplay/StarMessage
+@onready var heading = $Heading
 var star_color = Color("#fed430")
 var star_rating = null
 
 func _ready() -> void:
+	# instantiate drag and drop
+	var drag_and_drop = GameManager.current_level_data.character_sprite.instantiate()
+	drag_and_drop.position = Vector2(640, 275)
+	add_child(drag_and_drop)
+	
 	#print("sending star message!")
 	star_rating = GameManager.current_level_data.get_star_rating()
 	set_star_message()
 	animate_star_display()
+	
+	# set header
+	heading.text = GameManager.current_level_data.level_completed_message
 
 func set_star_message():
 	#print("star messages: ", star_rating[1])

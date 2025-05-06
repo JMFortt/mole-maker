@@ -38,7 +38,11 @@ const required_atoms = ["H", "O", "Na", "Cl"]
 var current_atoms = []
 
 # molecule maker variables
-var drag_and_drop = preload("res://Prefabs/Level1/DragAndDrop.tscn")
+var drag_and_drop = preload("res://Prefabs/Level1/drag_and_drop.tscn")
+
+# level completed variables
+var character_sprite = preload("res://Prefabs/Level1/character_sprite.tscn")
+var level_completed_message = "[b]Level 1 Completed![/b]"
 
 # run every time an atom is made successfully
 func check_atom_assembler_completed():
