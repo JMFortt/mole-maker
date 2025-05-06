@@ -433,6 +433,27 @@ texture_pressed = ExtResource("12_b8tex")
 texture_hover = ExtResource("13_64wss")
 metadata/_edit_use_anchors_ = true
 
+[node name="Timer" type="Node2D" parent="UILayer"]
+script = ExtResource("16_4ohlc")
+
+[node name="UpdateTimer" type="Timer" parent="UILayer/Timer"]
+autostart = true
+
+[node name="TimerLabel" type="Label" parent="UILayer/Timer"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1007.0
+offset_top = 20.0
+offset_right = 1111.0
+offset_bottom = 75.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_wqqpw")
+theme_override_font_sizes/font_size = 30
+text = "0:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="PeriodicTableOverlay" type="Control" parent="UILayer"]
 visible = false
 layout_mode = 3
@@ -618,32 +639,11 @@ bbcode_enabled = true
 text = "[None for now]"
 horizontal_alignment = 1
 
-[node name="Timer" type="Node2D" parent="UILayer"]
-script = ExtResource("16_4ohlc")
-
-[node name="UpdateTimer" type="Timer" parent="UILayer/Timer"]
-autostart = true
-
-[node name="TimerLabel" type="Label" parent="UILayer/Timer"]
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 1007.0
-offset_top = 20.0
-offset_right = 1111.0
-offset_bottom = 75.0
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_wqqpw")
-theme_override_font_sizes/font_size = 30
-text = "0:00"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [connection signal="pressed" from="UILayer/TopLeftMenu/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="UILayer/TopLeftMenu/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="UILayer/TopRightMenu/PeriodicTableButton" to="." method="_on_periodic_table_button_pressed"]
 [connection signal="pressed" from="UILayer/TopRightMenu/HintButton" to="." method="_on_hint_button_pressed"]
+[connection signal="timeout" from="UILayer/Timer/UpdateTimer" to="UILayer/Timer" method="_on_update_timer_timeout"]
 [connection signal="pressed" from="UILayer/PeriodicTableOverlay/ClosePeriodicTableButton" to="UILayer/PeriodicTableOverlay/ClosePeriodicTableButton" method="_on_pressed"]
 [connection signal="pressed" from="UILayer/HintOverlay/CloseHintButton" to="UILayer/HintOverlay/CloseHintButton" method="_on_pressed"]
 [connection signal="pressed" from="UILayer/OptionsOverlay/CloseOptionsButton" to="UILayer/OptionsOverlay/CloseOptionsButton" method="_on_pressed"]
-[connection signal="timeout" from="UILayer/Timer/UpdateTimer" to="UILayer/Timer" method="_on_update_timer_timeout"]
