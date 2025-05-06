@@ -224,17 +224,7 @@ theme_override_fonts/bold_font = ExtResource("2_wqqpw")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 25
 bbcode_enabled = true
-text = "[b]Want to make:
-NaOH[/b]
--------------------
-2NaCl+2H2O 
-->
- 2NaOH+Cl2+?
--------------------
-[b]Make atoms:[/b]
-Na, H, O, Cl
-[b]Make molecules:[/b]
-H20, NaCl"
+text = "[Ticket Text]"
 horizontal_alignment = 1
 vertical_alignment = 1
 

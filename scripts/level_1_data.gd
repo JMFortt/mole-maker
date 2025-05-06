@@ -15,6 +15,24 @@ var guess_answered_correctly = false
 var level_start_time = Time.get_ticks_msec()
 var timer_limit = 180
 
+# lab line variables
+var ticket_text = "[b]Want to make:\nNaOH[/b]
+-------------------
+2NaCl+2H2O \n->\n2NaOH+Cl2+?
+-------------------
+[b]Make atoms:[/b]\nNa, H, O, Cl
+[b]Make molecules:[/b]\nH20, NaCl"
+var customer_dialogues = [
+		[
+			"Hi there!",
+			"I would like to order some NaOH, please.",
+			"I want to make more soap with it!",
+			"Thanks! I'll be waiting!"
+		]
+	]
+var customer = preload("res://Prefabs/Level1/customer.tscn")
+
+
 # atom assembler variables
 const required_atoms = ["H", "O", "Na", "Cl"]
 var current_atoms = []
