@@ -1,40 +1,39 @@
 extends Node2D
 
-var ingredient1
-var ingredient2
-var result1
-var result2
-var result3
+var ingredients = []
+var results = []
 var poof
 var success_message
-var starting_pos1 = null
-var starting_pos2 = null
-var ending_pos1 = null
-var ending_pos2 = null
-var ending_pos3 = null
-var center = null
+var starting_positions = []
+var ending_positions = []
+var swirl_offsets = []
+var swirl_distances = []
+var center = Vector2(625, 300)
 
 func _ready() -> void:
-	# instantiate character
+	# instantiate synthesis quiz
 	var synthesis_quiz = GameManager.current_level_data.synthesis_quiz.instantiate()
-	synthesis_quiz.position = Vector2(0, 0)
+	synthesis_quiz.position = Vector2.ZERO
 	add_child(synthesis_quiz)
 	
-	# get child node referernces
-	poof = $SynthesisQuiz/GPUParticles2D
-	success_message = $SynthesisQuiz/SuccessMessage
-	ingredient1 = $SynthesisQuiz/Ingredient1
-	ingredient2 = $SynthesisQuiz/Ingredient2
-	result1 = $SynthesisQuiz/Result1
-	result2 = $SynthesisQuiz/Result2
-	result3 = $SynthesisQuiz/Result3
-	
-	center = (result1.position + result2.position) / 2
-	starting_pos1 = ingredient1.position
-	starting_pos2 = ingredient2.position
-	ending_pos1 = result1.position
-	ending_pos2 = result2.position
-	ending_pos3 = result3.position
+	# get references
+	poof = synthesis_quiz.get_node("GPUParticles2D")
+	success_message = synthesis_quiz.get_node("SuccessMessage")
+
+	# collect ingredient nodes dynamically
+	for child in synthesis_quiz.get_children():
+		if child.name.begins_with("Ingredient"):
+			ingredients.append(child)
+			starting_positions.append(child.position)
+			var vec = child.position - center
+			swirl_distances.append(vec.length())
+			swirl_offsets.append(vec.angle())
+
+	# collect result nodes dynamically
+	for child in synthesis_quiz.get_children():
+		if child.name.begins_with("Result"):
+			results.append(child)
+			ending_positions.append(child.position)
 
 func _on_mix_button_pressed() -> void:
 	mix()
@@ -43,58 +42,46 @@ func _on_mix_button_pressed() -> void:
 func mix():
 	var swirl_time = 2
 
-	# animate swirl using a tween method
+	# animate swirl and fade out
 	var ingredient_tween = create_tween()
 	ingredient_tween.tween_method(Callable(self, "_update_swirl"), 0.0, 3.0 * TAU, swirl_time)
-	# fade out ingredients
-	ingredient_tween.parallel().tween_property(ingredient1, "modulate", Color(1, 1, 1, 0), swirl_time)
-	ingredient_tween.parallel().tween_property(ingredient2, "modulate", Color(1, 1, 1, 0), swirl_time)
+	for ingredient in ingredients:
+		ingredient_tween.parallel().tween_property(ingredient, "modulate", Color(1, 1, 1, 0), swirl_time)
 	ingredient_tween.parallel().tween_property($MixButton, "modulate", Color(1, 1, 1, 0), swirl_time)
 	await ingredient_tween.finished
 
 	# poof
-	#print("poof!")
 	poof.position = center
 	poof.emitting = true
-	
-	# hide original ingredients
-	ingredient1.visible = false
-	ingredient2.visible = false
-	ingredient2.visible = false
-	$MixButton.visible = false
-	
-	# show result
-	result1.position = center
-	result2.position = center
-	result3.position = center
-	result1.visible = true
-	result2.visible = true
-	result3.visible = true
-	success_message.visible = true
-	# animate fade-in with a tween
-	var result_tween = create_tween()
-	result_tween.parallel().tween_property(result1, "modulate", Color("#ffffff"), swirl_time)
-	result_tween.parallel().tween_property(result2, "modulate", Color("#ffffff"), swirl_time)
-	result_tween.parallel().tween_property(result3, "modulate", Color("#ffffff"), swirl_time)
-	result_tween.parallel().tween_property(result1, "position", ending_pos1, swirl_time)
-	result_tween.parallel().tween_property(result2, "position", ending_pos2, swirl_time)
-	result_tween.parallel().tween_property(result3, "position", ending_pos3, swirl_time)
-	# face in success message
-	result_tween.parallel().tween_property(success_message, "modulate", Color("#ffffff"), swirl_time)
-	await result_tween.finished
 
+	# hide ingredients and mix button
+	for ingredient in ingredients:
+		ingredient.visible = false
+	$MixButton.visible = false
+
+	# show results at center, then animate outward
+	for result in results:
+		result.position = center
+		result.visible = true
+
+	success_message.visible = true
+
+	var result_tween = create_tween()
+	for i in results.size():
+		result_tween.parallel().tween_property(results[i], "modulate", Color(1, 1, 1), swirl_time)
+		result_tween.parallel().tween_property(results[i], "position", ending_positions[i], swirl_time)
+	result_tween.parallel().tween_property(success_message, "modulate", Color(1, 1, 1), swirl_time)
+	await result_tween.finished
 
 func _update_swirl(angle: float):
 	var total_angle = 3.0 * TAU
 	var progress = clamp(angle / total_angle, 0.0, 1.0)
 
-	var max_radius = 200.0
-	var min_radius = 20.0
-	var radius = lerp(max_radius, min_radius, progress)
-
-	ingredient1.position = center + Vector2.LEFT.rotated(angle) * radius
-	ingredient2.position = center + Vector2.RIGHT.rotated(angle) * radius
-
-	var modifier = lerp(1.0, 0.5, progress)
-	ingredient1.scale = Vector2.ONE * modifier
-	ingredient2.scale = Vector2.ONE * modifier
+	var count = ingredients.size()
+	for i in count:
+		var start_angle = swirl_offsets[i]
+		var start_radius = swirl_distances[i]
+		var current_angle = start_angle + angle
+		var radius = lerp(start_radius, 20.0, progress)
+		ingredients[i].position = center + Vector2.RIGHT.rotated(current_angle) * radius
+		ingredients[i].scale = Vector2.ONE * lerp(1.0, 0.5, progress)
