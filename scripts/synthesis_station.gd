@@ -1,12 +1,12 @@
 extends Node2D
 
-@onready var ingredient1 = $Ingredient1
-@onready var ingredient2 = $Ingredient2
-@onready var result1 = $Result1
-@onready var result2 = $Result2
-@onready var result3 = $Result3
-@onready var poof = $GPUParticles2D
-@onready var success_message = $SuccessMessage
+var ingredient1
+var ingredient2
+var result1
+var result2
+var result3
+var poof
+var success_message
 var starting_pos1 = null
 var starting_pos2 = null
 var ending_pos1 = null
@@ -15,6 +15,20 @@ var ending_pos3 = null
 var center = null
 
 func _ready() -> void:
+	# instantiate character
+	var synthesis_quiz = GameManager.current_level_data.synthesis_quiz.instantiate()
+	synthesis_quiz.position = Vector2(0, 0)
+	add_child(synthesis_quiz)
+	
+	# get child node referernces
+	poof = $SynthesisQuiz/GPUParticles2D
+	success_message = $SynthesisQuiz/SuccessMessage
+	ingredient1 = $SynthesisQuiz/Ingredient1
+	ingredient2 = $SynthesisQuiz/Ingredient2
+	result1 = $SynthesisQuiz/Result1
+	result2 = $SynthesisQuiz/Result2
+	result3 = $SynthesisQuiz/Result3
+	
 	center = (result1.position + result2.position) / 2
 	starting_pos1 = ingredient1.position
 	starting_pos2 = ingredient2.position
@@ -84,7 +98,3 @@ func _update_swirl(angle: float):
 	var modifier = lerp(1.0, 0.5, progress)
 	ingredient1.scale = Vector2.ONE * modifier
 	ingredient2.scale = Vector2.ONE * modifier
-
-
-func _on_success_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/LevelCompleted.tscn")

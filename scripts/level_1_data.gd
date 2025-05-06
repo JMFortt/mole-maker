@@ -32,13 +32,15 @@ var customer_dialogues = [
 	]
 var customer = preload("res://Prefabs/Level1/customer.tscn")
 
-
 # atom assembler variables
 const required_atoms = ["H", "O", "Na", "Cl"]
 var current_atoms = []
 
 # molecule maker variables
 var drag_and_drop = preload("res://Prefabs/Level1/drag_and_drop.tscn")
+
+# synthesis station variables
+var synthesis_quiz = preload("res://Prefabs/Level1/synthesis_quiz.tscn")
 
 # level completed variables
 var character_sprite = preload("res://Prefabs/Level1/character_sprite.tscn")
