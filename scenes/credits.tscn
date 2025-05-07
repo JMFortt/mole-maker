@@ -9,6 +9,12 @@
 [node name="Credits" type="Node2D"]
 script = ExtResource("1_al82v")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 853.0
+texture = ExtResource("5_jka11")
+expand_mode = 1
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
@@ -33,24 +39,28 @@ text = "Credits:"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
-offset_left = 435.0
+offset_left = 445.0
 offset_top = 202.0
-offset_right = 739.0
+offset_right = 729.0
 offset_bottom = 562.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_g618n")
 theme_override_fonts/bold_font = ExtResource("3_g618n")
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 15
 theme_override_font_sizes/bold_font_size = 30
 bbcode_enabled = true
-text = "[b]Programmers:[/b]
-Kent Brought
-Julia Fortt
+text = "[b]Programming:[/b]
+Lead Programmer: Julia Fortt
+Programmer: Kent Brought
 
-[b]Artists:[/b]
-Kent Brought
+[b]Art & Animation:[/b]
+Lead Artist: Kent Brought
+Artist: Julia Fortt
 
-[b]Designers:[/b]
+[b]Music & Audio:[/b]
+Composer/Sound Designer: Julia Fortt
+
+[b]Game Design:[/b]
 Kent Brought
 Julia Fortt
 Konstantina Rasvani
@@ -64,11 +74,5 @@ offset_right = 150.0
 offset_bottom = 100.0
 theme = ExtResource("4_t4hkn")
 text = "Menu"
-
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1280.0
-offset_bottom = 853.0
-texture = ExtResource("5_jka11")
-expand_mode = 1
 
 [connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
