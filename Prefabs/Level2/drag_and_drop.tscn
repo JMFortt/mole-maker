@@ -83,7 +83,7 @@ position = Vector2(756, 446.8)
 texture = ExtResource("1_f7hm8")
 
 [node name="ClTemplate2" type="Sprite2D" parent="Cl2EquationTemplate"]
-position = Vector2(569, 442)
+position = Vector2(576.002, 449.398)
 texture = ExtResource("1_f7hm8")
 
 [node name="DiagramComponents" type="Node2D" parent="Cl2EquationTemplate"]
@@ -91,25 +91,25 @@ position = Vector2(125, 160)
 
 [node name="Sprite2D" type="Sprite2D" parent="Cl2EquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(603, 204.8)
+position = Vector2(607, 208.8)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_f7hm8")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Cl2EquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(653, 204.8)
+position = Vector2(657, 208.8)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_f7hm8")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Cl2EquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(713, 274.8)
+position = Vector2(705.802, 268.197)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_f7hm8")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Cl2EquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(713, 314.8)
+position = Vector2(705.802, 308.197)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_f7hm8")
 
@@ -127,45 +127,45 @@ texture = ExtResource("1_f7hm8")
 
 [node name="Sprite2D9" type="Sprite2D" parent="Cl2EquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(413.8, 199.8)
+position = Vector2(424.801, 211.198)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_f7hm8")
 
 [node name="Sprite2D10" type="Sprite2D" parent="Cl2EquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(463.8, 199.8)
+position = Vector2(474.801, 211.198)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_f7hm8")
 
 [node name="Sprite2D13" type="Sprite2D" parent="Cl2EquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(413.8, 359.8)
+position = Vector2(420.802, 367.198)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_f7hm8")
 
 [node name="Sprite2D14" type="Sprite2D" parent="Cl2EquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(463.8, 359.8)
+position = Vector2(470.802, 367.198)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_f7hm8")
 
 [node name="Sprite2D15" type="Sprite2D" parent="Cl2EquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(363.8, 269.8)
+position = Vector2(373.802, 269.198)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_f7hm8")
 
 [node name="Sprite2D16" type="Sprite2D" parent="Cl2EquationTemplate/DiagramComponents"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(363.8, 309.8)
+position = Vector2(373.802, 309.198)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_f7hm8")
 
 [node name="Label3" type="Label" parent="Cl2EquationTemplate/DiagramComponents"]
-offset_left = 511.0
-offset_top = 222.0
-offset_right = 616.0
-offset_bottom = 451.0
+offset_left = 518.001
+offset_top = 220.998
+offset_right = 623.001
+offset_bottom = 449.998
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_omq77")
 theme_override_font_sizes/font_size = 100
@@ -310,10 +310,10 @@ correct_name = "Ingredient1"
 [node name="Cl1" type="Control" parent="DropSpots"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 823.0
-offset_top = 165.0
-offset_right = 925.0
-offset_bottom = 262.0
+offset_left = 815.602
+offset_top = 172.002
+offset_right = 917.602
+offset_bottom = 269.002
 script = ExtResource("4_rxd3q")
 correct_name = "Ingredient2"
 
