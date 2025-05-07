@@ -49,14 +49,14 @@ position = Vector2(2, -2)
 texture = ExtResource("1_7v56b")
 
 [node name="Label" type="Label" parent="Ingredient2"]
-offset_left = -34.0
-offset_top = -19.0
-offset_right = 42.0
-offset_bottom = 36.0
+offset_left = -29.0
+offset_top = -18.0
+offset_right = 47.0
+offset_bottom = 37.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_qst7n")
 theme_override_font_sizes/font_size = 30
-text = "3KOH"
+text = "KOH"
 
 [node name="Result1" type="Node2D" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -87,14 +87,14 @@ position = Vector2(2, -2)
 texture = ExtResource("1_7v56b")
 
 [node name="Label" type="Label" parent="Result2"]
-offset_left = -30.0
+offset_left = -25.0
 offset_top = -18.0
-offset_right = 52.0
+offset_right = 57.0
 offset_bottom = 37.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_qst7n")
 theme_override_font_sizes/font_size = 30
-text = "3H2O"
+text = "H2O"
 metadata/_edit_use_anchors_ = true
 
 [node name="QuestionOverlay" type="Control" parent="."]
@@ -132,7 +132,7 @@ theme_override_font_sizes/bold_font_size = 30
 bbcode_enabled = true
 text = "[b]You're almost there![/b]
 
-Before we make K3PO4, let's think - what else do you think will be made by putting H3PO4 and 3KOH together?
+Before we make K3PO4, let's think - what else do you think will be made by putting H3PO4 and KOH together?
 
 Make a guess!"
 horizontal_alignment = 1
