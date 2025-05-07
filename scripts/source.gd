@@ -8,9 +8,10 @@ func _gui_input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		# make a clone
 		var clone = duplicate()
-		# different name for each clone
+		# scale if needed
 		if GameManager.current_level_data.level_name == "level_3":
 			clone.scale = Vector2(0.5, 0.5)
+		# different name for each clone
 		clone.name = name + "_" + str(clone_count)
 		clone_count += 1
 		clone.set_script(load("res://scripts/placed_object.gd"))
