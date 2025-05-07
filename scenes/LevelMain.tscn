@@ -1,21 +1,22 @@
-[gd_scene load_steps=31 format=3 uid="uid://ckj04xs2msl6r"]
+[gd_scene load_steps=32 format=3 uid="uid://ckj04xs2msl6r"]
 
 [ext_resource type="Script" uid="uid://dmw7ead88nmeq" path="res://scripts/level_main.gd" id="1_8mxaj"]
 [ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="2_wqqpw"]
 [ext_resource type="StyleBox" uid="uid://c6rykowjenwip" path="res://themes/menu_panel_variant_1_style_box.tres" id="3_7l2ql"]
 [ext_resource type="Theme" uid="uid://ceyd5jq3dbr2c" path="res://themes/button_variant_2.tres" id="4_x0gfo"]
-[ext_resource type="Texture2D" uid="uid://drdxldt5ox1cr" path="res://assets/lock.png" id="5_t23ro"]
+[ext_resource type="Texture2D" uid="uid://drdxldt5ox1cr" path="res://assets/art/lock.png" id="5_t23ro"]
 [ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="6_t5hfu"]
 [ext_resource type="Script" uid="uid://dgjybt40nolb7" path="res://scripts/close_parent_button.gd" id="7_7l2ql"]
-[ext_resource type="Texture2D" uid="uid://b3igypxwpe1tt" path="res://assets/figmaPeriodicTable.png" id="7_ugd7i"]
-[ext_resource type="Texture2D" uid="uid://o25rtjl1m71c" path="res://assets/periodictablebutton.png" id="8_4ohlc"]
+[ext_resource type="Texture2D" uid="uid://b3igypxwpe1tt" path="res://assets/art/figmaPeriodicTable.png" id="7_ugd7i"]
+[ext_resource type="Texture2D" uid="uid://o25rtjl1m71c" path="res://assets/art/periodictablebutton.png" id="8_4ohlc"]
 [ext_resource type="StyleBox" uid="uid://c0j65wo0rxbma" path="res://themes/menu_panel_variant_2style_box.tres" id="8_wqqpw"]
-[ext_resource type="Texture2D" uid="uid://dxbslmjfqke6v" path="res://assets/pressedperiodictablebutton.png" id="9_amrb8"]
-[ext_resource type="Texture2D" uid="uid://c14kaug8121f2" path="res://assets/hoverperiodictablebutton.png" id="10_ay76c"]
-[ext_resource type="Texture2D" uid="uid://if5qwvalvorr" path="res://assets/helpbutton.png" id="11_brpn3"]
-[ext_resource type="Texture2D" uid="uid://c4m53on4njbrj" path="res://assets/pressedhelpbutton.png" id="12_b8tex"]
-[ext_resource type="Texture2D" uid="uid://8ma36l1du3c7" path="res://assets/hoverhelpbutton.png" id="13_64wss"]
+[ext_resource type="Texture2D" uid="uid://dxbslmjfqke6v" path="res://assets/art/pressedperiodictablebutton.png" id="9_amrb8"]
+[ext_resource type="Texture2D" uid="uid://c14kaug8121f2" path="res://assets/art/hoverperiodictablebutton.png" id="10_ay76c"]
+[ext_resource type="Texture2D" uid="uid://if5qwvalvorr" path="res://assets/art/helpbutton.png" id="11_brpn3"]
+[ext_resource type="Texture2D" uid="uid://c4m53on4njbrj" path="res://assets/art/pressedhelpbutton.png" id="12_b8tex"]
+[ext_resource type="Texture2D" uid="uid://8ma36l1du3c7" path="res://assets/art/hoverhelpbutton.png" id="13_64wss"]
 [ext_resource type="Script" uid="uid://bhfxgiio8tees" path="res://scripts/timer.gd" id="16_4ohlc"]
+[ext_resource type="PackedScene" uid="uid://b151sb0d1ixnj" path="res://prefabs/options_overlay.tscn" id="17_amrb8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qixek"]
 bg_color = Color(1, 1, 1, 1)
@@ -564,70 +565,7 @@ Check the periodic table for each element's number of valence electrons if you n
 [b] Synthesis Station: [/b]
 Make a guess at what the \"?\" in the ticket equation will be, then combine your molecules and see what happens!"
 
-[node name="OptionsOverlay" type="Control" parent="UILayer"]
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Panel" type="Panel" parent="UILayer/OptionsOverlay"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="OptionsBackground" type="Panel" parent="UILayer/OptionsOverlay"]
-layout_mode = 0
-offset_left = 269.0
-offset_top = 161.0
-offset_right = 1005.0
-offset_bottom = 493.0
-theme_override_styles/panel = ExtResource("8_wqqpw")
-
-[node name="CloseOptionsButton" type="Button" parent="UILayer/OptionsOverlay"]
-layout_mode = 0
-offset_left = 876.0
-offset_top = 186.0
-offset_right = 976.0
-offset_bottom = 236.0
-theme = ExtResource("6_t5hfu")
-text = "Close"
-script = ExtResource("7_7l2ql")
-
-[node name="Header" type="RichTextLabel" parent="UILayer/OptionsOverlay"]
-layout_mode = 0
-offset_left = 412.0
-offset_top = 188.0
-offset_right = 868.0
-offset_bottom = 239.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("2_wqqpw")
-theme_override_fonts/bold_font = ExtResource("2_wqqpw")
-theme_override_font_sizes/normal_font_size = 20
-theme_override_font_sizes/bold_font_size = 30
-bbcode_enabled = true
-text = "[u][b]Options:[/b][/u]"
-horizontal_alignment = 1
-
-[node name="RichTextLabel" type="RichTextLabel" parent="UILayer/OptionsOverlay"]
-layout_mode = 0
-offset_left = 296.0
-offset_top = 248.0
-offset_right = 979.0
-offset_bottom = 477.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("2_wqqpw")
-theme_override_fonts/bold_font = ExtResource("2_wqqpw")
-theme_override_font_sizes/normal_font_size = 20
-theme_override_font_sizes/bold_font_size = 30
-bbcode_enabled = true
-text = "[None for now]"
-horizontal_alignment = 1
+[node name="OptionsOverlay" parent="UILayer" instance=ExtResource("17_amrb8")]
 
 [connection signal="pressed" from="UILayer/TopLeftMenu/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="UILayer/TopLeftMenu/OptionsButton" to="." method="_on_options_button_pressed"]
@@ -636,4 +574,3 @@ horizontal_alignment = 1
 [connection signal="timeout" from="UILayer/Timer/UpdateTimer" to="UILayer/Timer" method="_on_update_timer_timeout"]
 [connection signal="pressed" from="UILayer/PeriodicTableOverlay/ClosePeriodicTableButton" to="UILayer/PeriodicTableOverlay/ClosePeriodicTableButton" method="_on_pressed"]
 [connection signal="pressed" from="UILayer/HintOverlay/CloseHintButton" to="UILayer/HintOverlay/CloseHintButton" method="_on_pressed"]
-[connection signal="pressed" from="UILayer/OptionsOverlay/CloseOptionsButton" to="UILayer/OptionsOverlay/CloseOptionsButton" method="_on_pressed"]

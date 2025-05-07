@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://cy8kfvob6180f"]
 
 [ext_resource type="Script" uid="uid://du3gc74e7p6hp" path="res://scripts/atom_assembler.gd" id="1_yqg2x"]
-[ext_resource type="Texture2D" uid="uid://bk7scx6n1xs2h" path="res://assets/atomassemblerbackground.png" id="2_vovuf"]
-[ext_resource type="Texture2D" uid="uid://fbgrj4y2yokf" path="res://assets/proton.png" id="3_3752f"]
+[ext_resource type="Texture2D" uid="uid://bk7scx6n1xs2h" path="res://assets/art/atomassemblerbackground.png" id="2_vovuf"]
+[ext_resource type="Texture2D" uid="uid://fbgrj4y2yokf" path="res://assets/art/proton.png" id="3_3752f"]
 [ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="4_np5r3"]
 [ext_resource type="Script" uid="uid://dc233iitfsmv8" path="res://scripts/number_field.gd" id="5_3b5xh"]
 [ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="6_5dn1n"]
 [ext_resource type="Script" uid="uid://c1jje0fl4pjqo" path="res://scripts/add_atom_component_button.gd" id="7_cs70e"]
-[ext_resource type="Texture2D" uid="uid://v4fdbxbl52a7" path="res://assets/neutron.png" id="8_m02th"]
-[ext_resource type="Texture2D" uid="uid://cw4lukm3b7flj" path="res://assets/electron.png" id="9_5lhjy"]
+[ext_resource type="Texture2D" uid="uid://v4fdbxbl52a7" path="res://assets/art/neutron.png" id="8_m02th"]
+[ext_resource type="Texture2D" uid="uid://cw4lukm3b7flj" path="res://assets/art/electron.png" id="9_5lhjy"]
 [ext_resource type="StyleBox" uid="uid://c6rykowjenwip" path="res://themes/menu_panel_variant_1_style_box.tres" id="10_ly6pu"]
 [ext_resource type="Script" uid="uid://c5ixkdlesiqg5" path="res://scripts/debug_button.gd" id="11_dvb2t"]
 
@@ -242,7 +242,6 @@ theme = ExtResource("6_5dn1n")
 text = "Make Atom"
 
 [node name="DebugButton" type="Button" parent="."]
-visible = false
 offset_left = 541.0
 offset_top = 516.0
 offset_right = 689.0

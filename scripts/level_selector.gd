@@ -32,14 +32,18 @@ func display_stars_and_unlocks():
 func _on_level_1_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/LevelMain.tscn")
 	GameManager.start_level("level_1")
+	AudioManager.button_click()
 
 func _on_level_2_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/LevelMain.tscn")
 	GameManager.start_level("level_2")
+	AudioManager.button_click()
 
 func _on_level_3_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/LevelMain.tscn")
 	GameManager.start_level("level_3")
+	AudioManager.button_click()
 
 func _on_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
+	AudioManager.button_click()

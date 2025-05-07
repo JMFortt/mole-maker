@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cyodsmt76vfae"]
 
-[ext_resource type="Texture2D" uid="uid://d28uu2h7ee3ef" path="res://assets/molenpc3.png" id="1_af0l0"]
+[ext_resource type="Texture2D" uid="uid://d28uu2h7ee3ef" path="res://assets/art/molenpc3.png" id="1_af0l0"]
 [ext_resource type="Theme" uid="uid://cjt1wgi2nnutb" path="res://themes/ChatBubbleTheme.tres" id="2_h3ul8"]
 [ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="3_ukllr"]
 

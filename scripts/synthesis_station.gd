@@ -37,6 +37,7 @@ func _ready() -> void:
 
 func _on_mix_button_pressed() -> void:
 	mix()
+	AudioManager.button_click()
 	$MixButton.disabled = true
 
 func mix():

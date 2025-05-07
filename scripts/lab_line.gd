@@ -28,6 +28,7 @@ func _on_dialogue_button_pressed() -> void:
 	# if dialogue is finished, switch to atom assembler
 	if dialogue_finished:
 		get_parent().get_parent()._switch_to_atom_assembler()
+		AudioManager.button_click()
 		return
 	
 	# otherwise update current text line
@@ -56,3 +57,4 @@ func _on_dialogue_button_pressed() -> void:
 			GameManager.emit_signal("stage_access_enabled", "atom_assembler")
 			#print("next stage available!")
 		dialogue_button.text = "Next Stage"
+	AudioManager.button_click()

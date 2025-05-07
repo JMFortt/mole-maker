@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://b1i2ucce87pfy"]
 
-[ext_resource type="Texture2D" uid="uid://t5txvxvchhc3" path="res://assets/lablevelbackground.png" id="1_p0wlc"]
+[ext_resource type="Texture2D" uid="uid://t5txvxvchhc3" path="res://assets/art/lablevelbackground.png" id="1_p0wlc"]
 [ext_resource type="Script" uid="uid://cpaigou1bkyxi" path="res://scripts/level_selector.gd" id="1_rif6e"]
-[ext_resource type="Texture2D" uid="uid://cf5pas4ncoeg2" path="res://assets/selectalevel.png" id="2_2epne"]
+[ext_resource type="Texture2D" uid="uid://cf5pas4ncoeg2" path="res://assets/art/selectalevel.png" id="2_2epne"]
 [ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="5_chg43"]
 [ext_resource type="Theme" uid="uid://cbjgpekx1hw3m" path="res://themes/button_variant_3.tres" id="5_r77uv"]
 

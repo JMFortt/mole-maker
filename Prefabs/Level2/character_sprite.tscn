@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cgfeltn0vq6bg"]
 
-[ext_resource type="Texture2D" uid="uid://d28uu2h7ee3ef" path="res://assets/molenpc3.png" id="1_guo22"]
+[ext_resource type="Texture2D" uid="uid://d28uu2h7ee3ef" path="res://assets/art/molenpc3.png" id="1_guo22"]
 
 [node name="CharacterSprite" type="Sprite2D"]
 scale = Vector2(0.2, 0.2)

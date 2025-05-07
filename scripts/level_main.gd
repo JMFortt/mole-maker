@@ -59,42 +59,50 @@ func _on_LabLineButton_pressed():
 	atom_assembler.visible = false
 	molecule_maker.visible = false
 	synthesis_station.visible = false
+	AudioManager.button_click()
 
 func _on_AtomAssemblerButton_pressed():
 	lab_line.visible = false
 	atom_assembler.visible = true
 	molecule_maker.visible = false
 	synthesis_station.visible = false
+	AudioManager.button_click()
 
 func _on_MoleculeMakerButton_pressed():
 	lab_line.visible = false
 	atom_assembler.visible = false
 	molecule_maker.visible = true
 	synthesis_station.visible = false
+	AudioManager.button_click()
 
 func _on_SynthesisStationButton_pressed():
 	lab_line.visible = false
 	atom_assembler.visible = false
 	molecule_maker.visible = false
 	synthesis_station.visible = true
+	AudioManager.button_click()
 
 func _on_hint_button_pressed():
 	# get hint overlay for that scene
 	# show hint overlay
 	$UILayer/HintOverlay.visible = true
+	AudioManager.button_click()
 
 func _on_periodic_table_button_pressed():
 	# show periodic table overlay
 	$UILayer/PeriodicTableOverlay.visible = true
+	AudioManager.button_click()
 
 func _on_options_button_pressed():
 	# show options overlay
 	$UILayer/OptionsOverlay.visible = true
+	AudioManager.button_click()
 
 func _on_back_button_pressed() -> void:
 	# back to level select
 	get_tree().change_scene_to_file("res://scenes/LevelSelect.tscn")
 	GameManager.end_level()
+	AudioManager.button_click()
 
 func _switch_to_atom_assembler() -> void:
 	lab_line.visible       = false

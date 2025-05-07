@@ -3,6 +3,7 @@ extends Button
 @onready var root = get_parent().get_parent()
 
 func _on_add_button_pressed() -> void:
+	AudioManager.button_click()
 	var line_edit = get_parent().get_node("LineEdit")
 	if get_parent().name == "Protons":
 		#print("adding protons")

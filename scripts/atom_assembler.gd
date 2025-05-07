@@ -37,6 +37,7 @@ func _ready():
 	update_counters()
 
 func create_atom():
+	AudioManager.button_click()
 	if protons in possible_atoms.keys():
 		var element_dict_entry = possible_atoms[protons]
 		if electrons == element_dict_entry[0] && neutrons == element_dict_entry[1]:
@@ -91,6 +92,7 @@ func _stage_complete_check():
 		push_error("No current level data!")
 
 func _on_reset_atom_button_pressed() -> void:
+	AudioManager.button_click()
 	protons = 0
 	neutrons = 0
 	electrons = 0

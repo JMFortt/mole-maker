@@ -59,7 +59,9 @@ func _on_back_button_pressed() -> void:
 	# back to level select
 	get_tree().change_scene_to_file("res://scenes/LevelSelect.tscn")
 	GameManager.end_level()
+	AudioManager.button_click()
 
 func _on_options_button_pressed() -> void:
 	# show options overlay
 	$UILayer/OptionsOverlay.visible = true
+	AudioManager.button_click()
