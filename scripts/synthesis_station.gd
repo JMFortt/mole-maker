@@ -49,7 +49,7 @@ func mix():
 	ingredient_tween.tween_method(Callable(self, "_update_swirl"), 0.0, 3.0 * TAU, swirl_time)
 	for ingredient in ingredients:
 		ingredient_tween.parallel().tween_property(ingredient, "modulate", Color(1, 1, 1, 0), swirl_time)
-	ingredient_tween.parallel().tween_property($MixButton, "modulate", Color(1, 1, 1, 0), swirl_time)
+	ingredient_tween.parallel().tween_property($MixButton, "modulate", Color(1, 1, 1, 0), 0.5)
 	await ingredient_tween.finished
 
 	# poof

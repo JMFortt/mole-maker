@@ -57,8 +57,14 @@ func _ready():
 	add_child(mix_player)
 	mix_player.stream = mix_sound
 
-func set_music_volume(volume_db: float):
-	music_player.volume_db = clamp(volume_db, -80, 0)
+func set_music_volume(linear: float):
+	#music_player.volume_db = clamp(linear, -80, 0)
+	music_player.volume_db = linear_to_db(linear)
+
+func set_sfx_volume(linear: float):
+	for audio_player in [click_player, success_player, fail_player, unlock_player,
+	sparkle_player, star_player, mix_player]:
+		audio_player.volume_db = linear_to_db(linear)
 
 func button_click():
 	click_player.play()
