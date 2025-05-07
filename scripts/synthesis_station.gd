@@ -41,7 +41,8 @@ func _on_mix_button_pressed() -> void:
 	$MixButton.disabled = true
 
 func mix():
-	var swirl_time = 2
+	var swirl_time = 1.75
+	AudioManager.mix()
 
 	# animate swirl and fade out
 	var ingredient_tween = create_tween()
@@ -54,6 +55,7 @@ func mix():
 	# poof
 	poof.position = center
 	poof.emitting = true
+	AudioManager.sparkle()
 
 	# hide ingredients and mix button
 	for ingredient in ingredients:

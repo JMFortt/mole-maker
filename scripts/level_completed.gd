@@ -47,9 +47,10 @@ func animate_star_display():
 		star.scale = Vector2(0.1, 0.1)
 		# animate stars using a tween method
 		var star_tween = create_tween()
-		star_tween.parallel().tween_property(star, "modulate", Color("#ffffff"), 1)
-		star_tween.parallel().tween_property(star, "scale", Vector2.ONE, 1)
-		star_tween.parallel().tween_property(star, "rotation", TAU, 1)
+		star_tween.parallel().tween_property(star, "modulate", Color("#ffffff"), 0.75)
+		star_tween.parallel().tween_property(star, "scale", Vector2.ONE, 0.75)
+		star_tween.parallel().tween_property(star, "rotation", TAU, 0.75)
+		AudioManager.star()
 		await star_tween.finished
 	var message_tween = create_tween()
 	message_tween.parallel().tween_property(star_message, "modulate", Color("#ffffff"), 1)

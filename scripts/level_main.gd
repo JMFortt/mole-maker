@@ -39,20 +39,21 @@ func _ready():
 	GameManager.stage_access_enabled.connect(self._on_stage_access_enabled)
 
 func _on_stage_access_enabled(flag_name: String):
-	if flag_name == "atom_assembler":
+	if flag_name == "atom_assembler" and $UILayer/StageNavBar/AtomAssemblerButton.disabled:
 		$UILayer/StageNavBar/AtomAssemblerButton.disabled = false
 		get_node("UILayer/StageNavBar/AtomAssemblerButton/Lock").visible = false
+		AudioManager.unlock()
 		#print("button enabled!")
-	elif flag_name == "molecule_maker":
+	elif flag_name == "molecule_maker" and $UILayer/StageNavBar/MoleculeMakerButton.disabled:
 		$UILayer/StageNavBar/MoleculeMakerButton.disabled = false
 		get_node("UILayer/StageNavBar/MoleculeMakerButton/Lock").visible = false
+		AudioManager.unlock()
 		#print("button enabled!")
-	elif flag_name == "synthesis_station":
+	elif flag_name == "synthesis_station" and $UILayer/StageNavBar/SynthesisStationButton.disabled:
 		$UILayer/StageNavBar/SynthesisStationButton.disabled = false
 		get_node("UILayer/StageNavBar/SynthesisStationButton/Lock").visible = false
+		AudioManager.unlock()
 		#print("button enabled!")
-	else:
-		push_error("Unknown signal flag detected!")
 
 func _on_LabLineButton_pressed():
 	lab_line.visible = true

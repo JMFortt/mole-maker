@@ -37,20 +37,27 @@ func _ready():
 	update_counters()
 
 func create_atom():
-	AudioManager.button_click()
 	if protons in possible_atoms.keys():
 		var element_dict_entry = possible_atoms[protons]
 		if electrons == element_dict_entry[0] && neutrons == element_dict_entry[1]:
 			#print("made " + element_dict_entry[2] + "!")
 			if element_dict_entry[3] not in GameManager.current_level_data.current_atoms:
 				GameManager.current_level_data.current_atoms.append(element_dict_entry[3])
+				AudioManager.success()
+			else:
+				AudioManager.button_click()
+		else:
+			AudioManager.fail()
 	else:
 		#print("Not a known atom!")
-		pass
+		AudioManager.fail()
 	#print("current atoms: ", GameManager.current_level_data.current_atoms)
 	_update_atom_list()
-	_on_reset_atom_button_pressed()
 	_stage_complete_check()
+	protons = 0
+	neutrons = 0
+	electrons = 0
+	update_counters()
 
 func add_atom_components(component_type: String, number: int):
 	if component_type == "proton":
