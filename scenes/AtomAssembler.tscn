@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://cy8kfvob6180f"]
+[gd_scene load_steps=11 format=3 uid="uid://cy8kfvob6180f"]
 
 [ext_resource type="Script" uid="uid://du3gc74e7p6hp" path="res://scripts/atom_assembler.gd" id="1_yqg2x"]
 [ext_resource type="Texture2D" uid="uid://bk7scx6n1xs2h" path="res://assets/art/atomassemblerbackground.png" id="2_vovuf"]
 [ext_resource type="Texture2D" uid="uid://fbgrj4y2yokf" path="res://assets/art/proton.png" id="3_3752f"]
 [ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="4_np5r3"]
-[ext_resource type="Script" uid="uid://dc233iitfsmv8" path="res://scripts/number_field.gd" id="5_3b5xh"]
 [ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="6_5dn1n"]
 [ext_resource type="Script" uid="uid://c1jje0fl4pjqo" path="res://scripts/add_atom_component_button.gd" id="7_cs70e"]
 [ext_resource type="Texture2D" uid="uid://v4fdbxbl52a7" path="res://assets/art/neutron.png" id="8_m02th"]
@@ -38,43 +37,43 @@ region_rect = Rect2(22.31, 0, 238.207, 827.883)
 [node name="Protons" type="Node2D" parent="."]
 
 [node name="ProtonSource" type="TextureButton" parent="Protons"]
-offset_left = 72.7162
+offset_left = 78.7162
 offset_top = 166.618
-offset_right = 253.716
+offset_right = 259.716
 offset_bottom = 351.618
 scale = Vector2(0.363646, 0.348512)
 texture_normal = ExtResource("3_3752f")
 metadata/_edit_use_anchors_ = true
 
-[node name="LineEdit" type="LineEdit" parent="Protons"]
-offset_left = 150.0
-offset_top = 180.0
-offset_right = 218.563
-offset_bottom = 211.0
-theme_override_fonts/font = ExtResource("4_np5r3")
-placeholder_text = "Number"
-alignment = 1
-virtual_keyboard_type = 2
-script = ExtResource("5_3b5xh")
-
 [node name="Count" type="Label" parent="Protons"]
-offset_left = 305.0
-offset_top = 175.0
-offset_right = 413.0
-offset_bottom = 224.0
+offset_left = 170.0
+offset_top = 156.0
+offset_right = 278.0
+offset_bottom = 205.0
 scale = Vector2(0.817455, 0.783436)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_np5r3")
 text = "Proton Count:
 0"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="AddAtomComponentButton" type="Button" parent="Protons"]
-offset_left = 230.0
-offset_top = 178.0
-offset_right = 280.0
-offset_bottom = 210.0
+[node name="AddAtomComponentButton2" type="Button" parent="Protons"]
+offset_left = 160.0
+offset_top = 200.0
+offset_right = 210.0
+offset_bottom = 232.0
 theme = ExtResource("6_5dn1n")
-text = "Add"
+text = "+"
+script = ExtResource("7_cs70e")
+
+[node name="SubtractAtomComponentButton" type="Button" parent="Protons"]
+offset_left = 220.0
+offset_top = 200.0
+offset_right = 270.0
+offset_bottom = 232.0
+theme = ExtResource("6_5dn1n")
+text = "-"
 script = ExtResource("7_cs70e")
 
 [node name="Neutrons" type="Node2D" parent="."]
@@ -88,35 +87,35 @@ scale = Vector2(0.326273, 0.312695)
 texture_normal = ExtResource("8_m02th")
 metadata/_edit_use_anchors_ = true
 
-[node name="LineEdit" type="LineEdit" parent="Neutrons"]
-offset_left = 150.0
-offset_top = 324.0
-offset_right = 218.563
-offset_bottom = 355.0
-theme_override_fonts/font = ExtResource("4_np5r3")
-placeholder_text = "Number"
-alignment = 1
-virtual_keyboard_type = 2
-script = ExtResource("5_3b5xh")
-
 [node name="Count" type="Label" parent="Neutrons"]
-offset_left = 300.0
-offset_top = 324.0
-offset_right = 421.0
-offset_bottom = 373.0
+offset_left = 170.0
+offset_top = 301.0
+offset_right = 291.0
+offset_bottom = 350.0
 scale = Vector2(0.817455, 0.783436)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_np5r3")
 text = "Neutron Count:
 0"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="AddAtomComponentButton" type="Button" parent="Neutrons"]
-offset_left = 230.0
-offset_top = 322.0
-offset_right = 280.0
-offset_bottom = 354.0
+[node name="AddAtomComponentButton2" type="Button" parent="Neutrons"]
+offset_left = 160.0
+offset_top = 340.0
+offset_right = 210.0
+offset_bottom = 372.0
 theme = ExtResource("6_5dn1n")
-text = "Add"
+text = "+"
+script = ExtResource("7_cs70e")
+
+[node name="SubtractAtomComponentButton" type="Button" parent="Neutrons"]
+offset_left = 220.0
+offset_top = 340.0
+offset_right = 270.0
+offset_bottom = 372.0
+theme = ExtResource("6_5dn1n")
+text = "-"
 script = ExtResource("7_cs70e")
 
 [node name="Electrons" type="Node2D" parent="."]
@@ -130,35 +129,35 @@ scale = Vector2(0.368308, 0.35298)
 texture_normal = ExtResource("9_5lhjy")
 metadata/_edit_use_anchors_ = true
 
-[node name="LineEdit" type="LineEdit" parent="Electrons"]
-offset_left = 150.0
-offset_top = 465.0
-offset_right = 218.563
-offset_bottom = 496.0
-theme_override_fonts/font = ExtResource("4_np5r3")
-placeholder_text = "Number"
-alignment = 1
-virtual_keyboard_type = 2
-script = ExtResource("5_3b5xh")
-
 [node name="Count" type="Label" parent="Electrons"]
-offset_left = 300.0
-offset_top = 461.0
-offset_right = 419.0
-offset_bottom = 510.0
+offset_left = 170.0
+offset_top = 441.0
+offset_right = 289.0
+offset_bottom = 490.0
 scale = Vector2(0.817455, 0.783436)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_np5r3")
 text = "Electron Count:
 0"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="AddAtomComponentButton" type="Button" parent="Electrons"]
-offset_left = 230.0
-offset_top = 464.0
-offset_right = 280.0
-offset_bottom = 496.0
+[node name="AddAtomComponentButton2" type="Button" parent="Electrons"]
+offset_left = 160.0
+offset_top = 480.0
+offset_right = 210.0
+offset_bottom = 512.0
 theme = ExtResource("6_5dn1n")
-text = "Add"
+text = "+"
+script = ExtResource("7_cs70e")
+
+[node name="SubtractAtomComponentButton" type="Button" parent="Electrons"]
+offset_left = 220.0
+offset_top = 480.0
+offset_right = 270.0
+offset_bottom = 512.0
+theme = ExtResource("6_5dn1n")
+text = "-"
 script = ExtResource("7_cs70e")
 
 [node name="AtomList" type="Node2D" parent="."]
@@ -242,6 +241,7 @@ theme = ExtResource("6_5dn1n")
 text = "Make Atom"
 
 [node name="DebugButton" type="Button" parent="."]
+visible = false
 offset_left = 541.0
 offset_top = 516.0
 offset_right = 689.0
@@ -252,43 +252,43 @@ script = ExtResource("11_dvb2t")
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="ColorRect3" type="ColorRect" parent="Node2D"]
-offset_left = 397.0
-offset_top = 350.0
-offset_right = 648.0
-offset_bottom = 355.0
-rotation = -0.237684
+offset_left = 292.0
+offset_top = 341.0
+offset_right = 642.0
+offset_bottom = 346.0
+rotation = -0.135881
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="Node2D"]
-offset_left = 406.0
-offset_top = 488.0
-offset_right = 557.0
-offset_bottom = 493.0
+offset_left = 296.0
+offset_top = 475.0
+offset_right = 605.0
+offset_bottom = 480.0
 rotation = -0.237684
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect5" type="ColorRect" parent="Node2D"]
-offset_left = 406.0
-offset_top = 488.0
-offset_right = 597.0
-offset_bottom = 493.0
-rotation = -0.504124
+offset_left = 292.0
+offset_top = 476.0
+offset_right = 506.0
+offset_bottom = 481.0
+rotation = -0.361207
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Node2D"]
-offset_left = 408.0
-offset_top = 206.0
-offset_right = 659.0
-offset_bottom = 211.0
-rotation = 0.341945
+offset_left = 300.0
+offset_top = 195.0
+offset_right = 655.0
+offset_bottom = 200.0
+rotation = 0.280337
 color = Color(0, 0, 0, 1)
 
-[connection signal="text_changed" from="Protons/LineEdit" to="Protons/LineEdit" method="_on_text_changed"]
-[connection signal="pressed" from="Protons/AddAtomComponentButton" to="Protons/AddAtomComponentButton" method="_on_add_button_pressed"]
-[connection signal="text_changed" from="Neutrons/LineEdit" to="Neutrons/LineEdit" method="_on_text_changed"]
-[connection signal="pressed" from="Neutrons/AddAtomComponentButton" to="Neutrons/AddAtomComponentButton" method="_on_add_button_pressed"]
-[connection signal="text_changed" from="Electrons/LineEdit" to="Electrons/LineEdit" method="_on_text_changed"]
-[connection signal="pressed" from="Electrons/AddAtomComponentButton" to="Electrons/AddAtomComponentButton" method="_on_add_button_pressed"]
+[connection signal="pressed" from="Protons/AddAtomComponentButton2" to="Protons/AddAtomComponentButton2" method="_on_add_button_pressed"]
+[connection signal="pressed" from="Protons/SubtractAtomComponentButton" to="Protons/SubtractAtomComponentButton" method="_on_subtract_button_pressed"]
+[connection signal="pressed" from="Neutrons/AddAtomComponentButton2" to="Neutrons/AddAtomComponentButton2" method="_on_add_button_pressed"]
+[connection signal="pressed" from="Neutrons/SubtractAtomComponentButton" to="Neutrons/SubtractAtomComponentButton" method="_on_subtract_button_pressed"]
+[connection signal="pressed" from="Electrons/AddAtomComponentButton2" to="Electrons/AddAtomComponentButton2" method="_on_add_button_pressed"]
+[connection signal="pressed" from="Electrons/SubtractAtomComponentButton" to="Electrons/SubtractAtomComponentButton" method="_on_subtract_button_pressed"]
 [connection signal="pressed" from="ResetAtomButton" to="." method="_on_reset_atom_button_pressed"]
 [connection signal="pressed" from="MakeAtomButton" to="." method="create_atom"]
 [connection signal="pressed" from="DebugButton" to="DebugButton" method="_on_pressed_molecule_maker"]
