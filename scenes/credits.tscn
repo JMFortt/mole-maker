@@ -40,9 +40,9 @@ horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
 offset_left = 445.0
-offset_top = 202.0
+offset_top = 198.0
 offset_right = 729.0
-offset_bottom = 562.0
+offset_bottom = 576.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_g618n")
 theme_override_fonts/bold_font = ExtResource("3_g618n")
